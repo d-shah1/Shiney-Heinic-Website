@@ -1,0 +1,606 @@
+@font-face {
+    font-family: "Gilroy-Black";
+    src: url('../fonts/Gilroy/Gilroy-Black.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Heavy";
+    src: url('../fonts/Gilroy/Gilroy-Heavy.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url('../fonts/Gilroy/Gilroy-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url('../fonts/Gilroy/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url('../fonts/Gilroy/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url('../fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url('../fonts/Gilroy/Gilroy-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url('../fonts/Gilroy/Gilroy-Light.ttf');
+}
+
+@font-face {
+    font-family: "Peace Sans";
+    src: url('../fonts/PeaceSans/PeaceSansWebfont.ttf');
+}
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+body {
+    background-color: #FBF4EB !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-wrapper {
+    background-image: url(../images/product-background.png);
+}
+
+/* Navigation Bar */
+.navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .navbar-brand img {
+    width: 300px;
+    height: 72px;
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link {
+    font-family: "Gilroy-Regular";
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar .collapse .navbar-nav .nav-item {
+    margin-right: 30px;
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link.active {
+    background-color: #75CFB8;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+/* Navigation Bar */
+
+/* Product Section */
+.product-section .products-img img {
+    height: 450px;
+    width: 580px;
+}
+
+.product-section .products-img .products-mini .mini img {
+    height: 150px;
+    width: 150px;
+}
+
+.product-section .products-img .products-mini {
+   justify-content: space-evenly;
+} 
+
+
+.product-section .product-details .product-name {
+    font-family: "Peace Sans";
+    font-weight: 400;
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+.product-section .product-details .product-name.on-the-go {
+    font-size: 45px;
+}
+
+.product-section .product-details .btn-buy {
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    background-color: #BBDFC8;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.product-section .product-details .btn-buy p {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding-top: 9px;
+    color: #669778;
+}
+
+.product-section .product-details .product-desc {
+    font-family: "Peace Sans";
+    font-weight: 400;
+    font-size: 30px;
+    color: #75CFB8;
+}
+
+.product-section .product-details .product-detail span {
+    color: #75CFB8;
+    font-weight: 700;
+}
+
+.product-section .product-details .product-detail .product-price {
+    color: #75CFB8;
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+.product-section .product-details .product-detail {
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    color: #000;
+}
+
+.product-section .product-details .product-detail-list {
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    color: #000;
+}
+/* Product Section */
+
+
+/* Tips Section */
+.tips-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.tips-section .tips-image img {
+    height: 60px;
+    width: 60px;
+}
+
+.tips-section .tips-heading {
+    font-family: "Gilroy-Medium";
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.tips-section .tips-desc {
+    font-family: "Gilroy-Regular";
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+}
+/* Tips Section */
+
+/* Features Section */
+.features-section .feature-image-wrapper img {
+    width: 583px;
+    height: 750px;
+}
+
+.features-section .feature-details {
+   margin-top: auto;
+   margin-bottom: auto;
+}
+
+.features-section .feature-details .title {
+    font-family: "Peace Sans";
+    font-weight: 400;
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+.features-section .feature-details .list {
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    color: #000;
+    line-height: 35px;
+}
+/* Features Section */
+
+/* Installation Section */
+.installation-section {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.installation-section .installation-img {
+   width: 950px;
+   height: 600px;
+   background-color: #75CFB8;
+   border-radius: 5px;
+}
+
+.installation-section .installation-steps {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.installation-section .installation-img img {
+    height: 590px;
+}
+
+
+.installation-section .installation-steps .title {
+    font-family: "Peace Sans";
+    font-weight: 400;
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+.installation-section .installation-steps .sub-title {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.installation-section .installation-steps .step-container {
+    height: 50px;
+    width: 320px;
+    border-radius: 62px;
+    background: #75CFB8;
+    padding: 5px;
+    display: inline-table;
+    margin-top: 30px;
+}
+
+.installation-section .installation-steps .step-container .step-point {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.installation-section .installation-steps .step-container .step-point p {
+    font-family: "Gilroy-Bold";
+    color: #75CFB8;
+    font-size: 30px;
+    text-align: center;
+}
+
+.installation-section .installation-steps .step-container .step-desc p {
+    font-family: "Gilroy-Bold";
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-align: center;
+}
+
+.installation-section .installation-steps .step-container .step-desc {
+    position: relative;
+}
+
+.installation-section .installation-steps .step-container-2 {
+    height: 50px;
+    width: 520px;
+    border-radius: 62px;
+    background: #75CFB8;
+    padding: 5px;
+    display: inline-table;
+    margin-top: 30px;
+}
+
+.installation-section .installation-steps .step-container-2 .step-point {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.installation-section .installation-steps .step-container-2 .step-point p {
+    font-family: "Gilroy-Bold";
+    color: #75CFB8;
+    font-size: 30px;
+    text-align: center;
+}
+
+.installation-section .installation-steps .step-container-2 .step-desc p {
+    font-family: "Gilroy-Bold";
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-align: center;
+}
+
+.installation-section .installation-steps .step-container-2 .step-desc {
+    position: relative;
+}
+
+.installation-section .installation-steps .step-container-3 {
+    height: 50px;
+    width: 500px;
+    border-radius: 62px;
+    background: #75CFB8;
+    padding: 5px;
+    display: inline-table;
+    margin-top: 30px;
+}
+
+.installation-section .installation-steps .step-container-3 .step-point {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.installation-section .installation-steps .step-container-3 .step-point p {
+    font-family: "Gilroy-Bold";
+    color: #75CFB8;
+    font-size: 30px;
+    text-align: center;
+}
+
+.installation-section .installation-steps .step-container-3 .step-desc p {
+    font-family: "Gilroy-Bold";
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-align: center;
+}
+
+.installation-section .installation-steps .step-container-3 .step-desc {
+    position: relative;
+}
+/* Installation Section */
+
+
+/* Reviews Section */
+.testimonials-section .title {
+    font-family: "Peace Sans";
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+/* .testimonials-section .slider-area .carousel-slide {
+    background-image: url(../shiney-spa/testimonial-bg.png);
+    height: 520px;
+    width: 921px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.testimonials-section .slider-area .carousel-slide .carousel-caption {
+    width: 688px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonials-section .slider-area .carousel-slide .carousel-caption p {
+    font-family: "Gilroy-Regular";
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    line-height: 45px;
+    margin-bottom: 45px;
+    margin-top: 40px;
+}
+
+.testimonials-section .slider-area .carousel-slide .carousel-caption h5 {
+    font-family: "Gilroy-Bold";
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    background-color: #5A5858;
+}
+
+footer .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+footer .footer-3 ul {
+    color: white;
+    list-style-type: none;
+}
+
+footer .footer-3 ul li {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 20px;
+}
+
+footer .footer-3 ul .custom-margin {
+    margin-top: 10px;
+}
+
+footer .footer-4 ul .custom-margin-1 {
+    margin-top: 4px;
+}
+
+footer .footer-4 ul {
+    color: white;
+    list-style-type: none;
+}
+
+footer .footer-4 ul li {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer .footer-1 h1 {
+    font-size: 30px;
+    font-family: "Gilroy-Regular";
+    color: white;
+}
+
+footer .footer-1 .newsletter-input {
+    width: 100%;
+    margin-top: 50px;
+    background-color: #5A5858;
+    border: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+footer .footer-1 #newsletter-arrow {
+    color: white;
+    margin-top: 58px;
+    margin-left: -15px;
+}
+
+footer .footer-1 .newsletter-input::placeholder {
+    font-family: "Gilroy-Regular";
+    color: white;
+}
+
+footer .footer-1 .social-icons {
+    color: white;
+    margin-top: 20px;
+}
+
+footer .footer-1 .social-icons i {
+    font-size: 30px;
+}
+
+footer .footer-1 .social-icons i:nth-child(2) {
+    margin-left: 20px;
+}
+
+.buy-btn .container .review-box {
+    width: 450px;
+    height: 80px;
+    background-color: #FFC67D;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.buy-btn {
+    margin-top: 25px;
+    margin-bottom: -20px;
+}
+
+.buy-btn .container .btn-buy {
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    background-color: #FFC67D;
+    text-align: center;
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buy-btn .container .btn-buy p {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-top: 9px;
+    color: #906F3C;
+}
+
+.buy-btn .container .review-box p {
+    font-family: "Peace Sans";
+    font-size: 30px;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.buy-btn .container .review-box i {
+    color: #fff;
+}
+
+.buy-btn .container .review-box i:nth-child(2) {
+    margin-left: 5px;
+}
+
+.buy-btn .container .review-box i:nth-child(3) {
+    margin-left: 5px;
+}
+
+.buy-btn .container .review-box i:nth-child(4) {
+    margin-left: 5px;
+}
+
+.buy-btn .container .review-box i:nth-child(5) {
+    margin-left: 5px;
+}
+
+.buy-btn .container .review-box .review-desc {
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: -5px;
+    margin-left: 20px;
+}
+
+/* Steps Section */
+.steps-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.steps-section .container .steps-img .step-bg {
+    height: 40px;
+    width: 40px;
+    background-color: #75CFB8;
+    border-radius: 20px;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-family: "Gilroy-Bold";
+}
+
+.steps-section .container .steps-img h1 {
+    font-size: 24px;
+    font-family: "Gilroy-Bold";
+    margin-left: 10px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.steps-section .container .steps-img p {
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.steps-section .container .steps-img .content {
+    margin-left: auto;
+}

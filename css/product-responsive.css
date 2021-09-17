@@ -1,0 +1,301 @@
+@font-face {
+    font-family: "Gilroy-Black";
+    src: url('../fonts/Gilroy/Gilroy-Black.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Heavy";
+    src: url('../fonts/Gilroy/Gilroy-Heavy.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url('../fonts/Gilroy/Gilroy-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url('../fonts/Gilroy/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url('../fonts/Gilroy/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url('../fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url('../fonts/Gilroy/Gilroy-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url('../fonts/Gilroy/Gilroy-Light.ttf');
+}
+
+@font-face {
+    font-family: "Peace Sans";
+    src: url('../fonts/PeaceSans/PeaceSansWebfont.ttf');
+}
+
+@media only screen and (max-width: 480px) {
+    .shiney-heini .container .navbar {
+        background-color: #FFC76D;
+    }
+
+    .shiney-heini .container .navbar {
+        display: block;
+    }
+
+    .shiney-heini .container {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .shiney-heini .navbar::after .navbar-brand img {
+        margin-top: -100px;
+    }
+
+    .shiney-heini .container .navbar .navbar-brand img {
+        width: 206px;
+        height: auto;
+        margin-top: -13px;
+    }
+
+    .navbar-light .navbar-toggler {
+        border: none;
+        color: transparent !important;
+    }
+
+    .navbar-collapse {
+        margin-left: 15px;
+    }
+
+    .navbar .collapse .navbar-nav .nav-item .nav-link.active {
+        background-color: transparent;
+        padding-left: 0px;
+    }
+
+    .product-section .container .products-img .main-img {
+        width: 346.15px !important;
+        height: 285.96px !important;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .product-section .container .products-mini {
+        display: none !important;
+    }
+
+    .product-section .container .product-details .product-name {
+        font-size: 30px;
+    }
+
+    .product-section .container .product-details .product-desc {
+        font-size: 26px;
+    }
+
+    .product-section .container .product-details .product-detail {
+        font-size: 18px;
+    }
+
+    .features-section .container .feature-image-wrapper img {
+        width: 365px;
+        height: 452px;
+    }
+
+    .features-section .container .feature-details .title {
+        font-size: 26px;
+    }
+
+    .features-section .container .feature-details .list {
+        font-size: 16px;
+    }
+
+    .installation-section .container .installation-steps .title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .installation-section .container .installation-steps .sub-title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .installation-section .container .installation-steps .step-container .step-desc p {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+    .installation-section .installation-steps .step-container {
+        height: 42px;
+        width: 243px;
+        border-radius: 62px;
+        background: #75CFB8;
+        padding: 5px;
+        display: inline-table;
+        margin-top: 30px;
+    }
+
+    .installation-section .installation-steps .step-container .step-point {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        border-radius: 16px;
+        background: #fff;
+    }
+
+    .installation-section .installation-steps .step-container .step-point p {
+        font-size: 20px;
+    }
+
+    .installation-section .installation-steps .step-container-2 {
+        height: 42px;
+        width: 390px;
+    }
+
+    .installation-section .container .installation-steps .step-container-2 .step-desc p {
+        font-size: 18px;
+        margin-left: 18px;
+        margin-top: 2px;
+    }
+
+    .installation-section .installation-steps .step-container-2 .step-point {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        border-radius: 16px;
+        background: #fff;
+    }
+
+    .installation-section .installation-steps .step-container-2 .step-point p {
+        font-size: 20px;
+    }
+
+    .installation-section .installation-steps .step-container-3 {
+        height: 42px;
+        width: 390px;
+    }
+
+    .installation-section .container .installation-steps .step-container-3 .step-desc p {
+        font-size: 18px;
+        margin-left: 18px;
+        margin-top: 2px;
+    }
+
+    .installation-section .installation-steps .step-container-3 .step-point {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        border-radius: 16px;
+        background: #fff;
+    }
+
+    .installation-section .installation-steps .step-container-3 .step-point p {
+        font-size: 20px;
+    }
+
+    .installation-section .installation-img {
+        height: 100%;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .installation-section .container .installation-img img {
+        height: 349px;
+        width: 336px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+
+    footer .footer-1 h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    footer .footer-1 .input {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    footer .footer-3 ul {
+       margin-left: -32px;
+    }
+
+    footer .footer-4 ul {
+       margin-left: -32px;
+    }
+
+    footer .footer-3 ul li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    footer .footer-3 ul .custom-margin {
+        margin-top: 20px;
+    }
+
+    footer .footer-4 {
+        margin-top: 60px;
+    }
+
+    footer .footer-4 ul li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    footer .footer-4 ul .custom-margin-1 {
+        margin-top: 20px;
+    }
+
+    footer .footer-1 .social-icons {
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .buy-btn .container .review-box {
+        width: 397px;
+        height: 80px;
+        margin-left: -4px;
+    }
+
+    .buy-btn .container .btn-buy {
+        display: none;
+    }
+
+    .buy-btn #product-title {
+        font-size: 25px;
+        padding-top: 5px;
+    }
+
+    .tips-section {
+        margin-top: 0px;
+    }
+
+    .features-section {
+        margin-top: -50px;
+    }
+
+    .installation-section {
+        margin-top: 50px;
+    }
+
+    .steps-section .container .steps-img .content {
+        width: 250px;
+        margin-right: auto;
+    }
+
+    .steps-section .container .custom-margin-resp {
+        margin-top: 50px;
+    }
+}
+

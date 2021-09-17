@@ -1,0 +1,205 @@
+@font-face {
+    font-family: "Gilroy-Black";
+    src: url('../fonts/Gilroy/Gilroy-Black.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Heavy";
+    src: url('../fonts/Gilroy/Gilroy-Heavy.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url('../fonts/Gilroy/Gilroy-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url('../fonts/Gilroy/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url('../fonts/Gilroy/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url('../fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url('../fonts/Gilroy/Gilroy-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url('../fonts/Gilroy/Gilroy-Light.ttf');
+}
+
+@font-face {
+    font-family: "Peace Sans";
+    src: url('../fonts/PeaceSans/PeaceSansWebfont.ttf');
+}
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* Each Year Section */
+.each-year {
+    background-color: #FBF4EB !important;
+}
+
+.each-year .container {
+    max-width: 1400px !important;
+}
+
+.each-year .each-year-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.each-year .container .each-year-1 {
+    width: 436.76px;
+    height: 200.29px;
+}
+
+.each-year .container .text-wrapper .each-year-3 {
+    margin-top: -150px;
+}
+
+.each-year .text-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.each-year .text-wrapper p {
+    font-family: "Peace Sans";
+    font-size: 35px;
+    line-height: 64px;
+    font-weight: 400;
+    color: #75CFB8;
+}
+
+/* All That Paper Section */
+.all-that-paper .container{
+    max-width: 100% !important;
+    height: 480px;
+    background-color: #BBDFC8;
+    background-image: url(../all-that-paper.png);
+    background-position: center;
+}
+
+.all-that-paper .container p {
+    font-family: "Peace Sans";
+    font-size: 30px;
+    color: white;
+    width: 922px;
+    text-align: center;
+}
+
+/* Better Hygiene Section */
+.better-hygiene {
+    background-color: #FBF4EB !important;
+}
+
+.better-hygiene .hygiene-banner-image img {
+    width: max-content;
+    transform: scale(0.85);
+}
+
+.better-hygiene .text-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.better-hygiene .text-wrapper .container-wrapper {
+    width: 300px;
+    height: 435px;
+    background-color: #FFC67D;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-right: 30px;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container {
+    align-items: center;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container img {
+    margin-top: -50px;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container h4 {
+    font-family: "Gilroy-Bold";
+    font-size: 24px;
+    font-style: normal;
+    color: white;
+    margin-top: 34px;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container .shop-btn {
+    width: 184px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #75CFB8;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container .shop-btn .shop-btn-text {
+    font-family: "Gilroy-Regular";
+    color: white;
+    position: relative;
+}
+
+.better-hygiene .text-wrapper h3 {
+    font-family: "Peace Sans";
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+.better-hygiene .text-wrapper p {
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    margin-top: 33px;
+}
+
+/* Miscellaneous Section */
+.miscellaneous-section {
+    background-color: #75CFB8;
+}
+
+.miscellaneous-section .container .icon-wrapper img{
+    height: 50px;
+    width: 50px;
+}
+
+.miscellaneous-section .container .text-wrapper h5 {
+    font-family: "Gilroy-Regular";
+    font-size: 20px;
+    color: white;
+}
+
+.miscellaneous-section .container .text-wrapper p {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    color: black;
+    margin-top: -5px;
+    margin-bottom: 0px;
+}

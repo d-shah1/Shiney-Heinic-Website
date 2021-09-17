@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Gilroy-Black";
+    src: url('../fonts/Gilroy/Gilroy-Black.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Heavy";
+    src: url('../fonts/Gilroy/Gilroy-Heavy.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url('../fonts/Gilroy/Gilroy-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url('../fonts/Gilroy/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url('../fonts/Gilroy/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url('../fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url('../fonts/Gilroy/Gilroy-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url('../fonts/Gilroy/Gilroy-Light.ttf');
+}
+
+@font-face {
+    font-family: "Peace Sans";
+    src: url('../fonts/PeaceSans/PeaceSansWebfont.ttf');
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* Miscellaneous Section */
+    .miscellaneous-section {
+        text-align: center;
+    }
+
+    .miscellaneous-section .container .icon-wrapper img{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .miscellaneous-section .container .text-wrapper h5 {
+        margin-top: 30px;
+    }
+
+    .miscellaneous-section .container .miscellaneous-wrapper {
+        margin-top: 50px;
+    }
+
+    #resp-cust {
+        margin-top: 10px;
+    }
+
+    /* Better Hygiene Section */
+    .better-hygiene {
+        text-align: center;
+    }
+
+    .better-hygiene .hygiene-banner-image img {
+        width: 390px;
+        height: 396px;
+    }
+
+    .better-hygiene .text-wrapper h3 {
+        font-family: "Peace Sans";
+        font-size: 36px;
+        color: #75CFB8;
+    }
+
+    .better-hygiene .text-wrapper p {
+        font-family: "Gilroy-Regular";
+        font-size: 18px;
+        margin-top: 33px;
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* All that paper Section */
+    .all-that-paper .container p {
+        font-size: 20px;
+        width: 334px;
+    }
+}
