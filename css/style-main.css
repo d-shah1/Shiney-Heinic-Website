@@ -1,0 +1,628 @@
+@font-face {
+    font-family: "Gilroy-Black";
+    src: url('../fonts/Gilroy/Gilroy-Black.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Heavy";
+    src: url('../fonts/Gilroy/Gilroy-Heavy.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url('../fonts/Gilroy/Gilroy-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url('../fonts/Gilroy/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url('../fonts/Gilroy/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url('../fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url('../fonts/Gilroy/Gilroy-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url('../fonts/Gilroy/Gilroy-Light.ttf');
+}
+
+@font-face {
+    font-family: "Peace Sans";
+    src: url('../fonts/PeaceSans/PeaceSansWebfont.ttf');
+}
+
+body {
+    background-color: #FBF4EB !important;
+    overflow-x: hidden;
+}
+
+.main-wrapper {
+    background-image: url(../images/product-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Navigation Bar */
+.navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .navbar-brand img {
+    width: 300px;
+    height: 72px;
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link {
+    font-family: "Gilroy-Regular";
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar .collapse .navbar-nav .nav-item {
+    margin-right: 30px;
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link.active {
+    background-color: #75CFB8;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+/* Navigation Bar */
+
+/* Footer */
+
+footer {
+    background-color: #5A5858;
+}
+
+footer .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+footer .footer-3 ul {
+    color: white;
+    list-style-type: none;
+}
+
+footer .footer-3 ul li {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 20px;
+}
+
+footer .footer-3 ul .custom-margin {
+    margin-top: 10px;
+}
+
+footer .footer-4 ul .custom-margin-1 {
+    margin-top: 4px;
+}
+
+footer .footer-4 ul {
+    color: white;
+    list-style-type: none;
+}
+
+footer .footer-4 ul li {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer .footer-1 h1 {
+    font-size: 30px;
+    font-family: "Gilroy-Regular";
+    color: white;
+}
+
+footer .footer-1 .newsletter-input {
+    width: 100%;
+    margin-top: 50px;
+    background-color: #5A5858;
+    border: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+footer .footer-1 #newsletter-arrow {
+    color: white;
+    margin-top: 58px;
+    margin-left: -15px;
+}
+
+footer .footer-1 .newsletter-input::placeholder {
+    font-family: "Gilroy-Regular";
+    color: white;
+}
+
+footer .footer-1 .social-icons {
+    color: white;
+    margin-top: 20px;
+}
+
+footer .footer-1 .social-icons i {
+    font-size: 30px;
+}
+
+footer .footer-1 .social-icons i:nth-child(2) {
+    margin-left: 20px;
+}
+
+/* Footer */
+
+/* Miscellaneous Section */
+
+.miscellaneous-section {
+    background-color: #75CFB8;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.miscellaneous-section .container .icon-wrapper img{
+    height: 50px;
+    width: 50px;
+}
+
+.miscellaneous-section .container .text-wrapper h5 {
+    font-family: "Gilroy-Regular";
+    font-size: 20px;
+    color: white;
+}
+
+.miscellaneous-section .container .text-wrapper p {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    color: black;
+    margin-top: -5px;
+    margin-bottom: 0px;
+}
+
+/* Miscellaneous Section */
+
+/* Better Hygiene Section */
+.better-hygiene {
+    background-color: #FBF4EB !important;
+}
+
+.better-hygiene .hygiene-banner-image img {
+    width: max-content;
+    transform: scale(0.85);
+}
+
+.better-hygiene .text-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.better-hygiene .text-wrapper .container-wrapper {
+    width: 300px;
+    height: 435px;
+    background-color: #FFC67D;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-right: 30px;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container {
+    align-items: center;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container img {
+    margin-top: -50px;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container h4 {
+    font-family: "Gilroy-Bold";
+    font-size: 24px;
+    font-style: normal;
+    color: white;
+    margin-top: 34px;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container .shop-btn {
+    width: 174px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border-radius: 30px;
+    background-color: #75CFB8;
+}
+
+.better-hygiene .text-wrapper .container-wrapper .shop-container .shop-btn h1 {
+    font-family: "Gilroy-Regular";
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.better-hygiene .text-wrapper h3 {
+    font-family: "Peace Sans";
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+.better-hygiene .text-wrapper p {
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    margin-top: 33px;
+}
+
+/* All That Paper Section */
+.all-that-paper .container{
+    max-width: 100% !important;
+    height: 480px;
+    background-color: #BBDFC8;
+    background-image: url(../images/all-that-paper.png);
+    background-position: center;
+    object-fit: cover;
+}
+
+.all-that-paper .container p {
+    font-family: "Peace Sans";
+    font-size: 30px;
+    color: white;
+    width: 922px;
+    text-align: center;
+}
+
+/* Each Year on Average Section */
+.each-year-section {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    overflow-x: hidden;
+}
+
+.each-year-section .container .each-year-right-banner {
+    width: 900px;
+    height: 550px;
+    background: radial-gradient(87.47% 72.4% at 16.35% 20.6%, #9FE9C2 0%, #AEF1CC 100%);
+    border-radius: 23px;
+}
+
+
+.each-year-section .container .text-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.each-year-section .container .text-wrapper p {
+    font-family: "Peace Sans";
+    font-size: 30px;
+    line-height: 64px;
+    font-weight: 400;
+    color: #75CFB8;
+}
+
+.each-year-section .container .text-wrapper .each-year-2 {
+    width: 330px;
+    height: 330px;
+}
+
+.each-year-section .container .text-wrapper .each-img {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.each-year-section .container .text-wrapper .each-year-1 {
+    width: 348px;
+    height: 172px;
+}
+
+.each-year-section .container .each-year-right-banner {
+    overflow-y: hidden;
+}
+
+.each-year-section .container .each-year-right-banner img {
+    width: 800px;
+    height: 904px;
+    margin-top: -200px;
+    margin-left: -70px;
+    position: absolute;
+}
+
+/* Tagline Section */
+.tagline-section {
+    height: 150px;
+    width: 100%;
+    background-color: #BBDFC8;
+}
+
+.tagline-section .container {
+    max-width: 100% !important;
+}
+
+.tagline-section .container .image-left img {
+    margin-top: 41px;
+}
+
+.tagline-section .container .image-right img {
+    position: absolute;
+    margin-right: 100px;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.testimonial-section .container .testimonials h1 {
+    font-family: "Peace Sans";
+    font-family: 48px;
+    color: #75CFB8;
+}
+
+.testimonial-section .container .testimonial-box {
+    width: 400px;
+    height: 113px;
+    background: rgba(251, 244, 235, 0.2);
+    box-shadow: 0px 4px 15px rgba(175, 156, 131, 0.2);
+    backdrop-filter: blur(25px);
+    border-radius: 243px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    padding: 10px;
+}
+
+.testimonial-section .container .testimonial-box .testimonial-desc p {
+    font-family: "Gilroy-Regular";
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    text-align: start;
+    padding-right: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.testimonial-section .container .testimonial-box .testimonial-desc .testimonial-name {
+    font-family: "Gilroy-Light";
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.testimonial-section .container .testimonial-box-large {
+    width: 600px;
+    height: 233px;
+    background: rgba(251, 244, 235, 0.2);
+    box-shadow: 0px 4px 15px rgba(175, 156, 131, 0.2);
+    backdrop-filter: blur(25px);
+    border-radius: 243px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 50px;
+    display: flex;
+    padding: 10px;
+}
+
+.testimonial-section .container .testimonial-box-large .testimonial-desc {
+    margin-top: 60px;
+}
+
+.testimonial-section .container .testimonial-box-large .testimonial-desc p {
+    font-family: "Gilroy-Regular";
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    text-align: start;
+    padding-right: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.testimonial-section .container .testimonial-box-large .testimonial-desc .testimonial-name {
+    font-family: "Gilroy-Light";
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.testimonial-section .container .left-side {
+    margin-right: -100px;
+}
+
+.testimonial-section {
+    width: 100% !important;
+    background-image: url(../images/testimonials-bg.png);
+    padding-bottom: 100px;
+    background-size: 1920px 400px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+
+.benefits-section {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.benefits-section .tips {
+    width: 944px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefits-section .section-title h1 {
+    font-family: "Peace Sans";
+    font-family: 48px;
+    color: #75CFB8;
+}
+
+.benefits-section .section-desc p {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.benefits-section .container .section-desc {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefits-section .section-tip {
+    margin-top: 50px;
+}
+
+.benefits-section .section-tip p {
+    font-family: "Gilroy-Regular";
+    width: 157px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+.shiney-on-the-go {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    overflow-x: hidden;
+}
+
+.shiney-on-the-go .shiney-right img {
+    width: 735px;
+    height: 552px;
+    margin-right: -100px;
+    overflow-x: hidden;
+    border-radius: 10px;
+}
+
+.shiney-on-the-go .shiney-left {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.shiney-on-the-go .container .shiney-left h1 {
+    font-family: "Peace Sans";
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+.shiney-on-the-go .container .shiney-left p {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    color: #000;
+    line-height: 33px;
+    margin-top: 30px;
+}
+
+.shiney-on-the-go .container .shiney-left .btn-buy {
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    background-color: #FFC67D;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 50px;
+}
+
+.shiney-on-the-go .container .shiney-left .btn-buy p {
+    font-family: "Gilroy-Regular";
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-top: 5px;
+    color: #906F3C;
+}
+
+
+
+.shiney-heini-spa {
+    margin-top: -150px;
+    margin-bottom: 100px;
+}
+
+.shiney-heini-spa .shiney-heini-spa-left img {
+    width: 504px;
+    height: 592px;
+}
+
+.shiney-heini-spa .container .shiney-heini-spa-right {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.shiney-heini-spa .container .shiney-heini-spa-right h1 {
+    font-family: "Peace Sans";
+    font-size: 48px;
+    color: #75CFB8;
+}
+
+.shiney-heini-spa .container .shiney-heini-spa-right p {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    color: #000;
+    line-height: 33px;
+    margin-top: 30px;
+}
+
+.shiney-heini-spa .container .shiney-heini-spa-right .btn-buy {
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    background-color: #FFC67D;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 50px;
+}
+
+.shiney-heini-spa .container .shiney-heini-spa-right .btn-buy p {
+    font-family: "Gilroy-Regular";
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-left: 30px;
+    color: #906F3C;
+}
+
+.hero-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.hero-section .container .hero-left h1 {
+    font-family: "Peace Sans";
+    font-size: 52px;
+    color: #75CFB8;
+    line-height: 88px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hero-section .container .hero-right img {
+    width: 982px;
+    height: 874px;
+    margin-top: -170px;
+    z-index: -999;
+}

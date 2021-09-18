@@ -45,6 +45,43 @@
 
 @media only screen and (max-width: 480px) {
 
+    .shiney-heini .container .navbar {
+        background-color: #FFC76D;
+    }
+
+    .shiney-heini .container .navbar {
+        display: block;
+    }
+
+    .shiney-heini .navbar::after .navbar-brand img {
+        margin-top: -100px;
+    }
+
+    .shiney-heini .container {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .shiney-heini .container .navbar .navbar-brand img {
+        width: 206px;
+        height: auto;
+        margin-top: -13px;
+    }
+
+    .navbar-light .navbar-toggler {
+        border: none;
+        color: transparent !important;
+    }
+
+    .navbar-collapse {
+        margin-left: 15px;
+    }
+
+    .navbar .collapse .navbar-nav .nav-item .nav-link.active {
+        background-color: transparent;
+        padding-left: 0px;
+    }
+
     /* Miscellaneous Section */
     .miscellaneous-section {
         text-align: center;
@@ -96,5 +133,198 @@
     .all-that-paper .container p {
         font-size: 20px;
         width: 334px;
+    }
+
+    .better-hygiene .container .hygiene-banner-image img {
+        width: 390px;
+        height: 396px;
+    }
+
+    footer .footer-1 h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    footer .footer-1 .input {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    footer .footer-3 ul {
+       margin-left: -32px;
+    }
+
+    footer .footer-4 ul {
+       margin-left: -32px;
+    }
+
+    footer .footer-3 ul li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    footer .footer-3 ul .custom-margin {
+        margin-top: 20px;
+    }
+
+    footer .footer-4 {
+        margin-top: 60px;
+    }
+
+    footer .footer-4 ul li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    footer .footer-4 ul .custom-margin-1 {
+        margin-top: 20px;
+    }
+
+    footer .footer-1 .social-icons {
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .better-hygiene .container .text-wrapper .container-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .better-hygiene .container .text-wrapper p {
+        width: 335px;
+        text-align: center;
+    }
+
+    .each-year-section .container .text-wrapper p {
+        font-size: 20px;
+        line-height: 45px;
+    }
+
+    .testimonial-section {
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+
+    .benefits-section {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .each-year-section {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .all-that-paper {
+        margin-top: 50px;
+    }
+
+
+    .testimonial-section .container .testimonial-box-large {
+        width: 400px;
+        height: 113px;
+        background: rgba(251, 244, 235, 0.2);
+        box-shadow: 0px 4px 15px rgba(175, 156, 131, 0.2);
+        backdrop-filter: blur(25px);
+        border-radius: 243px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        display: flex;
+        padding: 10px;
+    }
+
+    .testimonial-section .container .testimonial-box-large .testimonial-desc {
+        margin-top: 0px;
+    }
+
+    .testimonial-section .container .testimonial-box-large .testimonial-desc p {
+        font-family: "Gilroy-Regular";
+        font-weight: 600;
+        font-size: 16px;
+        color: #000;
+        text-align: start;
+        padding-right: 10px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    .testimonial-section .container .testimonial-box-large .testimonial-desc .testimonial-name {
+        font-family: "Gilroy-Light";
+        font-weight: 300;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .benefits-section .container .section-desc {
+        width: 335px !important;
+    }
+
+    .shiney-on-the-go .container .shiney-right img {
+        margin-top: 50px;
+        width: 355px;
+        height: auto;
+    }
+
+    .shiney-on-the-go .container .shiney-left h1 {
+        font-size: 28px;
+    }
+
+    .shiney-on-the-go .container .shiney-left .btn-buy {
+        margin-top: 0px;
+    }
+    
+    .shiney-heini-spa .shiney-heini-spa-left img {
+        width: 344px;
+        height: auto;
+    }
+
+    .shiney-heini-spa .container .shiney-heini-spa-right h1 {
+        font-size: 28px;
+    }
+
+    .shiney-heini-spa .container .shiney-heini-spa-right .btn-buy {
+        margin-top: 0px;
+    }
+
+    .shiney-heini-spa .container .shiney-heini-spa-right {
+        margin-top: 50px;
+    }
+
+    .hero-section .container .hero-left h1 {
+        font-size: 30px;
+        line-height: 50px;
+        margin-top: -40px;
+    }
+
+    .shiney-heini-spa {
+        margin-top: -70px;
+    }
+
+    .each-year-section .container .each-year-right-banner {
+        width: 500px;
+        height: 300px;
+        margin-top: 100px;
+    }
+
+    .each-year-section .container .text-wrapper .each-year-2 {
+        display: none;
+    }
+
+    .each-year-section .container .each-year-right-banner img {
+        width: 390px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -130px;
+    }
+
+    .hero-section .container .hero-right img {
+        width: 400px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: -20px;
     }
 }

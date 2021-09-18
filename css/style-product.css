@@ -59,8 +59,6 @@ body::-webkit-scrollbar-thumb {
 
 body {
     background-color: #FBF4EB !important;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .main-wrapper {
