@@ -158,10 +158,34 @@
        margin-left: -32px;
     }
 
+    footer .footer-3 {
+        margin-top: 30px;
+    }
+
     footer .footer-3 ul li {
         font-size: 16px;
         text-align: center;
     }
+
+    footer .footer-5 .social-icons {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        display: block;
+    }
+
+    footer .footer-1 .newsletter-input {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    footer .footer-1 #newsletter-arrow {
+    color: white;
+    margin-top: 58px;
+    margin-left: -15px;
+}
 
     footer .footer-3 ul .custom-margin {
         margin-top: 20px;
@@ -327,6 +351,54 @@
         margin-top: 30px;
         margin-bottom: -20px;
     }
+
+    .faq-section-start .container .heading {
+        font-family: "Peace Sans";
+        color: #75CFB8;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .faq-section-start .container .heading2 {
+        font-family: "Peace Sans";
+        color: #75CFB8;
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+
+    .faq-section-start {
+        margin-top: 50px;
+    }
+
+    .terms-conditions-section {
+        margin-top: 50px;
+    }
+
+    .privacy-policy-section {
+        margin-top: 50px;
+    }
+
+    .contact-form-section {
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .contact-form-section .container .g-maps {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-form-section .container .g-maps iframe {
+        width: 350px; 
+        height: 300px; 
+        margin-top: 40px;
+    }
+
+    .contact-form-section .container .form-section {
+        padding: 20px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
@@ -361,5 +433,13 @@
 
     .each-year-section .container .each-year-right-banner img {
         width: 350px;
+    }
+
+    .contact-form-section .container .g-maps iframe {
+        width: 300px; 
+        height: 250px; 
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

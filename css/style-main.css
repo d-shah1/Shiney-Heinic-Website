@@ -133,7 +133,7 @@ footer .footer-1 h1 {
 }
 
 footer .footer-1 .newsletter-input {
-    width: 100%;
+    width: 80%;
     margin-top: 50px;
     background-color: #5A5858;
     border: none;
@@ -163,6 +163,20 @@ footer .footer-1 .social-icons i {
 
 footer .footer-1 .social-icons i:nth-child(2) {
     margin-left: 20px;
+}
+
+footer .footer-5 .social-icons {
+    color: white;
+    margin-top: 20px;
+    display: flex;
+}
+
+footer .footer-5 .social-icons i {
+    font-size: 30px;
+}
+
+footer .footer-5 .social-icons i:nth-child(2) {
+    margin-left: 30px;
 }
 
 /* Footer */
@@ -625,4 +639,156 @@ footer .footer-1 .social-icons i:nth-child(2) {
     height: 874px;
     margin-top: -170px;
     z-index: -999;
+}
+
+
+/* Privacy Policy Section */
+.privacy-policy-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.privacy-policy-section .container .policy-desc p {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.privacy-policy-section .container .policy-desc h5 {
+    font-family: "Gilroy-Bold";
+    font-weight: 700;
+    font-size: 21px;
+    margin-top: 40px;
+}
+
+.privacy-policy-section .container .policy-desc ul {
+    list-style-type: square;
+}
+
+.privacy-policy-section .container .policy-desc ul li {
+    font-family: "Gilroy-Regular";
+    font-size: 19px;
+}
+
+.privacy-policy-section .container .policy-desc hr {
+    width: 400px; 
+    margin-top: 30px;
+}
+
+/* Terms and Conditions Section */
+.terms-conditions-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.terms-conditions-section .container .terms-conditions-desc p {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.terms-conditions-section .container .terms-conditions-desc h5 {
+    font-family: "Gilroy-Bold";
+    font-weight: 700;
+    font-size: 21px;
+    margin-top: 40px;
+}
+
+.terms-conditions-section .container .terms-conditions-desc ul {
+    list-style-type: square;
+}
+
+.terms-conditions-section .container .terms-conditions-desc ul li {
+    font-family: "Gilroy-Regular";
+    font-size: 19px;
+}
+
+.terms-conditions-section .container .terms-conditions-desc hr {
+    width: 400px; 
+    margin-top: 30px;
+}
+
+/* FAQ's Section Start */
+.faq-section-start {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.faq-section-start .container .accordion .accordion-item {
+    margin-top: 10px;
+    border: none;
+}
+
+.faq-section-start .container .accordion .accordion-item .accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: #FFFFFF;
+}
+
+.faq-section-start .container .accordion .accordion-item .accordion-button {
+    font-family: "Gilroy-Medium";
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.faq-section-start .container .accordion .accordion-item .accordion-body {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.faq-section-start .container .heading {
+    font-family: "Peace Sans";
+    color: #75CFB8;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.faq-section-start .container .heading2 {
+    font-family: "Peace Sans";
+    color: #75CFB8;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.contact-form-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contact-form-section .container .form-label {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+    margin-bottom: .3rem;
+}
+
+.contact-form-section .container .form-control::placeholder {
+    font-family: "Gilroy-Regular";
+}
+
+.contact-form-section .container .g-maps iframe {
+    width: 500px; 
+    height: 450px; 
+}
+
+.contact-form-section .container .g-maps h5 {
+    font-family: "Gilroy-Semibold";
+    font-weight: 800;
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.contact-form-section .container .g-maps p {
+    font-family: "Gilroy-Regular";
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.contact-form-section .container .g-maps {
+    padding-left: 30px;
+}
+
+.contact-form-section .container .form-section {
+    padding: 50px;
 }
