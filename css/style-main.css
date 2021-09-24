@@ -792,3 +792,195 @@ footer .footer-5 .social-icons i:nth-child(2) {
 .contact-form-section .container .form-section {
     padding: 50px;
 }
+
+
+
+/* Login Form */
+.login-form-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.login-form-section .container .form {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form-section .container .form .left-img img {
+    height: 631px;
+    border-radius: 10px;
+    margin-left: -12px;
+}
+
+.login-form-section .container .form .right-form {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.login-form-section .container .form .right-form h1 {
+    font-family: "Peace Sans";
+    color: #75CFB8;
+}
+
+.login-form-section .container .form .right-form p {
+    font-family: "Gilroy-Regular";
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 100px;
+}
+
+.login-form-section .container .form .right-form .email-field {
+    padding-right: 100px;
+    padding-top: 10px;
+}
+
+.login-form-section .container .form .right-form .email-field .form-label {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+}
+
+.login-form-section .container .form .right-form .password-field {
+    padding-right: 100px;
+}
+
+.login-form-section .container .form .right-form .password-field .form-label {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+}
+
+.login-form-section .container .form .right-form .register-link {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.login-form-section .container .form .right-form .register-link a {
+    color: #75CFB8;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+
+
+/* Register Form */
+.login-form-section .container .reg-form {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form-section .container .reg-form .left-img img {
+    height: 631px;
+    border-radius: 10px;
+    margin-left: -12px;
+}
+
+.login-form-section .container .reg-form .right-form {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.login-form-section .container .reg-form .right-form h1 {
+    font-family: "Peace Sans";
+    color: #75CFB8;
+}
+
+.login-form-section .container .reg-form .right-form p {
+    font-family: "Gilroy-Regular";
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 100px;
+}
+
+.login-form-section .container .reg-form .right-form .name-field {
+    padding-right: 100px;
+    margin-top: 20px;
+}
+
+.login-form-section .container .reg-form .right-form .name-field .form-label {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+}
+
+.login-form-section .container .reg-form .right-form .email-field {
+    padding-right: 100px;
+}
+
+.login-form-section .container .reg-form .right-form .email-field .form-label {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+}
+
+.login-form-section .container .reg-form .right-form .password-field {
+    padding-right: 100px;
+}
+
+.login-form-section .container .reg-form .right-form .password-field .form-label {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+}
+
+.login-form-section .container .reg-form .right-form .register-link {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.login-form-section .container .reg-form .right-form .register-link a {
+    color: #75CFB8;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+/* Checkout Form Start */
+.checkout-form-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.checkout-form-section .container .form-left h3 {
+    font-family: "Peace Sans";
+    color: #75CFB8;
+}
+
+.checkout-form-section .container .form-left label {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+}
+
+.checkout-form-section .container .form-left .input::placeholder {
+    font-family: "Gilroy-Regular";
+}
+
+.checkout-form-section .container .form-right {
+    padding-left: 30px;
+}
+
+.checkout-form-section .container .form-right h4 span {
+    font-family: "Peace Sans";
+    color: #75CFB8;
+}
+
+.checkout-form-section .container .form-right ul li h6 {
+    font-family: "Gilroy-SemiBold";
+    font-weight: 800;
+}
+
+.checkout-form-section .container .form-right ul li small {
+    font-family: "Gilroy-Regular";
+}
+
+.checkout-form-section .container .form-right ul li span {
+    font-family: "Gilroy-regular";
+}
+
+.checkout-form-section .container .form-right ul li .total {
+    font-family: "Gilroy-Bold";
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.checkout-form-section .container .form-right ul li .total-price {
+    font-family: "Gilroy-Bold";
+    font-weight: 800;
+    font-size: 20px;
+}

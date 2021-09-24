@@ -399,6 +399,61 @@
     .contact-form-section .container .form-section {
         padding: 20px;
     }
+
+    .login-form-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .checkout-form-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .login-form-section .container .form .left-img img {
+        display: none;
+    }
+
+    .login-form-section .container .form .right-form {
+        padding: 30px;
+    }
+
+    .login-form-section .container .form .right-form .email-field {
+        padding-right: 0px;
+    }
+
+    .login-form-section .container .form .right-form p {
+        padding-right: 0px;
+    }
+
+    .login-form-section .container .form .right-form .password-field {
+        padding-right: 0px;
+    }
+
+    
+    .login-form-section .container .reg-form .left-img img {
+        display: none;
+    }
+
+    .login-form-section .container .reg-form .right-form {
+        padding: 30px;
+    }
+
+    .login-form-section .container .reg-form .right-form .email-field {
+        padding-right: 0px;
+    }
+
+    .login-form-section .container .reg-form .right-form p {
+        padding-right: 0px;
+    }
+
+    .login-form-section .container .reg-form .right-form .password-field {
+        padding-right: 0px;
+    }
+
+    .login-form-section .container .reg-form .right-form .name-field {
+        padding-right: 0px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
