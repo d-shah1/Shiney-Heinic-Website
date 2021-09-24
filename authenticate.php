@@ -22,7 +22,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                     if ($remember) {
                         $hour = time() + 3600 * 24 * 360;
                         setcookie('Remember_me_email', urlencode(base64_encode($mail)), $hour);
-                        setcookie('Remember_me_password', urlencode(base64_encode($password)), $hour);
+                        setcookie('Remember_me_password', $password, $hour);
                     }
                     echo "<script>
                     window.location= 'dashboard.php'; 
