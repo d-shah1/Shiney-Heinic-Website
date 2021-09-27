@@ -244,6 +244,9 @@
         margin-top: 50px;
     }
 
+    .testimonial-section .container .testimonial-box {
+        width: 400px;
+    }
 
     .testimonial-section .container .testimonial-box-large {
         width: 400px;
