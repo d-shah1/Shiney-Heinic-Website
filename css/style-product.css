@@ -97,6 +97,12 @@ body {
 /* Navigation Bar */
 
 /* Product Section */
+
+.product-section .products-img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .product-section .products-img img {
     height: 450px;
     width: 580px;
@@ -232,16 +238,18 @@ body {
 /* Features Section */
 
 /* Installation Section */
+
 .installation-section {
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
 .installation-section .installation-img {
-   width: 950px;
+   width: 945px;
    height: 600px;
    background-color: #75CFB8;
    border-radius: 5px;
+   justify-content: center;
 }
 
 .installation-section .installation-steps {
@@ -307,7 +315,7 @@ body {
 
 .installation-section .installation-steps .step-container-2 {
     height: 50px;
-    width: 520px;
+    width: 550px;
     border-radius: 62px;
     background: #75CFB8;
     padding: 5px;
@@ -337,6 +345,7 @@ body {
     margin-bottom: auto;
     margin-top: auto;
     text-align: center;
+    margin-left: 40px;
 }
 
 .installation-section .installation-steps .step-container-2 .step-desc {
@@ -496,6 +505,19 @@ footer .footer-1 .social-icons i {
 }
 
 footer .footer-1 .social-icons i:nth-child(2) {
+    margin-left: 20px;
+}
+
+footer .footer-5 .social-icons {
+    color: white;
+    margin-top: 20px;
+}
+
+footer .footer-5 .social-icons i {
+    font-size: 30px;
+}
+
+footer .footer-5 .social-icons i:nth-child(2) {
     margin-left: 20px;
 }
 
