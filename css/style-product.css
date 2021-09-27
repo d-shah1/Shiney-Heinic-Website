@@ -261,6 +261,12 @@ body {
     height: 590px;
 }
 
+@media only screen and (max-width: 1600px) {
+    .installation-section .installation-img img {
+        height: 590px;
+        margin-right: 200px;
+    }
+}
 
 .installation-section .installation-steps .title {
     font-family: "Peace Sans";

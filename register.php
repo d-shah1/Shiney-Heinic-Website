@@ -38,7 +38,7 @@ if (isset($_REQUEST['message'])) {
                     var dc=document.getElementById("any");
                     dc.style.color="red";
                     dc.style.display="block";
-                    dc.innerHTML="Password must contain atleast one Capital Character && Special Character && Digit && Length must be grater than 8";
+                    dc.innerHTML="Password must contain atleast one Capital Character && Special Character && Digit && Length must be greater than 8";
                    
             }
             }
@@ -100,7 +100,7 @@ if (isset($_REQUEST['message'])) {
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                           <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                           <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">Shop</a>
@@ -182,7 +182,7 @@ if (isset($_REQUEST['message'])) {
                             <li><a href="./contact-us.html" style="text-decoration: none; color: white;">Contact Us</a></li>
                             <li class="custom-margin"><a href="./faq's.html" style="text-decoration: none; color: white;">FAQ's</a></li>
                             <li class="custom-margin"><a href="./shiney-heini-on-the-go.html" style="text-decoration: none; color: white;">Shiney Heinie On The Go</a></li>
-                            <li class="custom-margin"><a href="./shiney-heinic-spa-2.0.html" style="text-decoration: none; color: white;">Shiney Heinic Spa</a></li>
+                            <li class="custom-margin"><a href="./shiney-heinic-spa-2.0.html" style="text-decoration: none; color: white;">Shiney Heinie Classic</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-sm-12 footer-3">
@@ -196,10 +196,6 @@ if (isset($_REQUEST['message'])) {
                         <div class="social-icons">
                             <i class="fab fa-facebook-f"></i>
                             <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="social-icons mt-4">
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-linkedin" style="margin-left: 20px;"></i>
                         </div>
                     </div>
                 </div>
