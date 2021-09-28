@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 	/* 
    *  PDO DATABASE CLASS
    *  Connects Database Using PDO

@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -9,6 +14,7 @@
    <link rel="stylesheet" href="./css/style-main.css" />
    <link rel="stylesheet" href="./css/responsive.css" />
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+   
 </head>
 
 <body>
@@ -65,7 +71,7 @@
                   <h1>SHINEY HEINIE CLASSIC</h1>
                   <p>The bidet of today, designed to help you be cleaner,<br />save money and save the planet.</p>
                   <div class="btn-buy">
-                     <a href="./checkout.php?pay=500" style="text-decoration: none;">
+                     <a  href="checkout.php" id="idOfElement" style="text-decoration: none;">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
@@ -84,7 +90,7 @@
                   <h1>SHINEY ON THE GO</h1>
                   <p>We all have those moments where we gotta go when we gotta go even if its not at home. So we will help you be prepared with our SHINEY On The Go.<br />SHINEY On The Go is discreet and collapsible so that you can take it with you anywhere.</p>
                   <div class="btn-buy">
-                     <a href="./checkout.php?pay=50" style="text-decoration: none;">
+                     <a  href="checkout.php" style="text-decoration: none;" id="idOfElement1">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
@@ -323,6 +329,13 @@
    </div>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
    <script src="https://kit.fontawesome.com/e07f3322e5.js" crossorigin="anonymous"></script>
+   <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+   <script>
+   
+   </script>
 </body>
 
 </html>

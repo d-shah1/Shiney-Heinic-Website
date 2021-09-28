@@ -1,6 +1,6 @@
 <?php
-
-//require("./check-authenticate.php");
+session_start();
+require("./check-authenticate.php");
 
 
 

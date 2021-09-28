@@ -42,13 +42,15 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $pwd = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $user=$_POST["name"];
     $lastname=$_POST["last_name"];
+    date_default_timezone_set('America/Los_Angeles');
+    $current_time = date("j F  Y , g:i:s a", time());
     
 
     
 
-    $result = "INSERT INTO `user`(`email`, `password`, `first_name`, `last_name`) VALUES  (?,?,?,?)";
+    $result = "INSERT INTO `user`(`email`, `password`, `first_name`, `last_name`, `time_stamp`) VALUES  (?,?,?,?,?)";
     $statement = $pdo->prepare($result);
-    $statement->execute([$mail,$pwd,$user,$lastname]);
+    $statement->execute([$mail,$pwd,$user,$lastname,$current_time]);
         if ($statement) {
             echo "<script language='javascript'>
             window.location= 'login.php?message=successful register login!!'; 
