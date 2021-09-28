@@ -29,6 +29,7 @@ if (isset($_REQUEST['message'])) {
                 
                 var dc=document.getElementById("any");
                 dc.innerHTML="";
+                document.getElementById("password2").disabled = false;
                 
                 checkrps();
             }
@@ -39,6 +40,7 @@ if (isset($_REQUEST['message'])) {
                     dc.style.color="red";
                     dc.style.display="block";
                     dc.innerHTML="Password must contain atleast one Capital Character && Special Character && Digit && Length must be greater than 8";
+                    document.getElementById("password2").disabled = true;
                    
             }
             }
@@ -69,15 +71,15 @@ if (isset($_REQUEST['message'])) {
                     dc.style.color="green";
                     dc.style.display="block";
                     dc.innerHTML="password matched successfully";
-                    var sid = document.getElementById("sid");
-                    sid.disabled=false;
+                    var submit = document.getElementById("submit");
+                    submit.disabled=false;
                 }
                 else if(pass1!=pass2){
                     dc.style.color="red";
                     dc.style.display="block";
                     dc.innerHTML="passwords could not match !";
-                    var sid = document.getElementById("sid");
-                    sid.disabled=true;
+                    var submit = document.getElementById("submit");
+                    submit.disabled=true;
                 }
             }
         }
@@ -116,7 +118,7 @@ if (isset($_REQUEST['message'])) {
          <div class="login-form-section">
              <div class="container">
                 <div class="col-lg-10 shadow rounded reg-form">
-                    <form action="./register_new.php" method="post" name="f1">
+                    <form action="./register-submit.php" method="post" name="f1">
                         <div class="row">
                             <div class="col-lg-6 col-sm-12 left-img">
                                 <img src="./images/login-left.png"/>
@@ -156,7 +158,7 @@ if (isset($_REQUEST['message'])) {
                                         <input type="password" id="password2" onkeyup="checkrps()" name="re_password" class="form-control" placeholder="re-Password" required></input>
                                     </div>
                                 </div>
-                                <button id="sid" type="submit" class="btn btn-primary mt-3" style="background-color: #75CFB8; border: none; color: #fff; font-family: Gilroy-Regular, sans-serif " disabled="true">Register</button>
+                                <button id="submit" type="submit" class="btn btn-primary mt-3" style="background-color: #75CFB8; border: none; color: #fff; font-family: Gilroy-Regular, sans-serif " disabled="true">Register</button>
                                 <p class="register-link">Don't have an account ? <a href="./login.php">Login Now</a></p>
                             </div>
                         </div>

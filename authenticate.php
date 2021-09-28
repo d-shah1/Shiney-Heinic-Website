@@ -25,7 +25,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                         setcookie('Remember_me_password', $password, $hour);
                     }
                     echo "<script>
-                    window.location= 'dashboard.php'; 
+                    window.location= 'checkout.php?pay=".$_SESSION['pay']."'; 
                     </script>";
                 }
             } else {
@@ -37,7 +37,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                         setcookie('Remember_me_password', urlencode(base64_encode($password)), $hour);
                     }
                     echo "<script>
-                    window.location= 'payment.php'; 
+                    window.location= 'checkout.php?pay=".$_SESSION['pay']."'; 
                     </script>";
                 }
             }

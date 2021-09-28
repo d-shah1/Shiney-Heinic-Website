@@ -5,5 +5,5 @@ if(!isset($_SESSION['email']))
     window.location= './login.php'; 
    </script>"; 
 }
-echo $_SESSION['email'];
+
 ?>
