@@ -18,9 +18,67 @@ require("../connection.php");
     <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="./form-style.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <script>
+         function fill_edit_details_view(id) {
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+
+                var responseObj = this.responseText;
+                var response = JSON.parse(responseObj);
+                var error = response.error;
+                var comment = response.comment;
+
+
+            var customer_id = response.customer_id;
+            var customer_name = response.customer_name;
+            var shiping_address = response.shiping_address;
+            var country = response.country;
+            var state = response.state;
+            var zip  = response.zip 
+            var bill_address=response.bill_address
+            var country_bill=response.country_bill
+            var state_bill=response.state_bill
+            var zip_bill=response.zip_bill
+            var shiney_heinie_classic=response.shiney_heinie_classic
+            var shiney_no_the_go=response.shiney_no_the_go
+            var status=response.status
+            var amount=response.amount
+           
+           var userid=response.userid
+            
+            document.getElementById("userid").value = userid;
+            document.getElementById("customer_id").value =customer_id;
+            document.getElementById("customer_name").value = customer_name
+            document.getElementById("shiping_address").value = shiping_address
+            document.getElementById("country").value = country
+            document.getElementById("state").value = state
+            document.getElementById("zip").value = zip
+
+            document.getElementById("bill_address").value =bill_address    
+            document.getElementById("country_bill").value =country_bill
+            document.getElementById("state_bill").value =state_bill
+            document.getElementById("zip_bill").value =zip_bill
+            document.getElementById("shiney_heinie_classic").value =shiney_heinie_classic
+            document.getElementById("shiney_no_the_go").value =shiney_no_the_go
+            document.getElementById("status").value =status
+            document.getElementById("amount").value =amount
+          
+
+    
+
+
+
+            }
+        };
+        xhttp.open("POST", "get-details-view.php?id=" + id, true);
+        xhttp.send();
+
+        }
        
 
         function delete_message(id) {
@@ -136,7 +194,7 @@ require("../connection.php");
                             </svg>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link " href="today-transcation.php">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -146,7 +204,7 @@ require("../connection.php");
                                 </g>
                             </svg>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link " href="contact-details.php">
                            
@@ -222,6 +280,259 @@ require("../connection.php");
         <!--**********************************
             Success Modal End
         ***********************************-->
+        <!--**********************************
+            view Form Modal Start
+        ***********************************-->
+        <div class="modal fade" id="editFormModalView" >
+            <div class="modal-dialog dialogbox" role="document" >
+            <form  >
+                    <div class="modal-content" style="width:150% !impotant ; height:100% !important;" >
+                        <div class="modal-header">
+                            <h5 class="modal-title">View Transcation Form </h5>
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" >
+                            <div class="basic-form">
+                                <div class="form-row">
+                                    <input type="number" name="userid-form" id="userid" hidden>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group filed">
+                                        
+                                        <label>Customer Id</label>
+                                        <input type="text"
+                                        class="form-control"
+                                            name="input_1.1"
+                                            id="customer_id"
+                                            disabled="disabled"
+                                            required
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            
+                                        <div class="form-group filed">
+                                        <label>Customer Name</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="input_1.3"
+                                            id="customer_name"
+                                            disabled="disabled"
+                                            required
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                        <h6 class="mb-3">Shipping Address</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-3">
+                                        
+                                        <div class="form-group filed">
+                                        <label>Address</label>
+                                        <input
+                                            type="text"
+                                            name="input_1.4"
+                                            class="form-control"
+                                            id="shiping_address"
+                                            disabled="disabled"
+                                            required
+                                        
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="form-group filed">
+                                        <label>Country</label>
+                                        <input
+                                            type="text"
+                                            name="input_1.5"
+                                            class="form-control"
+                                            id="country"
+                                            disabled="disabled"
+                                        
+                                        />
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                        <label>State</label>
+                                        <input
+                                            name="input_3"
+                                            id="state"
+                                            type="text"
+                                            class="form-control"
+                                            disabled="disabled"
+                                        
+                                            class="medium"
+                                        
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                        <label>Zip</label>
+                                        <input
+                                            name="input_4"
+                                            id="zip"
+                                            type="text"
+                                            class="form-control"
+                                            disabled="disabled"
+                                        
+                                            class="medium"
+                                        
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                        <h6 class="mb-3">Billing address</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        
+                                        <div class="form-group">
+                                        <label>Address</label>
+                                        <input
+                                            name="input_6"
+                                            id="bill_address"
+                                            type="text"
+                                            class="form-control"
+                                            disabled="disabled"
+                                        
+                                            class="medium"
+                                            
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                        <label>Country</label>
+                                        <input
+                                        name="input_7"
+                                        id="country_bill"
+                                        type="text"
+                                        class="form-control"
+                                        disabled="disabled"
+                                    
+                                        class="medium"
+                                        
+                                        />        
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                        <label>State</label>
+                                        <input
+                                        name="input_8"
+                                        id="state_bill"
+                                        type="text"
+                                        class="form-control"
+                                        disabled="disabled"
+                                    
+                                        class="medium"
+                                        
+                                    />
+                                           
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                        <label>zip</label>
+                                        <input
+                                            name="input_10"
+                                            id="zip_bill"
+                                            type="text"
+                                            disabled="disabled"
+                                            class="form-control"
+                                            
+                                            class="medium"
+                                            
+                                        />
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group form-group-date">
+                                        <label>Shiney heinie classic quantity</label>
+                                        <input
+                                            name="input_11"
+                                            id="shiney_heinie_classic"
+                                            disabled="disabled"
+                                            type="text"
+                                            class="form-control"
+                                            
+                                            class="medium"
+                                        
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                        <label>Shiney no the go quantity</label>
+                                        <input
+                                            name="input_14"
+                                            id="shiney_no_the_go"
+                                            disabled="disabled"
+                                            type="number"
+                                            class="form-control"
+                                            value=""
+                                            class="medium"
+                                            min="1" max="10"
+                                            
+                                        />
+                                       
+                                           
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="form-group form-group-date">
+                                        <label>Status</label>
+                                        <input
+                                            name="input_13"
+                                            id="status"
+                                            type="text"
+                                            disabled="disabled"
+                                            class="form-control"
+                                            class="medium"
+                                            
+                                        />
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-3">
+                                        <div class="ginput_container ginput_container_email">
+                                        <label>Amount</label>
+                                        <input
+                                            name="input_17"
+                                            id="amount"
+                                            disabled="disabled"
+                                            type="text"
+                                            value=""
+                                            
+                                            class="form-control"
+                                            required
+                                        />
+                                        </div>
+                                       
+                                        </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--**********************************
+            view Form Modal end
+        ***********************************-->
+
 
       
 
@@ -410,7 +721,7 @@ require("../connection.php");
                                                         <td>
                                                             <div class="d-flex">
 
-                                                                
+                                                            <a href="#"  class="btn btn-secondary shadow btn-xs sharp mr-1" data-toggle="modal" data-target="#editFormModalView" onclick="fill_edit_details_view(<?= $row['id'] ?>)"><i class="fa fa-eye"></i></a>
                                                                 <a href="#" class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#deleteModal" onclick="delete_message(<?= $row['id'] ?>)"><i class="fa fa-trash"></i></a>
 
                                                             </div>

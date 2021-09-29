@@ -62,7 +62,7 @@ require("./connection.php");
                                 <ul class="list-group mb-3">
                                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                                     <div>
-                                        <h6 class="my-0">Product name :</h6>
+                                        <h6 class="my-0">Product name : SHINEY HEINIE CLASSIC</h6>
                                         
                                         <small class="text-muted">Quantity :</small><small class="text-muted" id="product1">0</small>
                                         <input type="number" name="product_first" id="first" class="form-control mb-3 StripeElement StripeElement--empty" hidden>
@@ -75,14 +75,15 @@ require("./connection.php");
                                             <span class="text-muted">$</span><span class="text-muted" id="prod_final">0</span>
                                             </div>
                                             <div>
-                                                <i class="fas fa-plus" onclick="total()"></i>
+                                                
                                                 <i class="fas fa-minus" onclick="minus()"></i>
+                                                <i class="fas fa-plus" onclick="total()"></i>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                                     <div>
-                                        <h6 class="my-0">Second product</h6>
+                                        <h6 class="my-0">Second product : SHINEY ON THE GO</h6>
                                         <small class="text-muted">Quantity :</small><small class="text-muted" id="product2">0</small>
                                         <input type="number" name="product_second" id="second" class="form-control mb-3 StripeElement StripeElement--empty" hidden>
                                         
@@ -92,8 +93,9 @@ require("./connection.php");
                                                 <span class="text-muted">$</span><span class="text-muted" id="prod_final_2">0</span>
                                                 </div>
                                                 <div>
-                                                <i class="fas fa-plus" onclick="total1()"></i>
+                                                
                                                 <i class="fas fa-minus" onclick="minus1()"></i>
+                                                <i class="fas fa-plus" onclick="total1()"></i>
                                                 </div>
                                         </div>
                                     </li>

@@ -222,8 +222,12 @@
                         <div class="m-auto shop-container text-center">
                            <img src="./images/better-hygiene-toilet.png" />
                            <h4>SHINEY HEINIE SPA 2.0</h4>
+                           
                            <div class="shop-btn">
+                           <a  href="checkout.php" style="text-decoration: none;" >
                               <h1>SHOP NOW</h1>
+
+                           </a>
                            </div>
                         </div>
                      </div>
@@ -232,7 +236,10 @@
                            <img src="./images/better-hygiene-bottle.png" />
                            <h4>SHINEY ON THE GO</h4>
                            <div class="shop-btn">
+                           <a  href="checkout.php" style="text-decoration: none;" >
                               <h1>SHOP NOW</h1>
+
+                           </a>
                            </div>
                         </div>
                      </div>

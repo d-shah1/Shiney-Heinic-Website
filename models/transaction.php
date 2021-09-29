@@ -9,7 +9,7 @@
 
     public function addTransaction($data) {
       // Prepare Query
-      $this->db->query('INSERT INTO transaction ( `customer_id`, `customer_name`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`, `product_first`, `product_second`, `status`, `amount`, `time_stamp`) VALUES(:customer_id, :customer_name, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp)');
+      $this->db->query('INSERT INTO transaction ( `customer_id`, `customer_name`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`, `shiney_heinie_classic`, `shiney_no_the_go`, `status`, `amount`, `time_stamp`) VALUES(:customer_id, :customer_name, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp)');
 
       // Bind Values
      
@@ -35,7 +35,7 @@
     }
     public function addTransactionFull($data) {
       // Prepare Query
-      $this->db->query('INSERT INTO transaction ( `customer_id`, `customer_name`, `shiping_address`, `country`, `state`, `zip`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`, `product_first`, `product_second`, `status`, `amount`, `time_stamp`) VALUES(:customer_id, :customer_name, :ship_add, :ship_country, :ship_state, :ship_zip, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp)');
+      $this->db->query('INSERT INTO transaction ( `customer_id`, `customer_name`, `shiping_address`, `country`, `state`, `zip`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`,`shiney_heinie_classic`, `shiney_no_the_go`, `status`, `amount`, `time_stamp`) VALUES(:customer_id, :customer_name, :ship_add, :ship_country, :ship_state, :ship_zip, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp)');
 
       // Bind Values
      

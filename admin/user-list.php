@@ -233,7 +233,7 @@ require("../connection.php");
                             </svg>
                         </a>
                     </li>
-                    <li class="nav-item">
+                   <!-- <li class="nav-item">
                         <a class="nav-link " href="today-transcation.php">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -243,7 +243,7 @@ require("../connection.php");
                                 </g>
                             </svg>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="contact-details.php">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
@@ -632,7 +632,7 @@ require("../connection.php");
                                                     <tr>
                                                         <td><?= $row["id"] ?>
                                                         </td>
-                                                        <td><?= $row["first_name"] ."".$row["last_name"]  ?>
+                                                        <td><?= $row["first_name"] ."  ".$row["last_name"]  ?>
                                                         </td>
                                                         <td>
                                                             <?= $row["email"] ?>

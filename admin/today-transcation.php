@@ -387,7 +387,7 @@ require("../connection.php");
                                            //SELECT id, name, name2, submittimestamp FROM recs WHERE DATE(submittimestamp) = CURDATE();
                                            //SELECT *  FROM `transaction`  WHERE time_stamp  > DATE_SUB(CURDATE(), INTERVAL 1 DAY)
                                             $q = " SELECT *  FROM `transaction`
-                                            WHERE time_stamp < DATE_SUB(NOW(), INTERVAL 1 DAY) ";
+                                            WHERE time_stamp > DATE_SUB(NOW(), INTERVAL 1 DAY) ";
                                             $list = $con->query($q);
                                             if (mysqli_num_rows($list) > 0) {
                                                 while ($row = mysqli_fetch_assoc($list)) {

@@ -1,0 +1,14 @@
+.dialogbox{
+    max-width: 1000px !important;
+    max-height: 100% !important;
+}
+.filed{
+    width: 100% !important;
+}
+.dialogbox1{
+    max-width: 1200px !important;
+    max-height: 1000px !important;
+}
+.bodyForm{
+    padding:  1rem !important;
+}
