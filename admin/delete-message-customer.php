@@ -15,7 +15,7 @@ if (!isset($_POST['userid'])) {
 
 $id = $con->real_escape_string($_POST['userid']);
 
-$query_update = "DELETE FROM `contact_form` WHERE `id`=$id";
+$query_update = "DELETE FROM `customer_address_list` WHERE `id`=$id";
 $result = $con->query($query_update);
 
 

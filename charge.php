@@ -8,7 +8,7 @@ require("./check-authenticate.php");
   require_once('models/transaction.php');
   
 
-  \Stripe\Stripe::setApiKey('sk_test_51JcpFsSGQwCG7bifsObRQR61DaeNCMiuJfRaH3Kj74PEtO1ynuqVl4phBV6edD0PDG55YelGYr2B0Y7yOo1czlaF007EVQKZ98');
+  \Stripe\Stripe::setApiKey('sk_test_51JcGFTCu8zM09tC6Hby6EqDptTF6raKG5GBJo4rFNLMro8vGxC66eavS6ENug0rB2kUWmBKIga1Pp7jwJrt0fzUh004rI1TW0Q');
 
  // Sanitize POST Array
  $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
@@ -23,9 +23,11 @@ require("./check-authenticate.php");
  
  $country=$POST['country'];
  $address=$POST['address'];
+ $address2=$POST['address2'];
  $zipCode=$POST['zip'];
  $state=$POST['state'];
- $pay=$POST['pay'];
+ $pay=round($POST['pay'],0);
+ $pay_store=$pay/100;
  $check=$POST['check_add'];
  $save=$POST['save'];
 
@@ -36,18 +38,18 @@ if($check=="on"){
 
     // Create Customer In Stripe
     $customer = \Stripe\Customer::create(array(
-      'name' => 'test',
-      'description' => 'test description',
+      'name' => $first_name,
+      'description' => 'Shiney Heinic payment',
       'email' => $email,
       'source' => $token,
-      "address" => ["country" => $country, "line1" => $address, "line2" => "", "postal_code" => $zipCode, "state" => $state]
+      "address" => ["country" => $country, "line1" => $address, "line2" => $address2, "postal_code" => $zipCode, "state" => $state]
     ));
 
     // Charge Customer
     $charge = \Stripe\Charge::create(array(
     "amount" => $pay,
-    "currency" => "inr",
-    "description" => "Intro To React Course",
+    "currency" => "usd",
+    "description" => "Payment of Shiney Heinic",
     "customer" => $customer->id
     ));
     if($save=="on"){
@@ -83,7 +85,7 @@ if($check=="on"){
       'bill_zip' => $zipCode,
       'product_first' => $pro1,
       'product_second' => $pro2,
-      'amount' => $charge->amount,
+      'amount' => $pay_store,
       'time' => $current_time,
       'status' => $charge->status,
     ];
@@ -152,7 +154,7 @@ else {
           'bill_zip' => $zipCode,
           'product_first' => $pro1,
           'product_second' => $pro2,
-          'amount' => $charge->amount,
+          'amount' => $pay_store,
           'time' => $current_time,
           'status' => $charge->status
         ];

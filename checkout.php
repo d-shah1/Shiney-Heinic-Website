@@ -1,9 +1,8 @@
 <?php
 session_start();
-
-
 require("./check-authenticate.php");
 require("./connection.php");
+
 
 
 ?>
@@ -41,8 +40,8 @@ require("./connection.php");
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="index.php">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Shop</a>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="./checkout.php">Shop</a>
                             </li>
                         </ul>
                     </div>
@@ -105,7 +104,7 @@ require("./connection.php");
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between">
                                     <span class="total">Total</span>
-                                    <input type="number" name="pay" id="pay" class="form-control mb-3 StripeElement StripeElement--empty" hidden>
+                                    <input type="number" name="pay" id="pay"  class="form-control mb-3 StripeElement StripeElement--empty" step="0.01" hidden>
 
 
                                     <div><strong class="total-price">$</strong><strong class="total-price" id="final">0</strong></div>
@@ -127,45 +126,45 @@ require("./connection.php");
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName" class="firstName">First name</label>
-                                <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name" required>
+                                <input type="text" name="first_name" id="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name" required>
 
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="lastName">Last name</label>
-                                <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name" required>
+                                <input type="text" name="last_name" id="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name" required>
 
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="email">Email</label>
-                            <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email Address" required>
+                            <input type="email" name="email" id="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email Address" required>
 
 
                         </div>
 
                         <div class="mb-3">
                             <label for="address">Address</label>
-                            <input type="text" name="address" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address" required>
+                            <input type="text" name="address" id="address" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address" required>
 
                         </div>
 
                         <div class="mb-3">
                             <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-                            <input type="text" name="address2" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address">
+                            <input type="text" name="address2" id="address2" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address">
                         </div>
 
                         <div class="row">
                             <div class="col-md-5 mb-3">
                                 <label for="country">Country</label>
-                                <input type="text" name="country" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="country" required>
+                                <input type="text" name="country" id="country" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="country" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="state">State</label>
-                                <input type="text" name="state" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="state" required>
+                                <input type="text" name="state"  id="state" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="state" required>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="zip">Zip</label>
-                                <input type="text" name="zip" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="zip code" required>
+                                <input type="text" name="zip" id="zip" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="zip code" required>
 
                             </div>
                         </div>
@@ -219,49 +218,85 @@ require("./connection.php");
         </div>
 
 
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-sm-12 footer-1">
-                        <h1>Sign up for our newsletter</h1>
-                        <div class="d-flex input">
-                            <input type="email" class="newsletter-input" name="newsletter" placeholder="Enter Email Address" />
-                            <i class="fas fa-arrow-right" id="newsletter-arrow"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-12 footer-3">
-                        <ul>
-                            <li><a href="./contact-us.html" style="text-decoration: none; color: white;">Contact Us</a></li>
-                            <li class="custom-margin"><a href="./faq's.html" style="text-decoration: none; color: white;">FAQ's</a></li>
-                            <li class="custom-margin"><a href="./shiney-heini-on-the-go.html" style="text-decoration: none; color: white;">Shiney Heinie On The Go</a></li>
-                            <li class="custom-margin"><a href="./shiney-heinic-spa-2.0.html" style="text-decoration: none; color: white;">Shiney Heinie Classic</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-sm-12 footer-3">
-                        <ul>
-                            <li>30-Day Return Policy</li>
-                            <li class="custom-margin"><a href="./privacy-policy.html" style="text-decoration: none; color: white;">Privacy Policy</a></li>
-                            <li class="custom-margin"><a href="./terms-conditions.html" style="text-decoration: none; color: white;">Terms &amp; Conditions</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-sm-12 text-center footer-5">
-                        <div class="social-icons">
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Footer End -->
-
+        <?php require("./footer.php");?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/e07f3322e5.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
 
         <script src="https://js.stripe.com/v3/"></script>
         <script src="./charge.js"></script>
+        <?php
+        $email=$_SESSION['email'];
+        $sql="select * from customer_address_list where email='$email'";
+        
+        $res=$con->query($sql);
+        
+        if ($res->num_rows > 0) {
+          
+          $row = $res->fetch_assoc();
+          if($email==isset($row['email']))
+          {
+            echo '<script >
+            document.getElementById("first_name").value = "'.$row['first_name'].'";
+            document.getElementById("last_name").value = "'.$row['last_name'].'";
+            document.getElementById("email").value = "'.$row['email'].'";
+            document.getElementById("country").value = "'.$row['country'].'";
+            document.getElementById("address").value = "'.$row['address'].'";
+            document.getElementById("zip").value = "'.$row['state'].'";
+            document.getElementById("state").value = "'.$row['zip'].'";
+            document.getElementById("address2").value = "'.$row['address_second'].'";
+            $("#save-info").prop("checked", true);
+            
+           </script>';
+                  
+          }
+         
+          }
+        ?>
+        <?php
+       
+            if($_SESSION['pay']=="product_1"){
+                echo '<script>
+                        var pro1 = 1;
+                        var pro2 = 0;
+                        var total = pro1 * 69.99 + pro2 * 24.99 ;
+                        var total2 = pro1 * 69.99 * 100 + pro2 * 24.99 * 100;
+                        document.getElementById("product1").innerHTML = 1;
+                        
+                        document.getElementById("prod_final").innerHTML = 69.99;
+                        document.getElementById("first").value = pro1;
+                        document.getElementById("pay").value = total2;
+                        document.getElementById("final").innerHTML = total.toFixed(2);
+                    </script>';
+        
+            }
+            else if($_SESSION['pay']=="product_2"){
+                echo '<script>
+                        var pro1 = 0;
+                        var pro2 = 1;
+                        var total = pro1 * 69.99  + pro2 * 24.99;
+                        var total2 = pro1 * 69.99 * 100 + pro2 * 24.99 * 100 ;
+                        document.getElementById("product2").innerHTML = pro2;
+                       
+                        document.getElementById("prod_final_2").innerHTML = 24.99;
+                        document.getElementById("second").value = pro2;
+                        document.getElementById("pay").value = total2;
+                        document.getElementById("final").innerHTML = total.toFixed(2);
+                    </script>';
+        
+            }
+            else {
+                echo '<script>
+                var pro1 = 0;
+                var pro2 = 0;
+               
+            </script>';
+        
+            }
+        
+       
+        ?>
         <script>
             $(document).ready(function() {
                 $("#address_ship_modal").hide();
@@ -316,14 +351,12 @@ require("./connection.php");
                 }
             });
 
-            var pro1 = 0;
-            var pro2 = 0;
-
+           
             function total() {
                 pro1++;
 
                 document.getElementById("product1").innerHTML = pro1;
-                document.getElementById("prod_final").innerHTML = pro1 * 12;
+                document.getElementById("prod_final").innerHTML = (pro1 * 69.99).toFixed(2);
                 final();
 
             }
@@ -331,7 +364,7 @@ require("./connection.php");
             function total1() {
                 pro2++;
                 document.getElementById("product2").innerHTML = pro2;
-                document.getElementById("prod_final_2").innerHTML = pro2 * 8;
+                document.getElementById("prod_final_2").innerHTML = (pro2 * 24.99).toFixed(2);
                 final();
             }
 
@@ -340,10 +373,10 @@ require("./connection.php");
                 if (pro1 == 0 || pro1 < 0) {
                     pro1 = 0;
                     document.getElementById("product1").innerHTML = pro1;
-                    document.getElementById("prod_final").innerHTML = pro1 * 12;
+                    document.getElementById("prod_final").innerHTML = (pro1 * 69.99).toFixed(2);
                 } else {
                     document.getElementById("product1").innerHTML = pro1;
-                    document.getElementById("prod_final").innerHTML = pro1 * 12;
+                    document.getElementById("prod_final").innerHTML = (pro1 * 24.99).toFixed(2);
                 }
                 final();
             }
@@ -353,29 +386,29 @@ require("./connection.php");
                 if (pro2 == 0 || pro2 < 0) {
                     pro2 = 0;
                     document.getElementById("product2").innerHTML = pro2;
-                    document.getElementById("prod_final_2").innerHTML = pro2 * 8;
+                    document.getElementById("prod_final_2").innerHTML = (pro2 * 69.99).toFixed(2);
                 } else {
                     document.getElementById("product2").innerHTML = pro2;
-                    document.getElementById("prod_final_2").innerHTML = pro2 * 8;
+                    document.getElementById("prod_final_2").innerHTML = (pro2 * 24.99).toFixed(2);
                 }
                 final();
             }
 
             function final() {
-                var total = pro1 * 12 + pro2 * 8;
-                var total2 = pro1 * 12 * 74 + pro2 * 8 * 74;
+                var total = pro1 * 69.99 + pro2 * 24.99;
+                var total2 = pro1 * 69.99 * 100 + pro2 * 24.99 * 100 ;
                 if (total < 0) {
                     total = 0;
                     total2 = 0;
                     document.getElementById("first").value = pro1;
                     document.getElementById("second").value = pro2;
                     document.getElementById("pay").value = total2;
-                    document.getElementById("final").innerHTML = total;
+                    document.getElementById("final").innerHTML = total.toFixed(2);
                 } else {
                     document.getElementById("first").value = pro1;
                     document.getElementById("second").value = pro2;
                     document.getElementById("pay").value = total2;
-                    document.getElementById("final").innerHTML = total;
+                    document.getElementById("final").innerHTML = total.toFixed(2);
 
                 }
             }

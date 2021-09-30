@@ -6,7 +6,7 @@ if (!isset($_POST['userid'])) {
     session_destroy();
     echo '
     <script language="javascript">
-    window.location="contact-details.php";
+    window.location="new_subscriptions.php";
     </script>
     ';
 }
@@ -15,7 +15,7 @@ if (!isset($_POST['userid'])) {
 
 $id = $con->real_escape_string($_POST['userid']);
 
-$query_update = "DELETE FROM `contact_form` WHERE `id`=$id";
+$query_update = "DELETE FROM `newsletter` WHERE `id`=$id";
 $result = $con->query($query_update);
 
 

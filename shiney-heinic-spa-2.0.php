@@ -1,3 +1,7 @@
+<?php
+session_start();
+require("./check-authenticate.php");
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -28,7 +32,7 @@
                               <a class="nav-link" aria-current="page" href="index.php">Home</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link active" href="#">Shop</a>
+                              <a class="nav-link active" href="./checkout.php">Shop</a>
                            </li>
                         </ul>
                      </div>
@@ -56,7 +60,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <div class="btn-buy">
-                           <a  href="checkout.php" id="idOfElement" style="text-decoration: none;">
+                           <a  href="#" onclick="product(); return false;" id="idOfElement" style="text-decoration: none;">
                               <p style="font-weight: 800;">Buy Now</p>
                            </a>
                         </div>
@@ -226,45 +230,39 @@
          </div>
          <!-- Installation Section End -->
 
-         <!-- Footer -->
-         <footer>
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-4 col-sm-12 footer-1">
-                     <h1>Sign up for our newsletter</h1>
-                     <div class="d-flex input">
-                        <input type="email" class="newsletter-input" name="newsletter" placeholder="Enter Email Address" />
-                        <i class="fas fa-arrow-right" id="newsletter-arrow"></i>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-12 footer-3">
-                     <ul>
-                        <li><a href="./contact-us.html" style="text-decoration: none; color: white;">Contact Us</a></li>
-                        <li class="custom-margin"><a href="./faq's.html" style="text-decoration: none; color: white;">FAQ's</a></li>
-                        <li class="custom-margin"><a href="./shiney-heini-on-the-go.html" style="text-decoration: none; color: white;">Shiney Heinie On The Go</a></li>
-                        <li class="custom-margin"><a href="./shiney-heinic-spa-2.0.html" style="text-decoration: none; color: white;">Shiney Heinie Classic</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-sm-12 footer-3">
-                     <ul>
-                        <li>30-Day Return Policy</li>
-                        <li class="custom-margin"><a href="./privacy-policy.html" style="text-decoration: none; color: white;">Privacy Policy</a></li>
-                        <li class="custom-margin"><a href="./terms-conditions.html" style="text-decoration: none; color: white;">Terms &amp; Conditions</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-sm-12 text-center footer-5">
-                     <div class="social-icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-instagram"></i>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </footer>
-         <!-- Footer End -->
+         <?php require("./footer.php");?>
 
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
       <script src="https://kit.fontawesome.com/e07f3322e5.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script>
+         function product(){
+         var formData = new FormData(); 
+           
+            formData.append("pay","product_1");
+            
+            $.ajax(
+         
+            {
+        url:"./set-session.php" ,
+        type:'POST',
+        data:formData,
+        contentType: false,
+        processData: false,           
+                success:function(data){   
+                    if (data == "yes") {
+                     window.location = './checkout.php';
+                       
+                    } else {
+                    }
+                    }                  
+            }
+    
+        );
+         //window.location = './checkout.php';
+      }
+      </script>
    </body>
 </html>

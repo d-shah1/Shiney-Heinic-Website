@@ -2,10 +2,10 @@
 session_start();
 require("check-authenticate.php");
 require("../connection.php");
-if (!isset($_POST['first_name'])) {
+if (!isset($_POST['emailForm'])) {
   echo '
   <script language="javascript">
-  window.location="contact-details.php";
+  window.location="new_subscriptions.php";
   </script>
   ';
 }
@@ -13,22 +13,17 @@ if (!isset($_POST['first_name'])) {
 date_default_timezone_set('America/Los_Angeles');
 $current_time = date("j F  Y , g:i:s a", time());
 
-$first_name=$_POST['first_name'];
-$last_name=$_POST['last_name'];
 
 $email = $_POST['emailForm'];
-$message = $_POST['messageForm'];
-$subject = $_POST['subjectForm'];
+
 
 
 $sql = sprintf(
-  "INSERT INTO `contact_form` ( `first_name`, `last_name`, `email`, `subject`, `message`, `time_stamp`)VALUES ('%s','%s','%s','%s','%s','%s')",
-  $con->real_escape_string($first_name),$con->real_escape_string($last_name),
+  "INSERT INTO `newsletter`(  `email`,`time_stamp`) VALUES ('%s','%s')",
   
   $con->real_escape_string($email),
  
-  $con->real_escape_string($subject),
-  $con->real_escape_string($message),
+  
   $con->real_escape_string($current_time)
 
 );

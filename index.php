@@ -36,7 +36,7 @@
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link" href="./checkout.php">Shop</a>
                      </li>
                   </ul>
                </div>
@@ -71,7 +71,7 @@
                   <h1>SHINEY HEINIE CLASSIC</h1>
                   <p>The bidet of today, designed to help you be cleaner,<br />save money and save the planet.</p>
                   <div class="btn-buy">
-                     <a  href="shiney-heinic-spa-2.0.html" id="idOfElement" style="text-decoration: none;">
+                     <a  href="shiney-heinic-spa-2.0.php" id="idOfElement" style="text-decoration: none;">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
@@ -90,7 +90,7 @@
                   <h1>SHINEY ON THE GO</h1>
                   <p>We all have those moments where we gotta go when we gotta go even if its not at home. So we will help you be prepared with our SHINEY On The Go.<br />SHINEY On The Go is discreet and collapsible so that you can take it with you anywhere.</p>
                   <div class="btn-buy">
-                     <a  href="shiney-heini-on-the-go.html" style="text-decoration: none;" id="idOfElement1">
+                     <a  href="shiney-heini-on-the-go.php" style="text-decoration: none;" id="idOfElement1">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
@@ -224,7 +224,7 @@
                            <h4>SHINEY HEINIE SPA 2.0</h4>
                            
                            <div class="shop-btn">
-                           <a  href="checkout.php" style="text-decoration: none;" >
+                           <a  href="shiney-heinic-spa-2.0.php" id="idOfElement" style="text-decoration: none;">
                               <h1>SHOP NOW</h1>
 
                            </a>
@@ -236,7 +236,7 @@
                            <img src="./images/better-hygiene-bottle.png" />
                            <h4>SHINEY ON THE GO</h4>
                            <div class="shop-btn">
-                           <a  href="checkout.php" style="text-decoration: none;" >
+                           <a  href="shiney-heini-on-the-go.php" style="text-decoration: none;" id="idOfElement1">
                               <h1>SHOP NOW</h1>
 
                            </a>
@@ -297,42 +297,7 @@
       </div>
       <!-- Miscellaneous Section End -->
 
-      <!-- Footer -->
-      <footer>
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-4 col-sm-12 footer-1">
-                  <h1>Sign up for our newsletter</h1>
-                  <div class="d-flex input">
-                     <input type="email" class="newsletter-input" name="newsletter" placeholder="Enter Email Address" />
-                     <i class="fas fa-arrow-right" id="newsletter-arrow"></i>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-12 footer-3">
-                  <ul>
-                     <li><a href="./contact-us.html" style="text-decoration: none; color: white;">Contact Us</a></li>
-                     <li class="custom-margin"><a href="./faq's.html" style="text-decoration: none; color: white;">FAQ's</a></li>
-                     <li class="custom-margin"><a href="./shiney-heini-on-the-go.html" style="text-decoration: none; color: white;">Shiney Heinie On The Go</a></li>
-                     <li class="custom-margin"><a href="./shiney-heinic-spa-2.0.html" style="text-decoration: none; color: white;">Shiney Heinie Classic</a></li>
-                  </ul>
-               </div>
-               <div class="col-lg-3 col-sm-12 footer-3">
-                  <ul>
-                     <li>30-Day Return Policy</li>
-                     <li class="custom-margin"><a href="./privacy-policy.html" style="text-decoration: none; color: white;">Privacy Policy</a></li>
-                     <li class="custom-margin"><a href="./terms-conditions.html" style="text-decoration: none; color: white;">Terms &amp; Conditions</a></li>
-                  </ul>
-               </div>
-               <div class="col-lg-2 col-sm-12 text-center footer-5">
-                  <div class="social-icons">
-                     <i class="fab fa-facebook-f"></i>
-                     <i class="fab fa-instagram"></i>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!-- Footer End -->
+      <?php require("./footer.php");?>
    </div>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
    <script src="https://kit.fontawesome.com/e07f3322e5.js" crossorigin="anonymous"></script>

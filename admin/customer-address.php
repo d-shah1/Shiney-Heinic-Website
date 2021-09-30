@@ -10,7 +10,7 @@ require("../connection.php");
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home Care Forms | Real Estate School International</title>
+    <title>Home Care Forms | Shiney-Heinic International</title>
     <!-- Favicon icon -->
     <!-- Datatable -->
     <link href="vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -34,26 +34,29 @@ require("../connection.php");
 
                     var first_name = response.first_name;
                     var last_name = response.last_name;
-                    var email = response.email
-                    var message = response.message;
-                   
-                    var subject=response.subject;
 
+                    var country = response.country;
+                    var zip = response.zip;
+                    var state = response.state;
+                    var address = response.address;
+                    var email = response.email
+                   
                     var userid = response.userid;
 
                     document.getElementById("userid").value = userid;
                     document.getElementById("first_name").value = first_name
                     document.getElementById("last_name").value = last_name
+                    document.getElementById("address").value = address
+                    document.getElementById("state").value = state
+                    document.getElementById("country").value = country
+                    document.getElementById("zip").value = zip
                     document.getElementById("email").value = email
-                  
-                    document.getElementById("subject").value = subject
-                    document.getElementById("message").value = message
-
+                    
 
 
                 }
             };
-            xhttp.open("POST", "get-details-contact.php?id=" + id, true);
+            xhttp.open("POST", "get-details-customer.php?id=" + id, true);
             xhttp.send();
 
         }
@@ -131,7 +134,7 @@ require("../connection.php");
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                     <div class="header-info">
                                         <span>Hey, <strong>Admin</strong></span>
-                                        <small>Real Estate School International</small>
+                                        <small>Shiney-Heinic International</small>
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -171,14 +174,27 @@ require("../connection.php");
                             </svg>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact-details.php">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link " href="today-transcation.php">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
-                                    <path d="M6,2 L18,2 C19.6568542,2 21,3.34314575 21,5 L21,19 C21,20.6568542 19.6568542,22 18,22 L6,22 C4.34314575,22 3,20.6568542 3,19 L3,5 C3,3.34314575 4.34314575,2 6,2 Z M12,11 C13.1045695,11 14,10.1045695 14,9 C14,7.8954305 13.1045695,7 12,7 C10.8954305,7 10,7.8954305 10,9 C10,10.1045695 10.8954305,11 12,11 Z M7.00036205,16.4995035 C6.98863236,16.6619875 7.26484009,17 7.4041679,17 C11.463736,17 14.5228466,17 16.5815,17 C16.9988413,17 17.0053266,16.6221713 16.9988413,16.5 C16.8360465,13.4332455 14.6506758,12 11.9907452,12 C9.36772908,12 7.21569918,13.5165724 7.00036205,16.4995035 Z" fill="#3A7AFE" />
+                                    <path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#ffffff" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953) " />
+                                    <path d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#ffffff" fill-rule="nonzero" opacity="0.5" />
+                                </g>
+                             </svg>
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact-details.php">
+                           
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <path d="M6,2 L18,2 C19.6568542,2 21,3.34314575 21,5 L21,19 C21,20.6568542 19.6568542,22 18,22 L6,22 C4.34314575,22 3,20.6568542 3,19 L3,5 C3,3.34314575 4.34314575,2 6,2 Z M12,11 C13.1045695,11 14,10.1045695 14,9 C14,7.8954305 13.1045695,7 12,7 C10.8954305,7 10,7.8954305 10,9 C10,10.1045695 10.8954305,11 12,11 Z M7.00036205,16.4995035 C6.98863236,16.6619875 7.26484009,17 7.4041679,17 C11.463736,17 14.5228466,17 16.5815,17 C16.9988413,17 17.0053266,16.6221713 16.9988413,16.5 C16.8360465,13.4332455 14.6506758,12 11.9907452,12 C9.36772908,12 7.21569918,13.5165724 7.00036205,16.4995035 Z" fill="#ffffff" />
                                 </g>
                             </svg>
+
                         </a>
                     </li>
                     <li class="nav-item">
@@ -192,13 +208,13 @@ require("../connection.php");
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="customer-address.php">
+                        <a class="nav-link active" href="customer-address.php">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
-                                    <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#ffffff" />
-                                    <path d="M10.875,15.75 C10.6354167,15.75 10.3958333,15.6541667 10.2041667,15.4625 L8.2875,13.5458333 C7.90416667,13.1625 7.90416667,12.5875 8.2875,12.2041667 C8.67083333,11.8208333 9.29375,11.8208333 9.62916667,12.2041667 L10.875,13.45 L14.0375,10.2875 C14.4208333,9.90416667 14.9958333,9.90416667 15.3791667,10.2875 C15.7625,10.6708333 15.7625,11.2458333 15.3791667,11.6291667 L11.5458333,15.4625 C11.3541667,15.6541667 11.1145833,15.75 10.875,15.75 Z" fill="#3A7AFE" />
-                                    <path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#3A7AFE" />
+                                    <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#3A7AFE" />
+                                    <path d="M10.875,15.75 C10.6354167,15.75 10.3958333,15.6541667 10.2041667,15.4625 L8.2875,13.5458333 C7.90416667,13.1625 7.90416667,12.5875 8.2875,12.2041667 C8.67083333,11.8208333 9.29375,11.8208333 9.62916667,12.2041667 L10.875,13.45 L14.0375,10.2875 C14.4208333,9.90416667 14.9958333,9.90416667 15.3791667,10.2875 C15.7625,10.6708333 15.7625,11.2458333 15.3791667,11.6291667 L11.5458333,15.4625 C11.3541667,15.6541667 11.1145833,15.75 10.875,15.75 Z" fill="#ffffff" />
+                                    <path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#ffffff" />
                                 </g>
                             </svg>
                         </a>
@@ -438,27 +454,38 @@ require("../connection.php");
                             <div class="basic-form">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="firstForm">First Name</label>
-                                        <input type="text" class="form-control" id='firstForm' placeholder="first Name" required="required">
+                                        <label for="nameForm">First Name</label>
+                                        <input type="text" class="form-control" id='firstnameForm' placeholder="Name" required="required">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="lastForm">Last Name</label>
-                                        <input type="text" class="form-control" id='lastForm' placeholder="Last Name" required="required">
+                                        <label for="emailForm">Last name</label>
+                                        <input type="text" class="form-control" id='lastnameForm' placeholder="Email" required="required">
+                                        
                                     </div>
                                     
+                                    <div class="form-group col-md-12">
+                                        <label for="messageForm">Address</label>
+                                        <textarea class="form-control" id='addressForm' placeholder="enter address" required="required"></textarea>
+                                    </div>
                                     <div class="form-group col-md-6">
                                         <label for="emailForm">Email</label>
                                         <input type="email" class="form-control" id='emailForm' placeholder="Email" required="required">
                                         <div id="email_error" style="color: red; display: none;">Enter valid Email.</div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="lastForm">subject</label>
-                                        <input type="text" class="form-control" id='subjectForm' placeholder="subject" required="required">
+                                        <label for="nameForm">Country</label>
+                                        <input type="text" class="form-control" id='countryForm' placeholder="country" required="required">
                                     </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="messageForm">Message</label>
-                                        <textarea class="form-control" id='messageForm' placeholder="Enter your message here..." required="required"></textarea>
+                                    <div class="form-group col-md-6">
+                                        <label for="stateForm">state</label>
+                                        <input type="text" class="form-control" id='stateForm' placeholder="state" required="required">
+                                       
                                     </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="nameForm">zip</label>
+                                        <input type="text" class="form-control" id='zipForm' placeholder="zip" required="required">
+                                    </div>
+                                    
 
                                 </div>
                             </div>
@@ -496,30 +523,41 @@ require("../connection.php");
                                     <input type="number" name="userid" id="userid" hidden>
                                     <div class="form-group col-md-6">
                                         <label>First Name</label>
-                                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Name" required="required">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Name" required="required">
+                                        <input type="text" class="form-control" name="name" id="first_name" placeholder="First Name" required="required">
                                     </div>
                                     
+                                    <div class="form-group col-md-6">
+                                        <label>Last name</label>
+                                        <input type="text" class="form-control" name="email" placeholder="last name" id="last_name" required="required">
+                                        <div id="edit_email_error" style="color: red; display: none;">Enter valid Email.</div>
+                                    </div>
+                                   
+                                    <div class="form-group col-md-12">
+                                        <label>Address</label>
+                                        <textarea class="form-control" name="message" id="address" placeholder="address" required="required">
+                                        </textarea>
+                                    </div>
                                     <div class="form-group col-md-6">
                                         <label>Email</label>
                                         <input type="email" class="form-control" name="email" placeholder="Email" id="email" required="required">
                                         <div id="edit_email_error" style="color: red; display: none;">Enter valid Email.</div>
                                     </div>
-                                   
                                     <div class="form-group col-md-6">
-                                        <label>Subject</label>
-                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="subject" required="required">
-                                    </div>
-                                   
-                                    <div class="form-group col-md-12">
-                                        <label>Message</label>
-                                        <textarea class="form-control" name="message" id="message" placeholder="Enter your message here..." required="required">
-                                        </textarea>
+                                        <label>country</label>
+                                        <input type="text" class="form-control" name="name" id="country" placeholder="country" required="required">
                                     </div>
                                     
+                                    <div class="form-group col-md-6">
+                                        <label>state</label>
+                                        <input type="text" class="form-control" name="email" placeholder="state" id="state" required="required">
+                                        <div id="edit_email_error" style="color: red; display: none;">Enter valid Email.</div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>zip</label>
+                                        <input type="text" class="form-control" name="name" id="zip" placeholder="zip" required="required">
+                                    </div>
+                                    
+                                   
 
                                 </div>
                             </div>
@@ -551,29 +589,31 @@ require("../connection.php");
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Contact Form</h4>
+                                <h4 class="card-title">Customer Address Form</h4>
                                 <button type="button" class="btn btn-rounded btn-info" data-toggle="modal" data-target="#basicModal"><span class="btn-icon-left text-info"><i class="fa fa-plus color-info"></i>
                                     </span>Add</button>
 
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="example5" class="display" style="min-width: 845px">
+                                <table id="example5" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
                                                 <th id="serial_no">Sr No.</th>
                                                 <th>Name</th>
                                                 <th>Email</th>
-                                                
-                                                <th>Message</th>
-                                                <th>Subject</th>
+                                                <th>Address</th>
+                                                <th>country</th>
+                                                <th>state</th>
+                                                <th>zip</th>
                                                 <th>TimeStamp</th>
                                                 <th>Actions</th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $q = "SELECT * FROM `contact_form`";
+                                            $q = "SELECT * FROM customer_address_list";
                                             $list = $con->query($q);
                                             if (mysqli_num_rows($list) > 0) {
                                                 while ($row = mysqli_fetch_assoc($list)) {
@@ -581,20 +621,25 @@ require("../connection.php");
                                                     <tr>
                                                         <td><?= $row["id"] ?>
                                                         </td>
-                                                        <td><?= $row["first_name"]." ".$row["last_name"]  ?>
+                                                        <td><?= $row["first_name"] ."  ".$row["last_name"]  ?>
                                                         </td>
-                                                       
                                                         <td>
                                                             <?= $row["email"] ?>
                                                         </td>
-                                                      
-                                                        <td>
-                                                            <?= $row["message"] ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $row["subject"] ?>
-                                                        </td>
 
+                                                        <td>
+                                                            <?= $row["address"] ?>
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <?= $row["country"] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?= $row["state"] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?= $row["zip"] ?>
+                                                        </td>
                                                         <td>
                                                             <?= $row["time_stamp"] ?>
                                                         </td>
@@ -607,6 +652,7 @@ require("../connection.php");
 
                                                             </div>
                                                         </td>
+                                                       
                                                     </tr>
 
                                             <?php
@@ -616,6 +662,7 @@ require("../connection.php");
                                             ?>
                                         </tbody>
                                     </table>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -673,46 +720,47 @@ require("../connection.php");
 
         function create_new() {
 
-            var firstForm = document.getElementById("firstForm");
-            var lastForm = document.getElementById("lastForm");
-           
-            var subjectForm = document.getElementById("subjectForm");
-            var messageForm = document.getElementById("messageForm");
+            var firstnameForm = document.getElementById("firstnameForm");
+           var lastnameForm = document.getElementById("lastnameForm");
+           var zipForm = document.getElementById("zipForm");
+           var countryForm = document.getElementById("countryForm");
+           var stateForm = document.getElementById("stateForm");
+           var addressForm = document.getElementById("addressForm");
+
             var emailForm = document.getElementById("emailForm");
             var email_error = document.getElementById('email_error');
-          
-           
-
-           
             var pattern = new RegExp("^([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])(;)?)+$");
             var data = emailForm.value;
 
            
             email_error.style.display = "none";
-           
+            if ((pattern.test(data) != true) ) {
+
                 if (pattern.test(data) != true) {
                     email_error.style.display = "block";
                     emailForm.value = "";
                     emailForm.focus();
 
-                }
-               else {
+                }  
+            } else {
                 
                 email_error.style.display = "none";
 
                 var formData = new FormData();
 
-                formData.append("first_name", firstForm.value);
-                formData.append("last_name", lastForm.value);
-                
-                formData.append("emailForm", emailForm.value);
-                formData.append("subjectForm", subjectForm.value);
-                formData.append("messageForm", messageForm.value);
+                formData.append("first_name", firstnameForm.value);
+                formData.append("last_name", lastnameForm.value);
+                formData.append("address", addressForm.value);
+                formData.append("country", countryForm.value);
+                formData.append("state", stateForm.value);
+                formData.append("zip", zipForm.value);
+                formData.append("email", emailForm.value);
+               
 
                 $.ajax(
 
                     {
-                        url: "./create-message-contact.php",
+                        url: "./create-message-customer.php",
                         type: 'POST',
                         data: formData,
                         contentType: false,
@@ -729,6 +777,7 @@ require("../connection.php");
                                 document.getElementById("create_form").reset();
 
                             } else {
+                                alert(data)
                                 setTimeout(document.getElementById('close_new_details').click(), 2000)
                                 document.getElementById('errorBtn').click()
 
@@ -753,17 +802,14 @@ require("../connection.php");
 
         function edit_new_form() {
 
-            var first_Form = document.getElementById("first_name");
-            var last_Form = document.getElementById("last_name");
-           var messageForm = document.getElementById("message");
-           var subjectForm = document.getElementById("subject");
+            var firstnameForm = document.getElementById("first_name");
+           var lastnameForm = document.getElementById("last_name");
+           var zipForm = document.getElementById("zip");
+           var countryForm = document.getElementById("country");
+           var stateForm = document.getElementById("state");
+           var addressForm = document.getElementById("address");
             var emailForm = document.getElementById("email");
-            
             var userid = document.getElementById('userid');
-            
-           
-
-            
 
 
             var email_error = document.getElementById('edit_email_error');
@@ -772,29 +818,35 @@ require("../connection.php");
 
           
             email_error.style.display = "none";
-             if (pattern.test(data) != true) {
+            if ((pattern.test(data) != true) ) {
+
+                if (pattern.test(data) != true) {
                     email_error.style.display = "block";
                     emailForm.value = "";
                     emailForm.focus();
 
                 }
-                 else {
+
+
+            } else {
                 email_error.style.display = "none";
 
                 var formData = new FormData();
 
-                formData.append("first_name", first_Form.value);
-                formData.append("last_name", last_Form.value);
+                formData.append("first_name", firstnameForm.value);
+                formData.append("last_name", lastnameForm.value);
+                formData.append("address", addressForm.value);
+                formData.append("country", countryForm.value);
+                formData.append("state", stateForm.value);
+                formData.append("zip", zipForm.value);
                 formData.append("email", emailForm.value);
-                formData.append("message", messageForm.value);
-                formData.append("subject", subjectForm.value);
-               
+                
                 formData.append("userid", userid.value);
 
                 $.ajax(
 
                     {
-                        url: "./update-content-contact.php",
+                        url: "./update-content-customer.php",
                         type: 'POST',
                         data: formData,
                         contentType: false,
@@ -811,6 +863,7 @@ require("../connection.php");
 
 
                             } else {
+                                
                                 setTimeout(document.getElementById('close_edit').click(), 2000)
                                 document.getElementById('errorBtn').click()
 
@@ -843,7 +896,7 @@ require("../connection.php");
             $.ajax(
 
                 {
-                    url: "./delete-message-contact.php",
+                    url: "./delete-message-customer.php",
                     type: 'POST',
                     data: formData,
                     contentType: false,
@@ -860,6 +913,7 @@ require("../connection.php");
 
 
                         } else {
+                            
                             setTimeout(document.getElementById('close_delete').click(), 2000)
                             document.getElementById('errorBtn').click()
 
