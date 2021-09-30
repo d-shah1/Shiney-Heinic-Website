@@ -19,6 +19,7 @@ require("./connection.php");
     <link rel="stylesheet" href="./css/style-main.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -116,7 +117,7 @@ require("./connection.php");
                                     <!-- Used to display form errors -->
                                     <div id="card-errors" role="alert"></div>
 
-                                    <button>Submit Payment</button>
+                                    <button >Submit Payment</button>
                                 </li>
                             </ul>
                     </div>
@@ -224,8 +225,7 @@ require("./connection.php");
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
 
-        <script src="https://js.stripe.com/v3/"></script>
-        <script src="./charge.js"></script>
+        
         <?php
         $email=$_SESSION['email'];
         $sql="select * from customer_address_list where email='$email'";
@@ -412,7 +412,10 @@ require("./connection.php");
 
                 }
             }
+            
         </script>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="./charge.js"></script>
 
     </div>
 </body>

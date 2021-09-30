@@ -1,7 +1,4 @@
-<?php
 
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -71,7 +68,7 @@
                   <h1>SHINEY HEINIE CLASSIC</h1>
                   <p>The bidet of today, designed to help you be cleaner,<br />save money and save the planet.</p>
                   <div class="btn-buy">
-                     <a  href="shiney-heinic-spa-2.0.php" id="idOfElement" style="text-decoration: none;">
+                     <a  href="shiney-heinic-spa-2.0.php?product=product_1" id="idOfElement" style="text-decoration: none;">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
@@ -90,7 +87,7 @@
                   <h1>SHINEY ON THE GO</h1>
                   <p>We all have those moments where we gotta go when we gotta go even if its not at home. So we will help you be prepared with our SHINEY On The Go.<br />SHINEY On The Go is discreet and collapsible so that you can take it with you anywhere.</p>
                   <div class="btn-buy">
-                     <a  href="shiney-heini-on-the-go.php" style="text-decoration: none;" id="idOfElement1">
+                     <a  href="shiney-heini-on-the-go.php?product=product_2" style="text-decoration: none;" id="idOfElement1">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
@@ -224,7 +221,7 @@
                            <h4>SHINEY HEINIE SPA 2.0</h4>
                            
                            <div class="shop-btn">
-                           <a  href="shiney-heinic-spa-2.0.php" id="idOfElement" style="text-decoration: none;">
+                           <a  href="shiney-heinic-spa-2.0.php?product=product_1" id="idOfElement" style="text-decoration: none;">
                               <h1>SHOP NOW</h1>
 
                            </a>
@@ -236,7 +233,7 @@
                            <img src="./images/better-hygiene-bottle.png" />
                            <h4>SHINEY ON THE GO</h4>
                            <div class="shop-btn">
-                           <a  href="shiney-heini-on-the-go.php" style="text-decoration: none;" id="idOfElement1">
+                           <a  href="shiney-heini-on-the-go.php?product=product_2" style="text-decoration: none;" id="idOfElement1">
                               <h1>SHOP NOW</h1>
 
                            </a>

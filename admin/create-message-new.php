@@ -19,7 +19,7 @@ $email = $_POST['emailForm'];
 
 
 $sql = sprintf(
-  "INSERT INTO `newsletter`(  `email`,`time_stamp`) VALUES ('%s','%s')",
+  "INSERT INTO `newsletter`( `email`,`time_stamp`) VALUES ('%s','%s')",
   
   $con->real_escape_string($email),
  

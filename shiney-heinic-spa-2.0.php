@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_REQUEST['product'])){
+   $_SESSION['pay']=$_REQUEST['product'];
+   }
 require("./check-authenticate.php");
 ?>
 <!DOCTYPE html>
