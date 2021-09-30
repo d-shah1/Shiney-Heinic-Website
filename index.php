@@ -71,7 +71,7 @@
                   <h1>SHINEY HEINIE CLASSIC</h1>
                   <p>The bidet of today, designed to help you be cleaner,<br />save money and save the planet.</p>
                   <div class="btn-buy">
-                     <a  href="checkout.php" id="idOfElement" style="text-decoration: none;">
+                     <a  href="shiney-heinic-spa-2.0.html" id="idOfElement" style="text-decoration: none;">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
@@ -90,7 +90,7 @@
                   <h1>SHINEY ON THE GO</h1>
                   <p>We all have those moments where we gotta go when we gotta go even if its not at home. So we will help you be prepared with our SHINEY On The Go.<br />SHINEY On The Go is discreet and collapsible so that you can take it with you anywhere.</p>
                   <div class="btn-buy">
-                     <a  href="checkout.php" style="text-decoration: none;" id="idOfElement1">
+                     <a  href="shiney-heini-on-the-go.html" style="text-decoration: none;" id="idOfElement1">
                         <p style="font-weight: 800;">Shop Now</p>
                      </a>
                   </div>
