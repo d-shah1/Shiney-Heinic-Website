@@ -460,6 +460,9 @@
 }
 
 @media only screen and (max-width: 360px) {
+    .blog-slider{
+        margin-top: 1500px;margin-bottom:50px;
+    }
     .hero-section .container .hero-right img {
         width: 350px;
         height: auto;
