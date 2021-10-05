@@ -48,7 +48,7 @@
                      <input type="email" class="newsletter-input" name="newsletter" style="margin-top: 0% !important;" id="newsletter" placeholder="Enter Email Address" />
                      <button type="submit" class="btn btn-hover-secondary newsletter-button">Subscribe</button>
                   </div>
-                  <div id="edit_email_error_1" style="color: white; display: none;">Enter valid Email.</div>
+                  <div id="edit_email_error_1" style="color: white; display: none;margin-left:52px">Enter valid Email.</div>
                </form>
                <div id="contact_success_1" class="ht-message-box style-success mb-2 " role="alert" style=" color: white;">
                   <span class="icon"><i class="far fa-check-circle"></i></span> Thank you ! We

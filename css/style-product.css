@@ -501,6 +501,12 @@ footer .footer-1 .newsletter-input {
     border-bottom: 1px solid white;
     padding-bottom: 5px;
 }
+footer .footer-1 .newsletter-input:focus{
+    outline: none;
+    color: white;
+    font-family: "Gilroy-Regular";
+}
+
 
 footer .footer-1 #newsletter-arrow {
     color: white;
