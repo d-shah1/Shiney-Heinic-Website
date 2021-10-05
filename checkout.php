@@ -20,11 +20,6 @@ require("./connection.php");
     <link rel="stylesheet" href="./css/responsive.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <style>
-         .SubmitButton {
-        
-      }
-    </style>
 
 </head>
 
@@ -87,11 +82,12 @@ require("./connection.php");
                         <form action="./charge.php" method="post" id="payment-form">
                             <ul class="list-group mb-3">
                                 <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                    <div style="font-family: 'Gilroy-Regular';">
-                                        <h5 class="my-0" style="font-weight: bolder">SHINEY HEINIE CLASSIC</h5>
-                                        <span style="display: flex;margin-top:10px; ">
+                                    <div>
+                                        <h6 class="my-0">SHINEY HEINIE CLASSIC</h6>
+                                        <span style="display: flex;">
+
                                             <small class="text-muted">Quantity :</small>
-                                            <i class="fas fa-minus form-control" style="width:40px;margin-left:10px" onclick="minus()"></i>
+                                            <i class="fas fa-minus form-control" style="width:40px" onclick="minus()"></i>
                                             <small class="text-muted form-control" style="width:40px" id="product1">0</small>
                                             <i class="fas fa-plus form-control" style="width:40px" onclick="total()"></i>
                                         </span>
@@ -100,7 +96,7 @@ require("./connection.php");
 
 
                                     </div>
-                                    <div style="font-family: 'Gilroy-Regular';font-weight:bolder;">
+                                    <div>
                                         <div>
                                             <span class="text-muted">$</span><span class="text-muted" id="prod_final">0</span>
                                         </div>
@@ -108,18 +104,18 @@ require("./connection.php");
                                     </div>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                    <div style="font-family: 'Gilroy-Regular';">
-                                        <h5 class="my-0" style="font-weight: bolder">SHINEY HEINIE ON THE GO</h5>
-                                        <span style="display: flex;margin-top:10px; ">
+                                    <div>
+                                        <h6 class="my-0">SHINEY HEINIE ON THE GO</h6>
+                                        <span style="display: flex;">
                                             <small class="text-muted">Quantity :</small>
-                                            <i class="fas fa-minus form-control" style="width:40px;margin-left:10px" onclick="minus1()"></i>
+                                            <i class="fas fa-minus form-control" style="width:40px" onclick="minus1()"></i>
                                             <small class=" form-control" style="width:40px" id="product2">0</small>
                                             <i class="fas fa-plus form-control" style="width:40px" onclick="total1()"></i>
                                         </span>
                                         <input type="number" name="product_second" id="second" class="form-control mb-3 StripeElement StripeElement--empty" hidden>
 
                                     </div>
-                                    <div style="font-family: 'Gilroy-Regular';font-weight:bolder;">
+                                    <div>
                                         <div>
                                             <span class="text-muted">$</span><span class="text-muted" id="prod_final_2">0</span>
                                         </div>
@@ -140,20 +136,7 @@ require("./connection.php");
                                     <!-- Used to display form errors -->
                                     <div style="color: red;" id="card-errors" role="alert"></div>
 
-                                    <button style=" height: 50px;
-         display: inline-flex;
-         background-image: linear-gradient(147deg, #75CFB8 0%, rgb(255, 198, 125, 0.5) 74%);
-         padding: 15px 15px;
-         border-radius: 5px;
-         border: none;
-         color: #fff;
-         text-decoration: none;
-         font-family: 'Gilroy Regular', sans-serif;
-         font-weight: 500;
-         justify-content: center;
-         text-align: center;
-         margin-left: 2%;
-         letter-spacing: 1px;">Submit Payment</button>
+                                    <button >Submit Payment</button>
                                
                             </ul>
                     </div>
