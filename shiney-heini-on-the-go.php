@@ -629,7 +629,7 @@ $_SESSION['pay']=$_REQUEST['product'];
             
             
             
-            <a href="view-review-onthego.php" id="read_more" class="blog-slider__button">View All</a>
+            <a href="view-onthego-reviews.php" id="read_more" class="blog-slider__button">View All</a>
 
             
          </div>

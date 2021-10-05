@@ -22,28 +22,49 @@ if (isset($_REQUEST['product'])) {
    <link rel="stylesheet" href="./css/product-responsive.css" />
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
-<!-- GOOGLE WEB FONT -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 
-<!-- BASE CSS -->
-<link href="review/css/animate.min.css" rel="stylesheet">
-<link href="review/css/bootstrap.min.css" rel="stylesheet">
-<link href="review/css/menu.css" rel="stylesheet">
-<link href="review/css/style.css" rel="stylesheet">
-<link href="review/css/responsive.css" rel="stylesheet">
-<link href="review/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
-<link href="review/css/skins/square/grey.css" rel="stylesheet">
+   <!-- BASE CSS -->
+   <link href="review/css/animate.min.css" rel="stylesheet">
+   <link href="review/css/bootstrap.min.css" rel="stylesheet">
+   <link href="review/css/menu.css" rel="stylesheet">
+   <link href="review/css/style.css" rel="stylesheet">
+   <link href="review/css/responsive.css" rel="stylesheet">
+   <link href="review/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+   <link href="review/css/skins/square/grey.css" rel="stylesheet">
 
-<!-- COLOR CSS -->
-<link href="review/css/color_4.css" rel="stylesheet">
+   <!-- COLOR CSS -->
+   <link href="review/css/color_4.css" rel="stylesheet">
 
-<!-- BASE CSS -->
-<link href="review/css/date_time_picker.css" rel="stylesheet">
+   <!-- BASE CSS -->
+   <link href="review/css/date_time_picker.css" rel="stylesheet">
 
-<!-- YOUR CUSTOM CSS -->
-<link href="review/css/custom.css" rel="stylesheet">
+   <!-- YOUR CUSTOM CSS -->
+   <link href="review/css/custom.css" rel="stylesheet">
 
-<script src="review/js/modernizr.js"></script>
+   <script src="review/js/modernizr.js"></script>
+   <!-- GOOGLE WEB FONT -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
+   <!-- BASE CSS -->
+   <link href="review/css/animate.min.css" rel="stylesheet">
+   <link href="review/css/bootstrap.min.css" rel="stylesheet">
+   <link href="review/css/menu.css" rel="stylesheet">
+   <link href="review/css/style.css" rel="stylesheet">
+   <link href="review/css/responsive.css" rel="stylesheet">
+   <link href="review/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+   <link href="review/css/skins/square/grey.css" rel="stylesheet">
+
+   <!-- COLOR CSS -->
+   <link href="review/css/color_4.css" rel="stylesheet">
+
+   <!-- BASE CSS -->
+   <link href="review/css/date_time_picker.css" rel="stylesheet">
+
+   <!-- YOUR CUSTOM CSS -->
+   <link href="review/css/custom.css" rel="stylesheet">
+
+   <script src="review/js/modernizr.js"></script>
 
    <style>
       #writeReviewDiv {
@@ -391,9 +412,53 @@ if (isset($_REQUEST['product'])) {
          }
       }
    </style>
+   <style>
+      #form_container {
+         width: 800px;
+         border-radius: 15px;
+         min-height: 200px;
+         margin-top: 10px;
+
+
+      }
+
+      #middle-wizard {
+         margin-left: 7%;
+         margin-right: 1%;
+      }
+
+      .starClass {
+         margin-top: -100px
+      }
+
+
+      @media screen and (max-width: 768px) {
+
+         #form_container {
+            width: auto;
+            border-radius: 15px;
+            min-height: 50px;
+            margin-top: 0px;
+         }
+
+         #middle-wizard {
+            margin-left: 0px;
+            margin-right: 0px;
+
+         }
+
+         .starClass {
+            margin-top: 00px
+         }
+
+
+
+      }
+   </style>
 </head>
 
 <body>
+
    <div class="main-wrapper">
 
       <!-- Navigation Menu Start -->
@@ -422,11 +487,11 @@ if (isset($_REQUEST['product'])) {
       <!-- Navigation Menu End -->
 
 
-   
 
-     
 
-   
+
+
+
 
       <!-- Review Section Start -->
 
@@ -442,240 +507,249 @@ if (isset($_REQUEST['product'])) {
             </div>
 
             <div id="load_box">
-            <?php
-            $result = $con->query("SELECT * from onthego_review");
+               <?php
+               $result = $con->query("SELECT * from onthego_review");
 
-            if(mysqli_num_rows($result) > 0) {
+               if (mysqli_num_rows($result) > 0) {
 
-               while($row=mysqli_fetch_assoc($result)){
-                  $name = $row['name'];
-                  $review = $row['review_text'];
-                  $timestamp = $row['timestamp'];
-                  $rating = $row['rating']; 
-                  
-                  if($rating == '1' )
-                  {
-                     $check1 = "checked";
-                     $check2 = "";
-                     $check3 = "";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '2') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '3') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '4') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "checked";
-                     $check5 = "";
-                  }
-                  else if($rating == '5') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "checked";
-                     $check5 = "checked";
-                  }
-                 
+                  while ($row = mysqli_fetch_assoc($result)) {
+                     $name = $row['name'];
+                     $id = $row['id'];
+                     $review = $row['review_text'];
+                     $timestamp = $row['timestamp'];
+                     $rating = $row['rating'];
 
-                  echo '
-                  <div class="blog-slider" style="height: auto;">
-                     <div class="blog-slider__wrp swiper-wrapper">
-                        <div class="blog-slider__item swiper-slide">
-                     
-                           <div class="blog-slider__content">
-                              <span class="blog-slider__code">'.$timestamp.'</span>
-                              <div class="blog-slider__title">'.$name.'
-                              <span>
-                              
-                                 <input type="radio" '.$check5.' class="required rating-input"  value="5"><label for="rating-input-1-5" class="rating-star"></label>
-                                 <input type="radio" '.$check4.' class="required rating-input"  value="4"><label for="rating-input-1-4" class="rating-star"></label>
-                                 <input type="radio" '.$check3.' class="required rating-input"  value="3"><label for="rating-input-1-3" class="rating-star"></label>
-                                 <input type="radio" '.$check2.' class="required rating-input"  value="2"><label for="rating-input-1-2" class="rating-star"></label>
-                                 <input type="radio"  '.$check1.' class="required rating-input" value="1 "><label for="rating-input-1-1" class="rating-star"></label>
-                              </span>
-                              </div>
+                     if ($rating == '1') {
+                        $check1 = "checked";
+                        $check2 = "";
+                        $check3 = "";
+                        $check4 = "";
+                        $check5 = "";
+                     } else if ($rating == '2') {
+                        $check1 = "checked";
+                        $check2 = "checked";
+                        $check3 = "";
+                        $check4 = "";
+                        $check5 = "";
+                     } else if ($rating == '3') {
+                        $check1 = "checked";
+                        $check2 = "checked";
+                        $check3 = "checked";
+                        $check4 = "";
+                        $check5 = "";
+                     } else if ($rating == '4') {
+                        $check1 = "checked";
+                        $check2 = "checked";
+                        $check3 = "checked";
+                        $check4 = "checked";
+                        $check5 = "";
+                     } else if ($rating == '5') {
+                        $check1 = "checked";
+                        $check2 = "checked";
+                        $check3 = "checked";
+                        $check4 = "checked";
+                        $check5 = "checked";
+                     }
 
-                              <div class="blog-slider__text">'.$review.'</div>
-                           </div>
+
+                     echo '
+
+
+
+                  <main>
+    <div id="form_container" >
+        <div class="row" style="border-radius: 25px;">
+            <div class="col-lg-12">
+
+                <div id="wizard_container">
+
+
+                    <form id="review-form" method="POST" action="submit-review-classic.php" style="font-family: "Gilroy-Regular;"">
+
+
+                        <div id="middle-wizard" >
+                        <span class="starClass">
+                        <input type="radio" ' . $check5 . ' class="required rating-input"  value="5"><label for="rating-input-1-5" class="rating-star"></label>
+                        <input type="radio" ' . $check4 . ' class="required rating-input"  value="4"><label for="rating-input-1-4" class="rating-star"></label>
+                        <input type="radio" ' . $check3 . ' class="required rating-input"  value="3"><label for="rating-input-1-3" class="rating-star"></label>
+                        <input type="radio" ' . $check2 . ' class="required rating-input"  value="2"><label for="rating-input-1-2" class="rating-star"></label>
+                        <input type="radio"  ' . $check1 . ' class="required rating-input" value="1 "><label for="rating-input-1-1" class="rating-star"></label>
+                                   </span>
+                            <div class="step">
+                                <h3 class="main_question" style="font-weight:500;font-family: "Gilroy-Regular";">' . $name . '</h3>
+                                
+                                <div class="row">
+                                    <div class="col-md-12" style="margin-top:-3%">
+                                        <div class="form-group clearfix">
+                                        
+                                            <label class="rating_type" style="font-family: "Gilroy-Regular;"" >' . $timestamp . '</label>
+                                         
+                                        </div>
+
+                                        <div class="blog-slider__text" style="font-family: "Gilroy-Regular;"">' . $review . '</div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
-                     </div>
-                  </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
                   
                   ';
-               }
-            }
-
-            ?>
+                  }
+               } ?>
             </div>
-            
-            
-            
-
-            
-         </div>
-      </div>
-
-
-      
-
-      <!-- Review Section End -->
-
-
+       
+               <!-- Jquery-->
+               <script src="review/js/jquery-3.2.1.min.js"></script>
+               <!-- Common script -->
+               <script src="review/js/common_scripts.js"></script>
+               <!-- Wizard script -->
+               <script src="review/js/review_wizard_func.js"></script>
+               <!-- Menu script -->
+               <script src="review/js/velocity.min.js"></script>
+               <script src="review/js/main.js"></script>
+               <!-- Theme script -->
+               <script src="review/js/functions.js"></script>
 
 
 
-      <?php require("footer.php")?>
-
-       <!-- Jquery-->
-	 <script src="review/js/jquery-3.2.1.min.js"></script>
-   <!-- Common script -->
-   <script src="review/js/common_scripts.js"></script>
-   <!-- Wizard script -->
-   <script src="review/js/review_wizard_func.js"></script>
-   <!-- Menu script -->
-   <script src="review/js/velocity.min.js"></script>
-   <script src="review/js/main.js"></script>
-   <!-- Theme script -->
-   <script src="review/js/functions.js"></script>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script>
-         $(document).ready(function() {
-            document.getElementById('contact_success_1').style.display = "none";
-            document.getElementById('contact_error_1').style.display = "none";
-            document.getElementById('newsletter_error').style.display = "none";
-         });
-         $("#form").submit(function(e) {
-            e.preventDefault();
-         });
-
-         function checkform() {
-            var email = document.getElementById("newsletter");
-            var email_error = document.getElementById('edit_email_error_1');
-            var pattern = new RegExp("^([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])(;)?)+$");
-            var data = email.value;
-            document.getElementById('contact_success_1').style.display = "none";
-            document.getElementById('contact_error_1').style.display = "none";
-            document.getElementById('newsletter_error').style.display = "none";
-            email_error.style.display = "none";
+               <!-- Review Section End -->
 
 
-            if (pattern.test(data) != true) {
-               email_error.style.display = "block";
-               email.value = "";
-               email.focus();
 
-            } else {
+               </div>
 
-               var formData = new FormData();
+             
 
-               formData.append("email", email.value);
+               <!-- Jquery-->
+               <script src="review/js/jquery-3.2.1.min.js"></script>
+               <!-- Common script -->
+               <script src="review/js/common_scripts.js"></script>
+               <!-- Wizard script -->
+               <script src="review/js/review_wizard_func.js"></script>
+               <!-- Menu script -->
+               <script src="review/js/velocity.min.js"></script>
+               <script src="review/js/main.js"></script>
+               <!-- Theme script -->
+               <script src="review/js/functions.js"></script>
 
-               $.ajax(
+               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+               <script>
+                  $(document).ready(function() {
+                     document.getElementById('contact_success_1').style.display = "none";
+                     document.getElementById('contact_error_1').style.display = "none";
+                     document.getElementById('newsletter_error').style.display = "none";
+                  });
+                  $("#form").submit(function(e) {
+                     e.preventDefault();
+                  });
 
-                  {
-                     url: "./interest-newsletter.php",
-                     type: 'POST',
-                     data: formData,
-                     contentType: false,
-                     processData: false,
-                     success: function(data) {
-                        if (data == "New record created successfully") {
-                           document.getElementById('contact_success_1').style.display = "block";
-                           document.getElementById('contact_error_1').style.display = "none";
-                           document.getElementById('newsletter_error').style.display = "none";
-                        } else if (data == "already exits") {
-                           document.getElementById('contact_success_1').style.display = "none";
-                           document.getElementById('contact_error_1').style.display = "none";
-                           document.getElementById('newsletter_error').style.display = "block";
-                        } else {
+                  function checkform() {
+                     var email = document.getElementById("newsletter");
+                     var email_error = document.getElementById('edit_email_error_1');
+                     var pattern = new RegExp("^([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])(;)?)+$");
+                     var data = email.value;
+                     document.getElementById('contact_success_1').style.display = "none";
+                     document.getElementById('contact_error_1').style.display = "none";
+                     document.getElementById('newsletter_error').style.display = "none";
+                     email_error.style.display = "none";
 
 
-                           document.getElementById('contact_success_1').style.display = "none";
+                     if (pattern.test(data) != true) {
+                        email_error.style.display = "block";
+                        email.value = "";
+                        email.focus();
 
-                           document.getElementById('contact_error_1').style.display = "block";
-                           document.getElementById('newsletter_error').style.display = "none";
-                        }
+                     } else {
+
+                        var formData = new FormData();
+
+                        formData.append("email", email.value);
+
+                        $.ajax(
+
+                           {
+                              url: "./interest-newsletter.php",
+                              type: 'POST',
+                              data: formData,
+                              contentType: false,
+                              processData: false,
+                              success: function(data) {
+                                 if (data == "New record created successfully") {
+                                    document.getElementById('contact_success_1').style.display = "block";
+                                    document.getElementById('contact_error_1').style.display = "none";
+                                    document.getElementById('newsletter_error').style.display = "none";
+                                 } else if (data == "already exits") {
+                                    document.getElementById('contact_success_1').style.display = "none";
+                                    document.getElementById('contact_error_1').style.display = "none";
+                                    document.getElementById('newsletter_error').style.display = "block";
+                                 } else {
+
+
+                                    document.getElementById('contact_success_1').style.display = "none";
+
+                                    document.getElementById('contact_error_1').style.display = "block";
+                                    document.getElementById('newsletter_error').style.display = "none";
+                                 }
+                              }
+                           }
+
+                        );
+                        document.getElementById("form").reset();
                      }
                   }
+               </script>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://kit.fontawesome.com/e07f3322e5.js" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <script>
+               function product() {
+                  var formData = new FormData();
 
-               );
-               document.getElementById("form").reset();
-            }
-         }
-      </script>
-   </div>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="https://kit.fontawesome.com/e07f3322e5.js" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-   <script>
-      function product() {
-         var formData = new FormData();
+                  formData.append("pay", "product_1");
 
-         formData.append("pay", "product_1");
+                  $.ajax(
 
-         $.ajax(
+                     {
+                        url: "./set-session.php",
+                        type: 'POST',
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function(data) {
+                           if (data == "yes") {
+                              window.location = './checkout.php';
 
-            {
-               url: "./set-session.php",
-               type: 'POST',
-               data: formData,
-               contentType: false,
-               processData: false,
-               success: function(data) {
-                  if (data == "yes") {
-                     window.location = './checkout.php';
+                           } else {}
+                        }
+                     }
 
-                  } else {}
+                  );
+
                }
-            }
-
-         );
-       
-      }
-   </script>
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
-   <script>
-      var swiper = new Swiper('.blog-slider', {
-         spaceBetween: 30,
-         effect: 'fade',
-         loop: false,
-         mousewheel: {
-            invert: false,
-         },
-         // autoHeight: true,
-         pagination: {
-            el: '.blog-slider__pagination',
-            clickable: true,
-
-         }
-      });
-   </script>
+            </script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+            <script>
+               var swiper = new Swiper('.blog-slider', {
 
 
+               });
+            </script>
+
+<div style="margin-top: 120px;"> <?php require("footer.php")?></div>
 
 </body>
 
 </html>
-
