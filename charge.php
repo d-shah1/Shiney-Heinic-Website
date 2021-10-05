@@ -56,28 +56,7 @@ $current_time = date("j F  Y , g:i:s a", time());
       "description" => "Payment for produts of Shiney Heinie",
       "customer" => $customer->id
       ));
-      if($save=="on"){
-        // Customer Data
-        $customerData = [
-          
-          'first_name' => $first_name,
-          'email' => $email,
-          'last_name' => $last_name,
-          "country" => $country_ship, 
-          "line1" => $address_ship, 
-          "postal_code" => $zipCode_ship, 
-          "state" => $state_ship,
-          "time"=> $current_time
-          
-        ];
-    
-        // Instantiate Customer
-        $customer = new Customer();
-    
-        // Add Customer To DB
-        $customer->addCustomer($customerData);
-    
-        }
+
         // Transaction Data
         $transactionData = [
         
@@ -110,5 +89,6 @@ $current_time = date("j F  Y , g:i:s a", time());
 header('Location: thank-you.php');
 }
 catch (Exception $err) {
-  header('Location: error.php');
+  echo $err;
+  //header('Location: error.php');
 }

@@ -5,8 +5,8 @@ if(isset($_REQUEST['pay'])){
     $pay = $_REQUEST['pay'];
     $_SESSION['pay']=$pay;
    
-    echo 'yes';
+    header("location: checkout.php");
     }
     else{
-       echo 'no';
+      header("location: login.php");
     }

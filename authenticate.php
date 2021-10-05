@@ -16,7 +16,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         while ($row = mysqli_fetch_assoc($result)) {
             $password = $row['password'];
             if ($remember) {
-                if ($pwd == $password || password_verify($pwd, $password)) {
+                if ( password_verify($pwd, $password)) {
 
                     $_SESSION["email"] = $row["email"];
                     $_SESSION['user_id'] = $row['id'];
@@ -24,7 +24,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                     if ($remember) {
                         $hour = time() + 3600 * 24 * 360;
                         setcookie('Remember_me_email', urlencode(base64_encode($mail)), $hour);
-                        setcookie('Remember_me_password', $password, $hour);
+                        setcookie('Remember_me_password', urlencode(base64_encode($password)), $hour);
                     }
                     echo "<script>
                     window.location= 'checkout.php'; 
@@ -35,13 +35,22 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                     $_SESSION["email"] = $row["email"];
                     $_SESSION['user_id'] = $row['id'];
                     if ($remember) {
-                        $hour = time() + 3600 * 24 * 360;
+                        $hour = time() - 3600 ;
                         setcookie('Remember_me_email', urlencode(base64_encode($mail)), $hour);
                         setcookie('Remember_me_password', urlencode(base64_encode($password)), $hour);
                     }
-                    echo "<script>
-                    window.location= 'checkout.php'; 
-                    </script>";
+
+                    if(isset($_SESSION['pay'])) {
+                        echo "<script>
+                        window.location= 'checkout.php'; 
+                        </script>";
+                    }
+                    else {
+                        echo "<script>
+                        window.location= 'index.php'; 
+                        </script>";
+                    }
+                   
                 }
             }
             echo "<script language='javascript'>

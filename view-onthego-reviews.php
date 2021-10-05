@@ -479,6 +479,24 @@ if (isset($_REQUEST['product'])) {
                      <li class="nav-item">
                         <a class="nav-link active" href="./checkout.php">Shop</a>
                      </li>
+                     <?php
+                     if(isset($_SESSION['email']))
+                     {
+                     ?>
+                     <li class="nav-item">
+                        <a class="nav-link" href="./login.php">Login</a>
+                     </li>
+                     <?php
+                     }
+                     else {
+
+                       ?>
+                       <li class="nav-item">
+                        <a class="nav-link" href="./logout.php">Logout</a>
+                     </li>
+                       <?php    
+                     }
+                     ?>
                   </ul>
                </div>
             </nav>
