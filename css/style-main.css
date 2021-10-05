@@ -474,6 +474,9 @@ footer .footer-5 .social-icons i:nth-child(2) {
     margin-top: 100px;
     margin-bottom: 200px;
 }
+.benefits-section .container{
+    max-width: 1340px;
+}
 
 .benefits-section .tips {
     width: 944px;

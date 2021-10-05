@@ -25,6 +25,10 @@ if (isset($_REQUEST['product'])) {
 
 
    <style>
+      #read_more{
+         align-items:center;margin-left:43%;margin-top:3%;
+
+      }
       #writeReviewDiv {
          margin-top: -110px;
 
@@ -40,6 +44,17 @@ if (isset($_REQUEST['product'])) {
          transform: translateX(-35%);
          margin-top: -20px;
       }
+      #divReviewShow {
+         background-image: linear-gradient(147deg, #75CFB8 0%, #FFC67D 74%);
+         box-shadow: 4px 13px 30px 1px rgb(255, 198, 125, 0.4);
+         border-radius: 20px;
+         width: 100px;
+         flex-shrink: 0;
+         height: 100px;
+         transform: translateX(-35%);
+         margin-top: -20px;
+      }
+      
 
       .blog-slider {
          width: 95%;
@@ -238,18 +253,21 @@ if (isset($_REQUEST['product'])) {
          color: #7b7992;
          margin-bottom: 15px;
          display: block;
-         font-weight: 500;
+         font-weight: 200;
+         font-family: "Gilroy-Regular";
       }
 
       .blog-slider__title {
          font-size: 24px;
          font-weight: 700;
          color: #0d0925;
+         font-family: "Gilroy-Regular";
          margin-bottom: 20px;
       }
 
       .blog-slider__text {
          color: #4e4a67;
+         font-family: "Gilroy-Regular";
          margin-bottom: 30px;
          line-height: 1.5em;
       }
@@ -368,6 +386,10 @@ if (isset($_REQUEST['product'])) {
             transform: translateX(50%);
             margin-top: -10%;
          }
+         #read_more{
+         align-items:center;margin-left:0%;margin-top:3%;
+
+      }
       }
    </style>
 </head>
@@ -493,6 +515,7 @@ if (isset($_REQUEST['product'])) {
                   <div class="tips-desc pt-1">
                      <p>Shiney Heinie cuts down your TP usage by upto 75%. Helping you save thousands over time.</p>
                   </div>
+                  
                </div>
                <div class="col-lg-3 col-md-12">
                   <div class="tips-image">
@@ -603,11 +626,11 @@ if (isset($_REQUEST['product'])) {
                </div>
             </div>
             <div id="writeReviewDiv"><?php require('./write-review-classic.php'); ?></div>
-
-
-
          </div>
       </div>
+
+      
+ 
 
 
       <!-- Write Review Section End -->
@@ -626,104 +649,24 @@ if (isset($_REQUEST['product'])) {
             </div>
 
             <div id="load_box">
-            <?php
-            $result = $con->query("SELECT * from classic_review LIMIT 7");
-
-            if(mysqli_num_rows($result) > 0) {
-
-               while($row=mysqli_fetch_assoc($result)){
-                  $name = $row['name'];
-                  $review = $row['review_text'];
-                  $timestamp = $row['timestamp'];
-                  $rating = $row['rating']; 
-                  
-                  if($rating == '1' )
-                  {
-                     $check1 = "checked";
-                     $check2 = "";
-                     $check3 = "";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '2') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '3') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '4') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "checked";
-                     $check5 = "";
-                  }
-                  else if($rating == '5') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "checked";
-                     $check5 = "checked";
-                  }
-                 
-
-                  echo '
-                  <div class="blog-slider" style="height: auto;">
-                     <div class="blog-slider__wrp swiper-wrapper">
-                        <div class="blog-slider__item swiper-slide">
-                     
-                           <div class="blog-slider__content">
-                              <span class="blog-slider__code">'.$timestamp.'</span>
-                              <div class="blog-slider__title">'.$name.'
-                              <span>
-                              
-                                 <input type="radio" '.$check5.' class="required rating-input"  value="5"><label for="rating-input-1-5" class="rating-star"></label>
-                                 <input type="radio" '.$check4.' class="required rating-input"  value="4"><label for="rating-input-1-4" class="rating-star"></label>
-                                 <input type="radio" '.$check3.' class="required rating-input"  value="3"><label for="rating-input-1-3" class="rating-star"></label>
-                                 <input type="radio" '.$check2.' class="required rating-input"  value="2"><label for="rating-input-1-2" class="rating-star"></label>
-                                 <input type="radio"  '.$check1.' class="required rating-input" value="1 "><label for="rating-input-1-1" class="rating-star"></label>
-                              </span>
-                              </div>
-
-                              <div class="blog-slider__text">'.$review.'</div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  
-                  ';
-               }
-            }
-
-            ?>
+            <?php require('./viewReviews.php'); ?>
             </div>
             
             
             
-            <a href="view-classic-reviews.php" id="read_more" class="blog-slider__button mr-auto" >View All</a>
+            <a href="view-classic-reviews.php" id="read_more" class="blog-slider__button">View All</a>
 
             
          </div>
+         
       </div>
       <!-- Review Section End -->
 
 
 
+<div style="margin-top: -120px;"> <?php require("footer.php")?></div>
 
-
-      <?php require("footer.php")?>
+     
 
 
 

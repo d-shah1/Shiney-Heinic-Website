@@ -362,7 +362,7 @@ input#website {
 
 #wizard_container {
 	position: relative;
-	min-height: 450px;
+	height: auto;
 }
 
 h3.main_question {
@@ -461,6 +461,7 @@ button.submit:before {
 
 #middle-wizard {
 	padding: 45px 45px 30px 15px;
+	padding-top: 45px;
 }
 
 #bottom-wizard {

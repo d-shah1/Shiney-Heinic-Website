@@ -194,7 +194,9 @@ body {
     height: 60px;
     width: 60px;
 }
-
+.tips-section .container{
+    max-width: 1340px;
+}
 .tips-section .tips-heading {
     font-family: "Gilroy-Medium";
     color: black;
@@ -215,6 +217,9 @@ body {
 .features-section .feature-image-wrapper img {
     width: 583px;
     height: 750px;
+}
+.features-section .container{
+    max-width: 1340px;
 }
 
 .features-section .feature-details {
@@ -242,6 +247,9 @@ body {
 .installation-section {
     overflow-x: hidden;
     overflow-y: hidden;
+}
+.installation-section .container{
+    max-width: 1340px;
 }
 
 .installation-section .installation-img {
