@@ -110,15 +110,15 @@ require("./connection.php");
 
                                     <div><strong class="total-price">$</strong><strong class="total-price" id="final">0</strong></div>
                                 </li>
-                                <li>
+                                
                                     <div id="card-element" class="form-control mt-2">
                                         <!-- a Stripe Element will be inserted here. -->
                                     </div>
                                     <!-- Used to display form errors -->
-                                    <div id="card-errors" role="alert"></div>
+                                    <div style="color: red;" id="card-errors" role="alert"></div>
 
                                     <button >Submit Payment</button>
-                                </li>
+                               
                             </ul>
                     </div>
                     <div class="col-md-8 shadow order-md-1 p-5 form-left">
@@ -144,15 +144,12 @@ require("./connection.php");
                         </div>
 
                         <div class="mb-3">
-                            <label for="address">Address</label>
+                            <label for="address">Address Line 1</label>
                             <input type="text" name="address" id="address" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address" required>
 
                         </div>
 
-                        <div class="mb-3">
-                            <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-                            <input type="text" name="address2" id="address2" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address">
-                        </div>
+                        
 
                         <div class="row">
                             <div class="col-md-5 mb-3">
@@ -169,46 +166,46 @@ require("./connection.php");
 
                             </div>
                         </div>
+
+                        <hr class="mb-4">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input StripeElement StripeElement--empty" name="check_add" id="check" >
+                            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                        </div>
+                       
+                        <hr class="mb-4">
                         <div class="col-md-8 order-md-1 form-left" id="address_ship_modal">
                             <h3 class="mb-3">Shipping Address</h3>
 
                             <div class="row">
 
                                 <div class="mb-3">
-                                    <label for="address">Address</label>
-                                    <input type="text" name="address_ship" id="address_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address">
+                                    <label for="address">Address </label>
+                                    <input required type="text" name="address_ship" id="address_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address">
 
                                 </div>
+
+                                
 
                                 <div class="row">
                                     <div class="col-md-5 mb-3">
                                         <label for="country">Country</label>
-                                        <input type="text" name="country_ship" id="country_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="country">
+                                        <input required type="text" name="country_ship" id="country_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="country">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label for="state">State</label>
-                                        <input type="text" name="state_ship" id="state_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="state">
+                                        <input required type="text" name="state_ship" id="state_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="state">
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label for="zip">Zip</label>
-                                        <input type="text" name="zip_ship" id="zip_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="zip code">
+                                        <input required type="text" name="zip_ship" id="zip_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="zip code">
 
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <hr class="mb-4">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input StripeElement StripeElement--empty" name="check_add" id="check" checked>
-                            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="save" class="custom-control-input StripeElement StripeElement--empty" id="save-info">
-                            <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                        </div>
-                        <hr class="mb-4">
-                        <!-- <button class="btn btn-primary btn-lg btn-block" id="mylink" type="submit" style="font-family: 'Gilroy-Regular', sans-serif; background-color: #75CFB8; border: none;">Continue to Payment</button> -->
+                       
 
 
 
@@ -227,8 +224,8 @@ require("./connection.php");
 
         
         <?php
-        $email=$_SESSION['email'];
-        $sql="select * from customer_address_list where email='$email'";
+  /*       $email=$_SESSION['email'];
+        $sql="SELECT * from customer_address_list where email='$email'";
         
         $res=$con->query($sql);
         
@@ -253,7 +250,7 @@ require("./connection.php");
           }
          
           }
-        ?>
+        */ ?>
         <?php
        
             if($_SESSION['pay']=="product_1"){
@@ -298,58 +295,30 @@ require("./connection.php");
        
         ?>
         <script>
-            $(document).ready(function() {
-                $("#address_ship_modal").hide();
-
-                $("#save-info").val("off");
-                $("#address_ship").val("");
-                $("#country_ship").val("");
-                $("#state_ship").val("");
-                $("#zip_ship").val("");
-
-                $('#address_ship').prop('required', false);
-                $('#country_ship').prop('required', false);
-                $('#state_ship').prop('required', false);
-                $('#zip_ship').prop('required', false);
-
-
-            });
-
+            
             $('#check').click(function() {
                 if ($('#check:checked').length > 0) {
-                    $("#address_ship_modal").hide();
+                   
                     $("#check").val("on");
+                    $("#address_ship").val(document.getElementById("address").value);
+                    $("#country_ship").val(document.getElementById("country").value);
+                    $("#state_ship").val(document.getElementById("state").value);
+                    $("#zip_ship").val(document.getElementById("zip").value);
+                    
+
+
+
+                } else {
+                    
+                    $("#check").val("off");
                     $("#address_ship").val("");
                     $("#country_ship").val("");
                     $("#state_ship").val("");
                     $("#zip_ship").val("");
-                    $('#address_ship').prop('required', false);
-                    $('#country_ship').prop('required', false);
-                    $('#state_ship').prop('required', false);
-                    $('#zip_ship').prop('required', false);
-
-
-
-                } else {
-                    $("#address_ship_modal").show();
-                    $("#check").val("off");
-                    $('#address_ship').prop('required', true);
-                    $('#country_ship').prop('required', true);
-                    $('#state_ship').prop('required', true);
-                    $('#zip_ship').prop('required', true);
-
 
                 }
             });
-            $('#save-info').click(function() {
-                if ($('#save-info:checked').length > 0) {
-                    $("#save-info").val("on");
-
-                } else {
-                    $("#save-info").val("off");
-
-                }
-            });
+            
 
            
             function total() {

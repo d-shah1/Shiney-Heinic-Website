@@ -159,7 +159,7 @@ if (isset($_REQUEST['message'])) {
                                     </div>
                                 </div>
                                 <button id="submit" type="submit" class="btn btn-primary mt-3" style="background-color: #75CFB8; border: none; color: #fff; font-family: Gilroy-Regular, sans-serif " disabled="true">Register</button>
-                                <p class="register-link">Don't have an account ? <a href="./login.php">Login Now</a></p>
+                                <p class="register-link">Already have an account ? <a href="./login.php">Login Now</a></p>
                             </div>
                         </div>
                     </form>

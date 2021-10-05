@@ -52,9 +52,8 @@ require("./check-authenticate.php");
                                 <img src="./images/login-left.png"/>
                             </div>
                             <div class="col-lg-6 col-sm-12 right-form">
-                                <h1>ERROR 404</h1>
-                                <p>Thank you for shopping with us.</p>
-                                <p class="register-link">Go back to shopping ? <a href="./index.php">Click Here</a></p>
+                                <h1>Ooops An Error Occured...</h1>
+                                <p>Please try again after sometime.</p>
                             </div>
                         </div>
                     </form>
