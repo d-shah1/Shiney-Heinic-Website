@@ -642,7 +642,7 @@ $_SESSION['pay']=$_REQUEST['product'];
             </div>
 
             <div id="load_box">
-            <?php require('./view-limited-reviews-onthego.php'); ?>
+            <?php require('view-limited-reviews-onthego.php'); ?>
             </div>
             
             
