@@ -9,7 +9,7 @@
 
     public function addTransaction($data) {
       // Prepare Query
-      $this->db->query('INSERT INTO transaction ( `customer_id`, `customer_name`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`, `shiney_heinie_classic`, `shiney_no_the_go`, `status`, `amount`, `time_stamp`) VALUES(:customer_id, :customer_name, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp)');
+      $this->db->query("INSERT INTO transaction ( `customer_id`, `customer_name`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`, `shiney_heinie_classic`, `shiney_no_the_go`, `status`, `amount`, `time_stamp`,`email`,`phone`,`user_id`) VALUES(:customer_id, :customer_name, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp,:email,:phone,:u_id)");
 
       // Bind Values
      
@@ -21,10 +21,12 @@
       $this->db->bind(':bill_zip', $data['bill_zip']);
       $this->db->bind(':product_first', $data['product_first']);
       $this->db->bind(':product_second', $data['product_second']);
-      
+      $this->db->bind(':email', $data['email']);
+      $this->db->bind(':phone', $data['phone']);
       $this->db->bind(':amount', $data['amount']);
       $this->db->bind(':time_stamp', $data['time']);
       $this->db->bind(':status_new', $data['status']);
+      $this->db->bind(':u_id', $data['user_id']);
 
       // Execute
       if($this->db->execute()) {
@@ -35,7 +37,7 @@
     }
     public function addTransactionFull($data) {
       // Prepare Query
-      $this->db->query('INSERT INTO transaction ( `customer_id`, `customer_name`, `shiping_address`, `country`, `state`, `zip`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`,`shiney_heinie_classic`, `shiney_no_the_go`, `status`, `amount`, `time_stamp`) VALUES(:customer_id, :customer_name, :ship_add, :ship_country, :ship_state, :ship_zip, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp)');
+      $this->db->query('INSERT INTO transaction ( `customer_id`, `customer_name`, `shiping_address`, `country`, `state`, `zip`, `bill_address`, `country_bill`, `state_bill`, `zip_bill`,`shiney_heinie_classic`, `shiney_no_the_go`, `status`, `amount`, `time_stamp`,`email`,`phone`,`user_id`) VALUES(:customer_id, :customer_name, :ship_add, :ship_country, :ship_state, :ship_zip, :bill_add, :bill_country, :bill_state, :bill_zip, :product_first,:product_second,  :status_new,:amount,:time_stamp,:email,:phone,:u_id)');
 
       // Bind Values
      
@@ -51,11 +53,12 @@
       $this->db->bind(':bill_zip', $data['bill_zip']);
       $this->db->bind(':product_first', $data['product_first']);
       $this->db->bind(':product_second', $data['product_second']);
-      
+      $this->db->bind(':email', $data['email']);
+      $this->db->bind(':phone', $data['phone']);
       $this->db->bind(':amount', $data['amount']);
       $this->db->bind(':time_stamp', $data['time']);
       $this->db->bind(':status_new', $data['status']);
-
+      $this->db->bind(':u_id', $data['user_id']);
       // Execute
       if($this->db->execute()) {
         return true;

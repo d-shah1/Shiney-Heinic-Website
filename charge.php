@@ -19,14 +19,15 @@ try {
  $last_name = $POST['last_name'];
  $email = $POST['email'];
  $token = $POST['stripeToken'];
-
+  $phone = $POST['phone'];
  $pro1 = $POST['product_first'];
  $pro2 = $POST['product_second'];
- 
+ $user_id = $_SESSION['user_id'];
  $country=$POST['country'];
  $address=$POST['address'];
  $zipCode=$POST['zip'];
  $state=$POST['state'];
+ 
  $pay=round($POST['pay'],0);
  $pay_store=$pay/100;
  $check=$POST['check_add'];
@@ -52,7 +53,7 @@ $current_time = date("j F  Y , g:i:s a", time());
       // Charge Customer
       $charge = \Stripe\Charge::create(array(
       "amount" => $pay,
-      "currency" => "USD",
+      "currency" => "usd",
       "description" => "Payment for produts of Shiney Heinie",
       "customer" => $customer->id
       ));
@@ -61,7 +62,7 @@ $current_time = date("j F  Y , g:i:s a", time());
         $transactionData = [
         
           'customer_id' => $charge->customer,
-          'customer_name' => $first_name,
+          'customer_name' => $first_name . " ". $last_name,
           'ship_add' => $address_ship,
           'ship_country' => $country_ship,
           'ship_state' => $state_ship,
@@ -74,7 +75,11 @@ $current_time = date("j F  Y , g:i:s a", time());
           'product_second' => $pro2,
           'amount' => $pay_store,
           'time' => $current_time,
-          'status' => $charge->status
+          'status' => $charge->status,
+          'phone'=> $phone,
+          'email' => $email,
+          'user_id'=> $user_id
+          
         ];
     
         // Instantiate Transaction

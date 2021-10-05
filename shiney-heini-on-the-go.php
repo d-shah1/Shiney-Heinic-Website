@@ -449,10 +449,9 @@ $_SESSION['pay']=$_REQUEST['product'];
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <div class="btn-buy">
-                        <a  href="#" onclick="product_second(); return false;" id="idOfElement" style="text-decoration: none;">
-                              
-                              <p style="font-weight: 800;">Buy Now</p>
-                           </a>
+                        <a href="set-session.php?pay=product_2"   >
+                        <p style="font-weight: 800;">Buy Now</p>
+                     </a>
                            
                         </div>
                     </div>
@@ -607,7 +606,13 @@ $_SESSION['pay']=$_REQUEST['product'];
          <!-- Steps Section End -->
 
            <!-- Write Review Section Start -->
+<?php
+if(isset($_SESSION['email']))
+{
 
+
+$res = $con->query("SELECT count() FROM")
+?>
       <div class="benefits-section">
          <div class="container" style="max-width: 1340px;">
             <div class="row text-center">
@@ -624,7 +629,9 @@ $_SESSION['pay']=$_REQUEST['product'];
 
          </div>
       </div>
-
+<?php
+}
+?>
 
       <!-- Write Review Section End -->
 
@@ -663,33 +670,7 @@ $_SESSION['pay']=$_REQUEST['product'];
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
       
-      <script>
-         function product_second(){
-         var formData = new FormData(); 
-            
-            formData.append("pay","product_2");
-            
-            $.ajax(
-         
-            {
-        url:"./set-session.php" ,
-        type:'POST',
-        data:formData,
-        contentType: false,
-        processData: false,           
-                success:function(data){   
-                    if (data == "yes") {
-                     window.location = './checkout.php';
-                       
-                    } else {
-                    }
-                    }                  
-            }
     
-        );
-      
-      }
-      </script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
    <script>
