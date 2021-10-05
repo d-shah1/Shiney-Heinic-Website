@@ -30,7 +30,7 @@ if (isset($_REQUEST['product'])) {
 
       }
       #writeReviewDiv {
-         margin-top: -110px;
+         margin-top: 10px;
 
       }
 
@@ -388,9 +388,17 @@ if (isset($_REQUEST['product'])) {
          }
          #read_more{
          align-items:center;margin-left:0%;margin-top:3%;
+      }
 
       }
-      }
+
+      @media only screen and (max-width: 480px){
+.installation-section .container .installation-steps .step-container-2 .step-desc p {
+    font-size: 16px;
+    margin-left: ;
+    margin-top: 2px;
+}
+}
    </style>
 </head>
 
@@ -625,7 +633,7 @@ if (isset($_REQUEST['product'])) {
                   <p>Help us to improve our service and customer satisfaction</p>
                </div>
             </div>
-            <div id="writeReviewDiv"><?php require('./write-review-classic.php'); ?></div>
+            <div id="writeReviewDiv" ><?php require('./write-review-classic.php'); ?></div>
          </div>
       </div>
 

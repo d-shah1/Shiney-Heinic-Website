@@ -16,7 +16,7 @@
     @media screen and (max-width: 768px) {
 
         #form_container{
-            width:auto;border-radius: 15px;min-height: 50px;margin-top:100px;
+            width:auto;border-radius: 15px;min-height: 50px;margin-top:0px;
 }
 #middle-wizard{
         margin-left:0px;margin-right:0px;
