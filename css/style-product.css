@@ -547,6 +547,9 @@ footer .footer-5 .social-icons i:nth-child(2) {
     margin-top: 25px;
     margin-bottom: -20px;
 }
+.buy-btn .container{
+    max-width: 1340px;
+}
 
 .buy-btn .container .btn-buy {
     height: 40px;

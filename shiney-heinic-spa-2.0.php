@@ -33,6 +33,9 @@ if (isset($_REQUEST['product'])) {
          margin-top: 10px;
 
       }
+      #ViewReviewDiv{
+         margin-top: -5%;
+      }
 
       #divReview {
          background-image: linear-gradient(147deg, #75CFB8 0%, #FFC67D 74%);
@@ -389,13 +392,16 @@ if (isset($_REQUEST['product'])) {
          #read_more{
          align-items:center;margin-left:0%;margin-top:3%;
       }
+      #ViewReviewDiv{
+         margin-top: -30%;
+      }
 
       }
 
       @media only screen and (max-width: 480px){
 .installation-section .container .installation-steps .step-container-2 .step-desc p {
     font-size: 16px;
-    margin-left: ;
+    margin-left: 8%;
     margin-top: 2px;
 }
 }
@@ -407,7 +413,7 @@ if (isset($_REQUEST['product'])) {
 
       <!-- Navigation Menu Start -->
       <div class="shiney-heini">
-         <div class="container">
+         <div class="container" style="max-width: 1340px;">
             <nav class="navbar navbar-expand-lg navbar-light mt-lg-3">
                <a class="navbar-brand" href="#">
                   <img src="./images/logo-shiny.png" />
@@ -432,7 +438,7 @@ if (isset($_REQUEST['product'])) {
 
       <!-- Product Title Section Start -->
       <div class="buy-btn">
-         <div class="container">
+         <div class="container" style="max-width: 1340px;">
             <div class="row">
                <div class="col-lg-6 col-sm-12">
                   <div class="review-box">
@@ -461,7 +467,7 @@ if (isset($_REQUEST['product'])) {
 
       <!-- Product Detail Section Start -->
       <div class="product-section pt-5 pb-5">
-         <div class="container">
+         <div class="container" style="max-width: 1340;">
             <div class="row">
                <div class="col-lg-6 col-md-12 products-img">
                   <img src="./images/spa-heini-1.png" class="main-img" />
@@ -645,7 +651,7 @@ if (isset($_REQUEST['product'])) {
 
       <!-- Review Section Start -->
 
-      <div class="benefits-section">
+      <div class="benefits-section" id="ViewReviewDiv">
          <div class="container" id="container">
             <div class="row text-center">
                <div class="col-lg-12 col-sm-12 section-title">

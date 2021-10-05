@@ -25,62 +25,62 @@
 		</head>
 	<body>
 	<main>
-		<div id="form_container" style=" border-radius: 25px;">
-			<div class="row" style="border-radius: 25px;">
-				<div class="col-lg-2">
-					<div id="divReview">
+			<div id="form_container" style=" border-radius: 25px;min-height: 350px;">
+				<div class="row" style="border-radius: 25px;">
+					<div class="col-lg-2">
+						<div id="divReview">
 
-						<h2  style="font-weight: 300; color: #fff; margin-top:40%; padding: 12%; font-size: 36px;height:50px;font-family: 'Gilroy-Regular';text-align:center;align-items:center">Reviews</h2>
+							<h2 style="font-weight: 300; color: #fff; margin-top:40%; padding: 12%; font-size: 36px;height:50px;font-family: 'Gilroy-Regular';text-align:center;align-items:center">Reviews</h2>
 
 
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-10">
+					<div class="col-lg-10">
 
-					<div id="wizard_container">
-						
-						
+						<div id="wizard_container">
+
+
 						<form id="review-form" method="POST" action="submit-review-onthego.php" style="font-family: 'Gilroy-Regular';">
-							
-							
-							<div id="middle-wizard">
 
-								<div class="step">
-									<h3 class="main_question">How do you describe your overall satisfaction?</h3>
-									<div class="row">
-										<div class="col-md-12">
-											<div class="form-group clearfix">
-												<label class="rating_type">Rate our product and Services</label>
-												<span class="rating">
-													<input type="radio" checked class="required rating-input" id="rating-input-1-5" name="rating_input_1" value="5"><label for="rating-input-1-5" class="rating-star"></label>
-													<input type="radio" class="required rating-input" id="rating-input-1-4" name="rating_input_1" value="4"><label for="rating-input-1-4" class="rating-star"></label>
-													<input type="radio" class="required rating-input" id="rating-input-1-3" name="rating_input_1" value="3"><label for="rating-input-1-3" class="rating-star"></label>
-													<input type="radio" class="required rating-input" id="rating-input-1-2" name="rating_input_1" value="2"><label for="rating-input-1-2" class="rating-star"></label>
-													<input type="radio"  class="required rating-input" id="rating-input-1-1" name="rating_input_1" value="1 "><label for="rating-input-1-1" class="rating-star"></label>
-												</span>
+
+								<div id="middle-wizard" >
+
+									<div class="step">
+										<h3 class="main_question">How do you describe your overall satisfaction?</h3>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group clearfix">
+													<label class="rating_type">Rate our product and Services</label>
+													<span class="rating">
+														<input type="radio" checked class="required rating-input" id="rating-input-1-5" name="rating_input_1" value="5"><label for="rating-input-1-5" class="rating-star"></label>
+														<input type="radio" class="required rating-input" id="rating-input-1-4" name="rating_input_1" value="4"><label for="rating-input-1-4" class="rating-star"></label>
+														<input type="radio" class="required rating-input" id="rating-input-1-3" name="rating_input_1" value="3"><label for="rating-input-1-3" class="rating-star"></label>
+														<input type="radio" class="required rating-input" id="rating-input-1-2" name="rating_input_1" value="2"><label for="rating-input-1-2" class="rating-star"></label>
+														<input type="radio" class="required rating-input" id="rating-input-1-1" name="rating_input_1" value="1 "><label for="rating-input-1-1" class="rating-star"></label>
+													</span>
+												</div>
+
+												<textarea name="review-text" required class="required border form-control p-1" style="height: 100px;">Write a Review...</textarea>
+
 											</div>
-
-											<textarea name="review-text" required class="required border form-control p-1" style="height: 100px;">Write a Review...</textarea>
-											
 										</div>
+
 									</div>
-									
-								</div>
-						
-							<button type="submit" class="submit"  style="background-image: linear-gradient(147deg, #75CFB8 0%, #FFC67D 74%);
+
+									<button type="submit" class="submit" style="background-image: linear-gradient(147deg, #75CFB8 0%, #FFC67D 74%);
          					border-radius: 5px;
          					color: #fff;
          					box-shadow: 0px 14px 80px rgb(255, 198, 125, 0.4);
          					">Submit</button>
-							</div>
-						</form>
+								</div>
+							</form>
+						</div>
+
 					</div>
-					
 				</div>
 			</div>
-		</div>
-	</main>
-
+		</main>
+	
 
 
 	

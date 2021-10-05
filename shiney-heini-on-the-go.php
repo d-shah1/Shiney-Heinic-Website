@@ -14,21 +14,29 @@ require("./check-authenticate.php");
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title>Shiney Heinic On The Go | Shiney Heinie</title>
       <link rel="stylesheet" href="./css/style-product.css" />
-      <link rel="stylesheet" href="./css/product-responsive.css" />
-      <link rel="stylesheet" href="./css/style-main.css" />
+   <link rel="stylesheet" href="./css/style-main.css" />
+   <link rel="stylesheet" href="./css/product-responsive.css" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
 
-      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
-
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+      
   
    </head>
    <body>
 
    <style>
-      #writeReviewDiv {
-         margin-top: -110px;
+        #read_more{
+         align-items:center;margin-left:43%;margin-top:3%;
 
       }
+      #writeReviewDiv {
+         margin-top: 10px;
+
+      }
+      #ViewReviewDiv{
+         margin-top: -5%;
+      }
+
 
       #divReview {
          background-image: linear-gradient(147deg, #75CFB8 0%, #FFC67D 74%);
@@ -350,7 +358,7 @@ require("./check-authenticate.php");
          background-position-y: 2px;
       }
 
-      @media screen and (max-width: 768px) {
+     @media screen and (max-width: 768px) {
          .social-block-rating {
             display: block;
             background: url('https://cdn2.hubspot.net/hubfs/2092172/Design_Elements/pr-5-stars.jpg') no-repeat;
@@ -368,13 +376,20 @@ require("./check-authenticate.php");
             transform: translateX(50%);
             margin-top: -10%;
          }
+         #read_more{
+         align-items:center;margin-left:0%;margin-top:3%;
+      }
+      #ViewReviewDiv{
+         margin-top: -30%;
+      }
+
       }
    </style>
       <div class="main-wrapper">
 
          <!-- Navigation Menu Start -->
          <div class="shiney-heini">
-            <div class="container">
+            <div class="container" style="max-width: 1340px;">
                <nav class="navbar navbar-expand-lg navbar-light mt-lg-3">
                 <a class="navbar-brand" href="#">
                     <img src="./images/logo-shiny.png" />
@@ -399,7 +414,7 @@ require("./check-authenticate.php");
 
          <!-- Product Title Section Start -->
         <div class="buy-btn">
-            <div class="container">
+            <div class="container" style="max-width: 1340px;">
                 <div class="row">
                     <div class="col-lg-6 col-sm-12">
                         <div class="review-box">
@@ -430,7 +445,7 @@ require("./check-authenticate.php");
 
          <!-- Product Detail Section Start -->
          <div class="product-section pt-5 pb-5">
-            <div class="container">
+            <div class="container" style="max-width: 1340px;">
                <div class="row">
                   <div class="col-lg-6 col-md-12 products-img">
                      <img src="./images/shiney-go.png" class="main-img" />
@@ -469,7 +484,7 @@ require("./check-authenticate.php");
 
          <!-- Tips Section Start -->
          <div class="tips-section">
-            <div class="container">
+            <div class="container" style="max-width: 1340px;">
                <div class="row text-center">
                   <div class="col-lg-3 col-md-12">
                      <div class="tips-image">
@@ -522,7 +537,7 @@ require("./check-authenticate.php");
 
          <!-- Steps Section Start -->
          <div class="steps-section">
-             <div class="container">
+             <div class="container" style="max-width:1340px">
                  <div class="row text-center">
                      <div class="col-lg-3 col-sm-12">
                          <div class="steps-img">
@@ -576,7 +591,7 @@ require("./check-authenticate.php");
            <!-- Write Review Section Start -->
 
       <div class="benefits-section">
-         <div class="container">
+         <div class="container" style="max-width: 1340px;">
             <div class="row text-center">
                <div class="col-lg-12 col-sm-12 section-title">
                   <h1>WE APPRECIATE YOUR RATE</h1>
@@ -597,8 +612,8 @@ require("./check-authenticate.php");
 
         <!-- Review Section Start -->
 
-        <div class="benefits-section">
-         <div class="container" id="container">
+      <div class="benefits-section" id="ViewReviewDiv">
+         <div class="container" id="container" style="max-width: 1340px;">
             <div class="row text-center">
                <div class="col-lg-12 col-sm-12 section-title">
                   <h1>TOP CUSTOMERS REVIEWS</h1>
@@ -609,100 +624,20 @@ require("./check-authenticate.php");
             </div>
 
             <div id="load_box">
-            <?php
-            $result = $con->query("SELECT * from classic_review LIMIT 7");
-
-            if(mysqli_num_rows($result) > 0) {
-
-               while($row=mysqli_fetch_assoc($result)){
-                  $name = $row['name'];
-                  $review = $row['review_text'];
-                  $timestamp = $row['timestamp'];
-                  $rating = $row['rating']; 
-                  
-                  if($rating == '1' )
-                  {
-                     $check1 = "checked";
-                     $check2 = "";
-                     $check3 = "";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '2') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '3') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "";
-                     $check5 = "";
-                  }
-                  else if($rating == '4') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "checked";
-                     $check5 = "";
-                  }
-                  else if($rating == '5') 
-                  {
-                     $check1 = "checked";
-                     $check2 = "checked";
-                     $check3 = "checked";
-                     $check4 = "checked";
-                     $check5 = "checked";
-                  }
-                 
-
-                  echo '
-                  <div class="blog-slider" style="height: auto;">
-                     <div class="blog-slider__wrp swiper-wrapper">
-                        <div class="blog-slider__item swiper-slide">
-                     
-                           <div class="blog-slider__content">
-                              <span class="blog-slider__code">'.$timestamp.'</span>
-                              <div class="blog-slider__title">'.$name.'
-                              <span>
-                              
-                                 <input type="radio" '.$check5.' class="required rating-input"  value="5"><label for="rating-input-1-5" class="rating-star"></label>
-                                 <input type="radio" '.$check4.' class="required rating-input"  value="4"><label for="rating-input-1-4" class="rating-star"></label>
-                                 <input type="radio" '.$check3.' class="required rating-input"  value="3"><label for="rating-input-1-3" class="rating-star"></label>
-                                 <input type="radio" '.$check2.' class="required rating-input"  value="2"><label for="rating-input-1-2" class="rating-star"></label>
-                                 <input type="radio"  '.$check1.' class="required rating-input" value="1 "><label for="rating-input-1-1" class="rating-star"></label>
-                              </span>
-                              </div>
-
-                              <div class="blog-slider__text">'.$review.'</div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  
-                  ';
-               }
-            }
-
-            ?>
+            <?php require('./viewReviews1.php'); ?>
             </div>
             
             
             
-            <a href="view-classic-reviews.php" id="read_more" class="blog-slider__button mr-auto" >View All</a>
+            <a href="view-review-onthego.php" id="read_more" class="blog-slider__button">View All</a>
 
             
          </div>
+         
       </div>
       <!-- Review Section End -->
 
-         <?php require("./footer.php");?>
+      <div style="margin-top: -120px;"> <?php require("footer.php")?></div>
 
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
