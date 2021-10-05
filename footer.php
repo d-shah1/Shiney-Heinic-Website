@@ -46,13 +46,13 @@
                      have received your response.
                   </div>
                   <div id="newsletter_error" class="ht-message-box style-error mt-3" role="alert" style="color: white;">
-                     <span class="icon"><i class="far fa-times-circle"></i></span> already Subscribe
+                     <span class="icon"><i class="far fa-times-circle"></i></span> You are Already Subscribed
                   </div>
 
                   <div id="contact_error_1" class="ht-message-box style-error mb-2" role="alert" style="color: white;">
                      <span class="icon"><i class="far fa-times-circle"></i></span> We were unable
                      to
-                     receive your response. Try Again or Mail us at <a href="mailto:" style="text-decoration:underline;"><b>example@gmail.com</b></a>
+                     receive your response. Try Again later
                   </div>
 
             </div>
