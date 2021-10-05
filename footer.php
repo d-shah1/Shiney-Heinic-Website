@@ -7,10 +7,32 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>footer</title>
    <style>
-      .input{
-     transform: translateX(10%);
+      .input {
+         transform: translateX(10%);
+      }
 
-      }</style>
+      .newsletter-form {
+         margin-left: -50px;
+         margin-top: 30px;
+      }
+
+      .newsletter-button {
+         height: 50px;
+         display: inline-flex;
+         background-image: linear-gradient(147deg, #75CFB8 0%, rgb(255, 198, 125, 0.5) 74%);
+         padding: 15px 15px;
+         border-radius: 5px;
+         border: none;
+         color: #fff;
+         text-decoration: none;
+         font-family: 'Gilroy Regular', sans-serif;
+         font-weight: 500;
+         justify-content: center;
+         text-align: center;
+         margin-left: 2%;
+         letter-spacing: 1px;
+      }
+   </style>
 </head>
 
 <body>
@@ -21,39 +43,26 @@
             <div class="col-lg-4 col-sm-12 footer-1">
 
                <h1>Sign up for our newsletter</h1>
-               <form id="form" onsubmit="checkform()" method="POST">
+               <form id="form" onsubmit="checkform()" method="POST" class="newsletter-form">
                   <div class="d-flex input">
                      <input type="email" class="newsletter-input" name="newsletter" style="margin-top: 0% !important;" id="newsletter" placeholder="Enter Email Address" />
-                     <button type="submit" class="btn btn-hover-secondary " style="height:50px;display: inline-flex;
-         background-image: linear-gradient(147deg, #75CFB8 0%, rgb(255, 198, 125, 0.5) 74%);
-         padding: 15px 15px;
-         border-radius: 5px;
-         border:none;
-         color: #fff;
-         box-shadow: 0px 14px 80px rgb(255, 198, 125, 0.4);
-         text-decoration: none;
-         font-weight: 500;
-         justify-content: center;
-         text-align: center;
-         margin-left:2%;
-         letter-spacing: 1px;">Subscribe</button>
-
+                     <button type="submit" class="btn btn-hover-secondary newsletter-button">Subscribe</button>
                   </div>
                   <div id="edit_email_error_1" style="color: white; display: none;">Enter valid Email.</div>
-                  </from>
-                  <div id="contact_success_1" class="ht-message-box style-success mb-2 " role="alert" style=" color: white;">
-                     <span class="icon"><i class="far fa-check-circle"></i></span> Thank you ! We
-                     have received your response.
-                  </div>
-                  <div id="newsletter_error" class="ht-message-box style-error mt-3" role="alert" style="color: white;">
-                     <span class="icon"><i class="far fa-times-circle"></i></span> You are Already Subscribed
-                  </div>
+               </form>
+               <div id="contact_success_1" class="ht-message-box style-success mb-2 " role="alert" style=" color: white;">
+                  <span class="icon"><i class="far fa-check-circle"></i></span> Thank you ! We
+                  have received your response.
+               </div>
+               <div id="newsletter_error" class="ht-message-box style-error mt-3" role="alert" style="color: white;">
+                  <span class="icon"><i class="far fa-times-circle"></i></span> You are Already Subscribed
+               </div>
 
-                  <div id="contact_error_1" class="ht-message-box style-error mb-2" role="alert" style="color: white;">
-                     <span class="icon"><i class="far fa-times-circle"></i></span> We were unable
-                     to
-                     receive your response. Try Again later
-                  </div>
+               <div id="contact_error_1" class="ht-message-box style-error mb-2" role="alert" style="color: white;">
+                  <span class="icon"><i class="far fa-times-circle"></i></span> We were unable
+                  to
+                  receive your response. Try Again later
+               </div>
 
             </div>
             <div class="col-lg-3 col-sm-12 footer-3">
@@ -74,7 +83,7 @@
             <div class="col-lg-2 col-sm-12 text-center footer-5">
                <div class="social-icons">
                   <i class="fab fa-facebook-f"></i>
-                  <i class="fab fa-instagram" ></i>
+                  <i class="fab fa-instagram"></i>
                </div>
             </div>
          </div>
