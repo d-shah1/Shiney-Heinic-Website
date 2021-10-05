@@ -18,32 +18,9 @@ if (isset($_REQUEST['product'])) {
    <link rel="stylesheet" href="./css/product-responsive.css" />
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
-   <link rel="stylesheet" href="./Pagination/style.css">
-   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
 
    <style>
-      .ratingDiv {
-         margin-top: -5%;
-      }
-
-      .h1Div {
-         align-items: center;
-         transform: translateX(30%);
-         font-size: 54px;
-         font-family: 'Gilroy-Regular';
-      }
-
-      .pDiv{
-         align-items:center;transform:translateX(30%);font-family: 'Gilroy-Regular';font-size:16px
-         
-      }
-
-      .starsDiv{transform:translateX(27%);margin-top:-10%;}
-
-      .contentDiv{margin-top: 18%;font-family: 'Gilroy-Regular';}
-      
-      .pagination{}
-
       #writeReviewDiv {
          margin-top: -110px;
 
@@ -78,15 +55,15 @@ if (isset($_REQUEST['product'])) {
       @media screen and (max-width: 992px) {
          .blog-slider {
             max-width: 680px;
-            height: auto;
+            height: 400px;
          }
       }
 
       @media screen and (max-width: 768px) {
          .blog-slider {
-            min-height: auto;
+            min-height: 500px;
             height: auto;
-            margin: 10% auto;
+            margin: 180px auto;
          }
       }
 
@@ -107,7 +84,10 @@ if (isset($_REQUEST['product'])) {
          }
       }
 
-
+      .blog-slider__item.swiper-slide-active .blog-slider__img img {
+         opacity: 1;
+         transition-delay: 0.3s;
+      }
 
       .blog-slider__item.swiper-slide-active .blog-slider__content>* {
          opacity: 1;
@@ -175,11 +155,11 @@ if (isset($_REQUEST['product'])) {
       }
 
       .blog-slider__img {
-         width: 30%;
+         width: 300px;
          flex-shrink: 0;
-         height: 50%;
-         background-image: linear-gradient(147deg, rgb(117, 207, 184, 0.8) 0%, rgb(255, 198, 125, 0.8) 74%);
-         box-shadow: 4px 13px 30px 1px rgb(255, 198, 125, 0.2);
+         height: 300px;
+         background-image: linear-gradient(147deg, #75CFB8 0%, #FFC67D 74%);
+         box-shadow: 4px 13px 30px 1px rgb(255, 198, 125, 0.4);
          border-radius: 20px;
          transform: translateX(-80px);
          overflow: hidden;
@@ -192,9 +172,9 @@ if (isset($_REQUEST['product'])) {
          left: 0;
          width: 100%;
          height: 100%;
-         background-image: linear-gradient(147deg, rgb(117, 207, 184, 0.5) 0%, rgb(255, 198, 125, 0.4) 74%);
+         background-image: linear-gradient(147deg, #75CFB8 0%, #FFC67D 74%);
          border-radius: 20px;
-         opacity: 1;
+         opacity: 0.8;
       }
 
       .blog-slider__img img {
@@ -210,13 +190,13 @@ if (isset($_REQUEST['product'])) {
       @media screen and (max-width: 768px) {
          .blog-slider__img {
             transform: translateY(-50%);
-            width: 70%;
+            width: 90%;
          }
       }
 
       @media screen and (max-width: 576px) {
          .blog-slider__img {
-            width: 60%;
+            width: 95%;
          }
       }
 
@@ -384,28 +364,6 @@ if (isset($_REQUEST['product'])) {
             transform: translateX(50%);
             margin-top: -10%;
          }
-
-         .ratingDiv {
-            margin-top: 0%;
-         }
-
-         .h1Div {
-         align-items: center;
-         transform: translateX(32%);
-         font-size: 42px;
-         margin-top: 3%;
-         margin-bottom: -1%;
-         font-family: 'Gilroy-Regular';
-      }
-      .pDiv{
-         align-items:center;transform:translateX(27%);font-family: 'Gilroy-Regular';font-size:16px;margin-bottom: 10px;
-
-      }
-      
-      .starsDiv{transform:translateX(24%);margin-top:-7%;margin-bottom: 10px;}
-
-      .contentDiv{margin-top: -5%;font-family: 'Gilroy-Regular';}
-
       }
    </style>
 </head>
@@ -663,54 +621,72 @@ if (isset($_REQUEST['product'])) {
             </div>
             <div class="blog-slider">
                <div class="blog-slider__wrp swiper-wrapper">
-
-
-                  <div class="blog-slider__item swiper-slide ratingDiv">
+                  <div class="blog-slider__item swiper-slide">
                      <div class="blog-slider__img">
-                        <h1 class="h1Div">4/5</h1>
-                        <p class="pDiv">Rating Score</p>
-                        <div class="stars starsDiv">
-                           <i class="fas fa-star fa-lg" style="font-size: medium;"></i>
-                           <i class="fas fa-star fa-lg" style="font-size: medium;"></i>
-                           <i class="fas fa-star fa-lg" style="font-size: medium;"></i>
-                           <i class="fas fa-star fa-lg" style="font-size: medium;"></i>
-                           <i class="fas fa-star fa-lg" style="font-size: medium;"></i>
-                        </div>
 
-
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
                      </div>
-                     <div class="blog-slider__content contentDiv">
+                     <div class="blog-slider__content">
                         <span class="blog-slider__code">26 December 2019</span>
                         <div class="blog-slider__title">Anonymous Person 1<span class="social-block-rating"></span></div>
 
                         <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-                        <div class="pagination" style="margin-top: 15%;transform:translateX(-0%);font-size:small">
-                           <ul>
-                              <!--pages or li are comes from javascript -->
-                           </ul>
-                        </div>
                         <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
                      </div>
+                  </div>
+                  <div class="blog-slider__item swiper-slide">
+                     <div class="blog-slider__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/jason-leung-798979-unsplash.jpg" alt="">
+                     </div>
+                     <div class="blog-slider__content">
+                        <span class="blog-slider__code">26 December 2019</span>
+                        <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+                        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+                        <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
+                     </div>
+                  </div>
 
-
-
-
+                  <div class="blog-slider__item swiper-slide">
+                     <div class="blog-slider__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg" alt="">
+                     </div>
+                     <div class="blog-slider__content">
+                        <span class="blog-slider__code">26 December 2019</span>
+                        <div class="blog-slider__title">Lorem Ipsum Dolor3</div>
+                        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+                        <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
+                     </div>
                   </div>
 
 
+                  <div class="blog-slider__item swiper-slide">
+                     <div class="blog-slider__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg" alt="">
+                     </div>
+                     <div class="blog-slider__content">
+                        <span class="blog-slider__code">26 December 2019</span>
+                        <div class="blog-slider__title">Lorem Ipsum Dolor4</div>
+                        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+                        <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
+                     </div>
+                  </div>
 
 
-
-
-
-
+                  <div class="blog-slider__item swiper-slide">
+                     <div class="blog-slider__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg" alt="">
+                     </div>
+                     <div class="blog-slider__content">
+                        <span class="blog-slider__code">26 December 2019</span>
+                        <div class="blog-slider__title">Lorem Ipsum Dolor5</div>
+                        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+                        <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
+                     </div>
+                  </div>
                </div>
-
+               <div class="blog-slider__pagination"></div>
             </div>
 
-
-
-            <script src="./Pagination/script.js"></script>
 
          </div>
       </div>
@@ -720,16 +696,16 @@ if (isset($_REQUEST['product'])) {
 
 
       <footer>
+      
+      <div class="container" style="font-family: 'Gilroy-Regular';">
+         <div class="row">
+            <div class="col-lg-4 col-sm-12 footer-1">
 
-         <div class="container" style="font-family: 'Gilroy-Regular';">
-            <div class="row">
-               <div class="col-lg-4 col-sm-12 footer-1">
-
-                  <h1 style="font-family: 'Gilroy-Regular';">Sign up for our newsletter</h1>
-                  <form id="form" onsubmit="checkform()" method="POST">
-                     <div class="d-flex input">
-                        <input type="email" class="newsletter-input" name="newsletter" style="margin-top: 0% !important;" id="newsletter" placeholder="Enter Email Address" />
-                        <button type="submit" class="btn btn-primary btn-hover-secondary" style="height:50px;    display: inline-block;
+               <h1 style="font-family: 'Gilroy-Regular';">Sign up for our newsletter</h1>
+               <form id="form" onsubmit="checkform()" method="POST">
+                  <div class="d-flex input">
+                     <input type="email" class="newsletter-input" name="newsletter" style="margin-top: 0% !important;" id="newsletter" placeholder="Enter Email Address" />
+                     <button type="submit" class="btn btn-primary btn-hover-secondary" style="height:50px;    display: inline-block;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -749,117 +725,117 @@ if (isset($_REQUEST['product'])) {
     background-color: #0d6efd;
     border-color: #0d6efd;">Subscribe</button>
 
-                     </div>
-                     <div id="edit_email_error_1" style="color: white; display: none;">Enter valid Email.</div>
-                     </from>
-                     <div id="contact_success_1" class="ht-message-box style-success mb-2 " role="alert" style=" color: white;">
-                        <span class="icon"><i class="far fa-check-circle"></i></span> Thank you ! We
-                        have received your response.
-                     </div>
-                     <div id="newsletter_error" class="ht-message-box style-error mt-3" role="alert" style="color: white;">
-                        <span class="icon"><i class="far fa-times-circle"></i></span> already Subscribe
-                     </div>
-
-                     <div id="contact_error_1" class="ht-message-box style-error mb-2" role="alert" style="color: white;">
-                        <span class="icon"><i class="far fa-times-circle"></i></span> We were unable
-                        to
-                        receive your response. Try Again or Mail us at <a href="mailto:" style="text-decoration:underline;"><b>example@gmail.com</b></a>
-                     </div>
-
-               </div>
-               <div class="col-lg-3 col-sm-12 footer-3">
-                  <ul>
-                     <li><a href="./contact-us.php" style="text-decoration: none; color: white;">Contact Us</a></li>
-                     <li class="custom-margin"><a href="./faq's.php" style="text-decoration: none; color: white;">FAQ's</a></li>
-                     <li class="custom-margin"><a href="./shiney-heini-on-the-go.php" style="text-decoration: none; color: white;">Shiney Heinie On The Go</a></li>
-                     <li class="custom-margin"><a href="./shiney-heinic-spa-2.0.php" style="text-decoration: none; color: white;">Shiney Heinie Classic</a></li>
-                  </ul>
-               </div>
-               <div class="col-lg-3 col-sm-12 footer-3">
-                  <ul>
-                     <li>30-Day Return Policy</li>
-                     <li class="custom-margin"><a href="./privacy-policy.php" style="text-decoration: none; color: white;">Privacy Policy</a></li>
-                     <li class="custom-margin"><a href="./terms-conditions.php" style="text-decoration: none; color: white;">Terms &amp; Conditions</a></li>
-                  </ul>
-               </div>
-               <div class="col-lg-2 col-sm-12 text-center footer-5">
-                  <div class="social-icons">
-                     <i class="fab fa-facebook-f"></i>
-                     <i class="fab fa-instagram"></i>
                   </div>
+                  <div id="edit_email_error_1" style="color: white; display: none;">Enter valid Email.</div>
+                  </from>
+                  <div id="contact_success_1" class="ht-message-box style-success mb-2 " role="alert" style=" color: white;">
+                     <span class="icon"><i class="far fa-check-circle"></i></span> Thank you ! We
+                     have received your response.
+                  </div>
+                  <div id="newsletter_error" class="ht-message-box style-error mt-3" role="alert" style="color: white;">
+                     <span class="icon"><i class="far fa-times-circle"></i></span> already Subscribe
+                  </div>
+
+                  <div id="contact_error_1" class="ht-message-box style-error mb-2" role="alert" style="color: white;">
+                     <span class="icon"><i class="far fa-times-circle"></i></span> We were unable
+                     to
+                     receive your response. Try Again or Mail us at <a href="mailto:" style="text-decoration:underline;"><b>example@gmail.com</b></a>
+                  </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-12 footer-3">
+               <ul>
+                  <li><a href="./contact-us.php" style="text-decoration: none; color: white;">Contact Us</a></li>
+                  <li class="custom-margin"><a href="./faq's.php" style="text-decoration: none; color: white;">FAQ's</a></li>
+                  <li class="custom-margin"><a href="./shiney-heini-on-the-go.php" style="text-decoration: none; color: white;">Shiney Heinie On The Go</a></li>
+                  <li class="custom-margin"><a href="./shiney-heinic-spa-2.0.php" style="text-decoration: none; color: white;">Shiney Heinie Classic</a></li>
+               </ul>
+            </div>
+            <div class="col-lg-3 col-sm-12 footer-3">
+               <ul>
+                  <li>30-Day Return Policy</li>
+                  <li class="custom-margin"><a href="./privacy-policy.php" style="text-decoration: none; color: white;">Privacy Policy</a></li>
+                  <li class="custom-margin"><a href="./terms-conditions.php" style="text-decoration: none; color: white;">Terms &amp; Conditions</a></li>
+               </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 text-center footer-5">
+               <div class="social-icons">
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-instagram"></i>
                </div>
             </div>
          </div>
-      </footer>
-
-
+      </div>
+   </footer>
+      
+      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script>
-         $(document).ready(function() {
-            document.getElementById('contact_success_1').style.display = "none";
-            document.getElementById('contact_error_1').style.display = "none";
-            document.getElementById('newsletter_error').style.display = "none";
-         });
-         $("#form").submit(function(e) {
-            e.preventDefault();
-         });
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function() {
+         document.getElementById('contact_success_1').style.display = "none";
+         document.getElementById('contact_error_1').style.display = "none";
+         document.getElementById('newsletter_error').style.display = "none";
+      });
+      $("#form").submit(function(e) {
+         e.preventDefault();
+      });
 
-         function checkform() {
-            var email = document.getElementById("newsletter");
-            var email_error = document.getElementById('edit_email_error_1');
-            var pattern = new RegExp("^([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])(;)?)+$");
-            var data = email.value;
-            document.getElementById('contact_success_1').style.display = "none";
-            document.getElementById('contact_error_1').style.display = "none";
-            document.getElementById('newsletter_error').style.display = "none";
-            email_error.style.display = "none";
-
-
-            if (pattern.test(data) != true) {
-               email_error.style.display = "block";
-               email.value = "";
-               email.focus();
-
-            } else {
-
-               var formData = new FormData();
-
-               formData.append("email", email.value);
-
-               $.ajax(
-
-                  {
-                     url: "./interest-newsletter.php",
-                     type: 'POST',
-                     data: formData,
-                     contentType: false,
-                     processData: false,
-                     success: function(data) {
-                        if (data == "New record created successfully") {
-                           document.getElementById('contact_success_1').style.display = "block";
-                           document.getElementById('contact_error_1').style.display = "none";
-                           document.getElementById('newsletter_error').style.display = "none";
-                        } else if (data == "already exits") {
-                           document.getElementById('contact_success_1').style.display = "none";
-                           document.getElementById('contact_error_1').style.display = "none";
-                           document.getElementById('newsletter_error').style.display = "block";
-                        } else {
+      function checkform() {
+         var email = document.getElementById("newsletter");
+         var email_error = document.getElementById('edit_email_error_1');
+         var pattern = new RegExp("^([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])(;)?)+$");
+         var data = email.value;
+         document.getElementById('contact_success_1').style.display = "none";
+         document.getElementById('contact_error_1').style.display = "none";
+         document.getElementById('newsletter_error').style.display = "none";
+         email_error.style.display = "none";
 
 
-                           document.getElementById('contact_success_1').style.display = "none";
+         if (pattern.test(data) != true) {
+            email_error.style.display = "block";
+            email.value = "";
+            email.focus();
 
-                           document.getElementById('contact_error_1').style.display = "block";
-                           document.getElementById('newsletter_error').style.display = "none";
-                        }
+         } else {
+
+            var formData = new FormData();
+
+            formData.append("email", email.value);
+
+            $.ajax(
+
+               {
+                  url: "./interest-newsletter.php",
+                  type: 'POST',
+                  data: formData,
+                  contentType: false,
+                  processData: false,
+                  success: function(data) {
+                     if (data == "New record created successfully") {
+                        document.getElementById('contact_success_1').style.display = "block";
+                        document.getElementById('contact_error_1').style.display = "none";
+                        document.getElementById('newsletter_error').style.display = "none";
+                     } else if (data == "already exits") {
+                        document.getElementById('contact_success_1').style.display = "none";
+                        document.getElementById('contact_error_1').style.display = "none";
+                        document.getElementById('newsletter_error').style.display = "block";
+                     } else {
+
+
+                        document.getElementById('contact_success_1').style.display = "none";
+
+                        document.getElementById('contact_error_1').style.display = "block";
+                        document.getElementById('newsletter_error').style.display = "none";
                      }
                   }
+               }
 
-               );
-               document.getElementById("form").reset();
-            }
+            );
+            document.getElementById("form").reset();
          }
-      </script>
+      }
+   </script>
    </div>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
    <script src="https://kit.fontawesome.com/e07f3322e5.js" crossorigin="anonymous"></script>
@@ -895,12 +871,23 @@ if (isset($_REQUEST['product'])) {
    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
    <script>
       var swiper = new Swiper('.blog-slider', {
+         spaceBetween: 30,
+         effect: 'fade',
+         loop: true,
+         mousewheel: {
+            invert: false,
+         },
+         // autoHeight: true,
+         pagination: {
+            el: '.blog-slider__pagination',
+            clickable: true,
 
+         }
       });
    </script>
 
 
-
+  
 </body>
 
 </html>
