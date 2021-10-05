@@ -32,7 +32,7 @@
     }
 </style>
 <?php
-$result = $con->query("SELECT * from classic_review LIMIT 7");
+$result = $con->query("SELECT * from classic_review LIMIT 3");
 
 if (mysqli_num_rows($result) > 0) {
 

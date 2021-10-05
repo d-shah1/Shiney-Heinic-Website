@@ -484,7 +484,7 @@ if (isset($_REQUEST['product'])) {
 
       <!-- Product Detail Section Start -->
       <div class="product-section pt-5 pb-5">
-         <div class="container" style="max-width: 1340;">
+         <div class="container" style="max-width: 1340px;">
             <div class="row">
                <div class="col-lg-6 col-md-12 products-img">
                   <img src="./images/spa-heini-1.png" class="main-img" />

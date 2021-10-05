@@ -279,9 +279,15 @@
         height: 80px;
         margin-left: -4px;
     }
-
+    
+   
     .buy-btn .container .btn-buy {
-        display: none;
+        display: block;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
+        
     }
 
     .buy-btn #product-title {
