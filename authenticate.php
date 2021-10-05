@@ -19,6 +19,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 if ($pwd == $password || password_verify($pwd, $password)) {
 
                     $_SESSION["email"] = $row["email"];
+                    $_SESSION['user_id'] = $row['id'];
+                    
                     if ($remember) {
                         $hour = time() + 3600 * 24 * 360;
                         setcookie('Remember_me_email', urlencode(base64_encode($mail)), $hour);
@@ -31,6 +33,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             } else {
                 if (password_verify($pwd, $password)) {
                     $_SESSION["email"] = $row["email"];
+                    $_SESSION['user_id'] = $row['id'];
                     if ($remember) {
                         $hour = time() + 3600 * 24 * 360;
                         setcookie('Remember_me_email', urlencode(base64_encode($mail)), $hour);

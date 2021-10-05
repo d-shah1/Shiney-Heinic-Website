@@ -1,4 +1,4 @@
-	/*  Wizard */
+/* 	/*  Wizard 
 	jQuery(function ($) {
 		$('form#wrapped').attr('action', 'review_send.php');
 		$("#wizard_container").wizard({
@@ -30,7 +30,7 @@
 				$("#location").text("(" + state.stepsComplete + "/" + state.stepsPossible + ")");
 			}
 		});
-		/* Submit loader mask */
+		/* Submit loader mask 
 		$('form').on('submit',function() {
 			var form = $("form#wrapped");
 			form.validate();
@@ -38,4 +38,4 @@
 				$("#loader_form").fadeIn();
 			}
 		});
-	});
+	}); */
