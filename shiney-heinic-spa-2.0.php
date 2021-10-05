@@ -1,6 +1,5 @@
 <?php
 
-use function PHPSTORM_META\type;
 
 session_start();
 require("connection.php");
@@ -663,7 +662,7 @@ if (isset($_REQUEST['product'])) {
             </div>
 
             <div id="load_box">
-            <?php require('./viewReviews.php'); ?>
+            <?php require('./view-limited-reviews-classic.php'); ?>
             </div>
             
             

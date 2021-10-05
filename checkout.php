@@ -144,7 +144,7 @@ require("./connection.php");
                         </div>
 
                         <div class="mb-3">
-                            <label for="address">Address Line 1</label>
+                            <label for="address">Address</label>
                             <input type="text" name="address" id="address" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address" required>
 
                         </div>
@@ -174,12 +174,12 @@ require("./connection.php");
                         </div>
                        
                         <hr class="mb-4">
-                        <div class="col-md-8 order-md-1 form-left" id="address_ship_modal">
+                        <div class="col-md-12 order-md-1 form-left" id="address_ship_modal">
                             <h3 class="mb-3">Shipping Address</h3>
 
                             <div class="row">
 
-                                <div class="mb-3">
+                                <div class="mb-3 col-md-12">
                                     <label for="address">Address </label>
                                     <input required type="text" name="address_ship" id="address_ship" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Address">
 

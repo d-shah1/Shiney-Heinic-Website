@@ -4,7 +4,7 @@ require("connection.php");
 if(isset($_REQUEST['product'])){
 $_SESSION['pay']=$_REQUEST['product'];
 }
-require("./check-authenticate.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -624,7 +624,7 @@ require("./check-authenticate.php");
             </div>
 
             <div id="load_box">
-            <?php require('./viewReviews1.php'); ?>
+            <?php require('./view-limited-reviews-onthego.php'); ?>
             </div>
             
             
