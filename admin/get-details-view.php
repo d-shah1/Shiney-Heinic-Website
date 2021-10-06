@@ -23,6 +23,8 @@ if (!isset($_REQUEST['id'])) {
     $userid=$row['id'];
     $customer_id = $row['customer_id'];
     $customer_name = $row['customer_name'];
+    $email = $row['email'];
+    $phone = $row['phone'];
     $shiping_address = $row['shiping_address'];
     $country = $row['country'];
     $state = $row['state'];
@@ -43,6 +45,8 @@ if (!isset($_REQUEST['id'])) {
         "error" => "false", "comment" => "successful", 
         "customer_id" => $customer_id,
         "customer_name" => $customer_name,
+        "email" => $email,
+        "phone" => $phone,
         "shiping_address" => $shiping_address,
          "country" => $country,
          
