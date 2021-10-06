@@ -58,7 +58,8 @@ $current_time = date("j F  Y , g:i:s a", time());
       "customer" => $customer->id
       ));
 
-        // Transaction Data
+         
+    // Transaction Data
         $transactionData = [
         
           'customer_id' => $charge->customer,
