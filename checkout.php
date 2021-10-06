@@ -23,6 +23,7 @@ require("./connection.php");
     <style>
     #modal {
         position: fixed;
+        font-family: "Gilroy-Regular";
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -34,12 +35,35 @@ require("./connection.php");
     #overlay {
         position: fixed;
         left: 0;
+        font-family: "Gilroy-Regular";
         top: 0;
         width: 100vw;
         height: 100vh;
         display: none;
         background-color: #000;
         opacity: 0.5;
+    }
+    @media screen and (max-width: 768px) {
+        #modal {
+        position: fixed;
+        width: auto;
+        width: 360px;
+        left: 18%;
+        top: 20%;
+        transform: translate(-10%, -10%);
+        border: solid 1px #000;
+        display: none;
+        background-color: #fff;
+    }
+    .header-bill{
+    font-size:40px;
+    text-align: center !important;
+    }
+    .checkout-form-section .container .form-right {
+    margin-top: 80px;
+    padding-left: 15px;
+
+}
     }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -103,7 +127,7 @@ require("./connection.php");
 
 
                         <div class="col-md-8 shadow order-md-1 p-5 form-left">
-                            <h3 class="mb-3">Billing address</h3>
+                            <h3 class="mb-3 header-bill">Billing address</h3>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -217,9 +241,9 @@ require("./connection.php");
                             </div>
 
                         </div>
-                        <div class="col-md-4 order-md-2 mb-4  form-right">
+                        <div class="col-md-4 order-md-2 mb-4 form-right">
                             <h4 class="d-flex justify-content-between align-items-center mb-3">
-                                <span>Your Cart</span>
+                            <span class="mb-3 header-bill">Cart</span>
                             </h4>
 
                             <ul class="list-group mb-3">
@@ -317,10 +341,10 @@ require("./connection.php");
         <div id="modal" style="z-index: 50000000;">
             <div class="p-5 text-center">
                 <img style="height: 150px; width:150px;" src="./images/Spinner.gif">
-                <div class=" mt-2 sm\:font-small" style="font-size: 20px;">Please Wait....</div>
+                <div class=" mt-2 sm\:font-small" style="font-size: 20px;font-weight:800">Please Wait....</div>
                 <div class="text-gray-600 mt-2 mb-2">Please allow upto 5 min for slow internet while the transaction in
                     in progress</div>
-                <div class="text-gray-600  mb-5" style="color: red;">Do not refresh or close this page. You will be
+                <div class="text-gray-600  mb-5" style="color: red;font-weight:600">Do not refresh or close this page. You will be
                     automatically redirected once payment process is completed</div>
             </div>
         </div>
