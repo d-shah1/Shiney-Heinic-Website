@@ -115,7 +115,7 @@ require("../connection.php");
 
             }
         };
-        xhttp.open("POST", "get-details-user.php?id=" + id, true);
+        xhttp.open("POST", "get-details-review.php?id=" + id, true);
         xhttp.send();
 
     }

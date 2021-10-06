@@ -1,0 +1,38 @@
+<?php
+session_start();
+require("check-authenticate.php");
+require("../connection.php");
+if (!isset($_POST['name'])) {
+  echo '
+  <script language="javascript">
+  window.location="review-list-onthego.php";
+  </script>
+  ';
+}
+
+date_default_timezone_set('America/Los_Angeles');
+$current_time = date("j F  Y , g:i:s a", time());
+
+$name=$_POST['name'];
+$userid_realForm=$_POST['userid_realForm'];
+
+$ratingForm = $_POST['ratingForm'];
+$review_textFrom = $_POST['review_textFrom'];
+
+
+$sql = sprintf(
+  "INSERT INTO `onthego_review` ( `name`, `user_id`,  `rating`, `review_text`, `timestamp`)VALUES ('%s','%s','%s','%s','%s')",
+  $con->real_escape_string($name),
+  $con->real_escape_string($userid_realForm),
+ 
+  $con->real_escape_string($ratingForm),
+  $con->real_escape_string($review_textFrom),
+  $con->real_escape_string($current_time)
+
+);
+
+if ($con->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Record is not created error occurs";
+}

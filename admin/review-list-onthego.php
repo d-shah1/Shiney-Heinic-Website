@@ -22,6 +22,43 @@ require("../connection.php");
     <link href="css/style.css" rel="stylesheet">
 
     <script>
+            function fill_edit_details(id) {
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+        var responseObj = this.responseText;
+        var response = JSON.parse(responseObj);
+        var error = response.error;
+        var comment = response.comment;
+
+
+        var name = response.name;
+        var review_text	=response.review_text;
+       
+
+
+        var rating = response.rating
+
+        var userid = response.userid;
+        var userid_real = response.userid_real;
+
+        document.getElementById("userid").value = userid;
+        document.getElementById("userid_real").value = userid_real;
+        document.getElementById("name").value = name
+        document.getElementById("rating").value =rating
+
+        document.getElementById("review_text").value = review_text
+
+
+
+    }
+};
+xhttp.open("POST", "get-details-review-ongo.php?id=" + id, true);
+xhttp.send();
+
+}
     function delete_message(id) {
         document.getElementById("delete").value = id;
     }
@@ -305,6 +342,52 @@ require("../connection.php");
         <!--**********************************
             Success Modal End
         ***********************************-->
+          <!--**********************************
+           Edit Success Modal Start
+        ***********************************-->
+        <button hidden id="editsuccessBtn" data-toggle="modal" data-target="#editsuccessModal"></button>
+        <div class="modal fade" id="editsuccessModal" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <form>
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <div aria-labelledby="swal2-title" aria-describedby="swal2-content"
+                                class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog"
+                                aria-live="assertive" aria-modal="true" style="display: flex;">
+                                <div class="swal2-header">
+                                    <div class="swal2-icon swal2-success swal2-animate-success-icon"
+                                        style="display: flex;">
+                                        <div class="swal2-success-circular-line-left"
+                                            style="background-color: rgb(255, 255, 255);"></div>
+                                        <span class="swal2-success-line-tip"></span> <span
+                                            class="swal2-success-line-long"></span>
+                                        <div class="swal2-success-ring"></div>
+                                        <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);">
+                                        </div>
+                                        <div class="swal2-success-circular-line-right"
+                                            style="background-color: rgb(255, 255, 255);"></div>
+                                    </div>
+                                    <h2 class="swal2-title" id="swal2-title" style="display: flex;">Record Edited
+                                        Successfully !!
+                                    </h2>
+                                </div>
+
+                                <div class="swal2-actions" style="display: flex;"><button type="button"
+                                        onclick="window.location.reload()" class="swal2-confirm swal2-styled"
+                                        aria-label=""
+                                        style="border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);">OK</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--**********************************
+          Edit  Success Modal End
+        ***********************************-->
 
 
 
@@ -445,6 +528,130 @@ require("../connection.php");
         <!--**********************************
             Error Modal End
         ***********************************-->
+           <!--**********************************
+            Add New Form Modal Start
+        ***********************************-->
+        <div class="modal fade" id="basicModal">
+            <div class="modal-dialog" role="document">
+                <form onsubmit="create_new()" name="f1" id="create_form" method="POST">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add New User</h5>
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="basic-form">
+                                <div id="any" style="display:none;color:green;"></div>
+                                <div class="form-row">
+
+                                    <div class="form-group col-md-6">
+                                        <label for="nameForm">Name</label>
+                                        <input type="text" class="form-control" id='nameForm' placeholder="Name"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="emailForm">User ID</label>
+                                        <input type="text" class="form-control" id='userid_realForm' placeholder="userid"
+                                            required="required">
+                                        
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="emailForm">Rating</label>
+                                        <input type="text" class="form-control" id='ratingForm' placeholder="Rating"
+                                            required="required">
+
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="emailForm">Review Text</label>
+                                        <input type="text" id="review_textFrom"  name="review_text"
+                                            class="form-control" placeholder="review_text" required></input>
+
+                                    </div>
+                                   
+
+
+                                   
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-danger light" id="close_new_details"
+                                data-dismiss="modal">Close</button>
+                            <button type="submit" id="submit" class="btn btn-primary" >Save
+                                changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--**********************************
+            Add New Form Modal end
+        ***********************************-->
+
+
+        <!--**********************************
+            Edit Form Modal Start
+        ***********************************-->
+        <div class="modal fade" id="editFormModal">
+            <div class="modal-dialog" role="document">
+                <form method="POST" onsubmit="edit_new_form()" id="edit_form">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit User</h5>
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="basic-form">
+                                <div class="form-row">
+                                    <input type="number" name="userid" id="userid" hidden>
+                                    <div class="form-group col-md-6">
+                                        <label for="nameForm">Name</label>
+                                        <input type="text" class="form-control" id='name' placeholder="Name"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="emailForm">User ID</label>
+                                        <input type="text" class="form-control" id='userid_real' placeholder="userid"
+                                            required="required">
+                                        
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="emailForm">Rating</label>
+                                        <input type="text" class="form-control" id='rating' placeholder="Rating"
+                                            required="required">
+
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="emailForm">Review Text</label>
+                                        <input type="text" id="review_text"  name="review_text"
+                                            class="form-control" placeholder="review_text" required></input>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger light" id="close_edit"
+                                data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--**********************************
+            Edit Form Modal end
+        ***********************************-->
 
 
 
@@ -464,7 +671,10 @@ require("../connection.php");
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">On The Go Product Reviews</h4>
-
+                                <button type="button" class="btn btn-rounded btn-info" data-toggle="modal"
+                                    data-target="#basicModal"><span class="btn-icon-left text-info"><i
+                                            class="fa fa-plus color-info"></i>
+                                    </span>Add</button>
 
                             </div>
                             <div class="card-body">
@@ -492,7 +702,7 @@ require("../connection.php");
                                                 while ($row = mysqli_fetch_assoc($list)) {
                                             ?>
                                             <tr>
-                                                <td><?= $row["id"] ?>
+                                            <td><?= $row["id"] ?>
                                                 </td>
 
                                                 <td>
@@ -514,6 +724,10 @@ require("../connection.php");
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
+                                                    <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"
+                                                            data-toggle="modal" data-target="#editFormModal"
+                                                            onclick="fill_edit_details(<?= $row['id'] ?>)">
+                                                            <i class="fa fa-pencil"></i></a>
 
                                                         <a href="#" class="btn btn-danger shadow btn-xs sharp"
                                                             data-toggle="modal" data-target="#deleteModal"
@@ -583,6 +797,134 @@ require("../connection.php");
     <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="js/plugins-init/datatables.init.js"></script>
     <script>
+          $("#create_form").submit(function(e) {
+        e.preventDefault();
+    });
+
+    function create_new() {
+
+        var nameForm = document.getElementById("nameForm");
+        var userid_realForm = document.getElementById("userid_realForm");
+        var ratingForm = document.getElementById("ratingForm");
+
+
+        var review_textFrom = document.getElementById("review_textFrom");
+       
+       
+           
+
+            var formData = new FormData();
+
+            formData.append("name", nameForm.value);
+            formData.append("userid_realForm", userid_realForm.value);
+            formData.append("ratingForm", ratingForm.value);
+
+            formData.append("review_textFrom", review_textFrom.value);
+
+
+            $.ajax(
+
+                {
+                    url: "./create-message-review-ongo.php",
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+
+
+
+                    success: function(data) {
+
+                        if (data == "New record created successfully") {
+
+                            setTimeout(document.getElementById('close_new_details').click(), 2000)
+                            document.getElementById('successBtn').click()
+                            document.getElementById("create_form").reset();
+
+                        } else {
+                          
+
+                            setTimeout(document.getElementById('close_new_details').click(), 2000)
+                            document.getElementById('errorBtn').click()
+
+
+                        }
+
+                    }
+
+
+
+                }
+
+            );
+
+        
+    }
+
+
+    $("#edit_form").submit(function(e) {
+        e.preventDefault();
+    });
+
+    function edit_new_form() {
+
+        var nameForm = document.getElementById("name");
+        var userid_realForm = document.getElementById("userid_real");
+        var ratingForm = document.getElementById("rating");
+        var userid = document.getElementById('userid');
+
+
+        var review_textFrom = document.getElementById("review_text");
+       
+       
+      
+
+            var formData = new FormData();
+
+            formData.append("name", nameForm.value);
+            formData.append("userid_realForm", userid_realForm.value);
+            formData.append("ratingForm", ratingForm.value);
+            formData.append("userid", userid.value);
+
+            formData.append("review_textFrom", review_textFrom.value);
+
+            $.ajax(
+
+                {
+                    url: "./update-content-review-ongo.php",
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+
+
+
+                    success: function(data) {
+
+                        if (data == "Record Edited Successfully") {
+
+                            setTimeout(document.getElementById('close_edit').click(), 2000)
+                            document.getElementById('editsuccessBtn').click()
+
+
+                        } else {
+                           
+                            setTimeout(document.getElementById('close_edit').click(), 2000)
+                            document.getElementById('errorBtn').click()
+
+
+                        }
+
+                    }
+
+
+
+                }
+
+            );
+
+        
+    }
     $("#delete_form").submit(function(e) {
         e.preventDefault();
     });
