@@ -11,7 +11,7 @@ if ($res->num_rows > 0) {
   if($email==isset($row['email']))
   {
     echo "<script language='javascript'>
-    window.location= 'register.php?message=user already exist'; 
+    window.location= 'register.php?message=This Email Already Exists'; 
    </script>";
           
   }
@@ -19,10 +19,10 @@ if ($res->num_rows > 0) {
   }
 else{
 session_start();
-$host = '127.0.0.1';
-$db   = 'shiney_heinic_website';
-$user = 'root';
-$pass = '';
+$host = 'localhost';
+$db   = 'rounavza_shiney';
+$user = 'rounavza_shiney';
+$pass = 'rounavza_shiney';
 $port = "3306";
 $charset = 'utf8mb4';
 
@@ -52,12 +52,13 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $statement = $pdo->prepare($result);
     $statement->execute([$mail,$pwd,$user,$lastname,$current_time]);
         if ($statement) {
+            $_SESSION['login_error'] = "false";
             echo "<script language='javascript'>
-            window.location= 'login.php?message=successful register login!!'; 
+            window.location= 'login.php?message=You have registered Sucessfully!'; 
            </script>";
         } else {
             echo "<script language='javascript'>
-            window.location= 'login.php?message=error try again!!'; 
+            window.location= 'register.php?message=Error Please Try Again!'; 
            </script>";
         }
 } else {
@@ -67,4 +68,3 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 }
 
 }
-?>
