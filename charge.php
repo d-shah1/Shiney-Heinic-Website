@@ -22,14 +22,27 @@ try {
   $phone = $POST['phone'];
   $pro1 = $POST['product_first'];
   $pro2 = $POST['product_second'];
+
+  if ($pro2 == "" || $pro2 == " ") {
+    $pro2 = 0;
+  }
+
+
   $user_id = $_SESSION['user_id'];
   $country = $POST['country'];
   $address = $POST['address'];
   $zipCode = $POST['zip'];
   $state = $POST['state'];
 
+  $cre = (($pro2 * 24.99) + ($pro1 * 69.99));
+
   $pay = round($POST['pay'], 0);
   $pay_store = $pay / 100;
+
+
+  if ((int)$cre != (int)$pay_store)
+    header("location : error.php");
+
   $check = $POST['check_add'];
 
 

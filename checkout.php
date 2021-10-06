@@ -21,26 +21,26 @@ require("./connection.php");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
-#modal {
-  position:fixed;
-  left:50%;
-  top:50%;
-  transform:translate(-50%, -50%);
-  border:solid 1px #000;
-  display:none;
-  background-color:#fff;
-}
+    #modal {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 1px #000;
+        display: none;
+        background-color: #fff;
+    }
 
-#overlay {
-  position:fixed;
-  left:0;
-  top:0;
-  width:100vw;
-  height:100vh;
-  display:none;
-  background-color:#000;
-  opacity:0.5;
-}
+    #overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        background-color: #000;
+        opacity: 0.5;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -97,7 +97,8 @@ require("./connection.php");
         <!-- Checkout Form Start -->
         <div class="checkout-form-section">
             <div class="container">
-                <form action="./charge.php" method="post" id="payment-form">
+                <form action="./charge.php" onsubmit="document.getElementById('modal_btn').click()" method="post"
+                    id="payment-form">
                     <div class="row">
 
 
@@ -216,79 +217,78 @@ require("./connection.php");
                             </div>
 
                         </div>
-                        <div class="col-md-4 order-md-2 mb-4 form-right">
+                        <div class="col-md-4 order-md-2 mb-4  form-right">
                             <h4 class="d-flex justify-content-between align-items-center mb-3">
                                 <span>Your Cart</span>
                             </h4>
-                            <form action="./charge.php" method="post" id="payment-form">
-                                <ul class="list-group mb-3">
-                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                        <div style="font-family: 'Gilroy-Regular';">
-                                            <h5 class="my-0" style="font-weight: bolder">SHINEY HEINIE CLASSIC</h5>
-                                            <span style="display: flex;margin-top:10px; ">
-                                                <small class="text-muted">Quantity :</small>
-                                                <i class="fas fa-minus form-control" style="width:40px;margin-left:10px"
-                                                    onclick="minus(),check_zero()"></i>
-                                                <small class="text-muted form-control" style="width:40px"
-                                                    id="product1">0</small>
-                                                <i class="fas fa-plus form-control" style="width:40px"
-                                                    onclick="total(),check_zero()"></i>
-                                            </span>
-                                            <input type="number" name="product_first" id="first"
-                                                class="form-control mb-3 StripeElement StripeElement--empty" hidden>
+
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <div style="font-family: 'Gilroy-Regular';">
+                                        <h5 class="my-0" style="font-weight: bolder">SHINEY HEINIE CLASSIC</h5>
+                                        <span style="display: flex;margin-top:10px; ">
+                                            <small class="text-muted">Quantity :</small>
+                                            <i class="fas fa-minus form-control" style="width:40px;margin-left:10px"
+                                                onclick="minus(),check_zero()"></i>
+                                            <small class="text-muted form-control" style="width:40px"
+                                                id="product1">0</small>
+                                            <i class="fas fa-plus form-control" style="width:40px"
+                                                onclick="total(),check_zero()"></i>
+                                        </span>
+                                        <input type="number" name="product_first" id="first"
+                                            class="form-control mb-3 StripeElement StripeElement--empty" hidden>
 
 
 
-                                        </div>
-                                        <div style="font-family: 'Gilroy-Regular';font-weight:bolder;">
-                                            <div>
-                                                <span class="text-muted">$</span><span class="text-muted"
-                                                    id="prod_final">0</span>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                        <div style="font-family: 'Gilroy-Regular';">
-                                            <h5 class="my-0" style="font-weight: bolder">SHINEY HEINIE ON THE GO</h5>
-                                            <span style="display: flex;margin-top:10px; ">
-                                                <small class="text-muted">Quantity :</small>
-                                                <i class="fas fa-minus form-control" style="width:40px;margin-left:10px"
-                                                    onclick="minus1(),check_zero()"></i>
-                                                <small class=" form-control" style="width:40px" id="product2">0</small>
-                                                <i class="fas fa-plus form-control" style="width:40px"
-                                                    onclick="total1(),check_zero()"></i>
-                                            </span>
-                                            <input type="number" name="product_second" id="second"
-                                                class="form-control mb-3 StripeElement StripeElement--empty" hidden>
-
-                                        </div>
-                                        <div style="font-family: 'Gilroy-Regular';font-weight:bolder;">
-                                            <div>
-                                                <span class="text-muted">$</span><span class="text-muted"
-                                                    id="prod_final_2">0</span>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between">
-                                        <span class="total">Total</span>
-                                        <input type="number" name="pay" id="pay"
-                                            class="form-control mb-3 StripeElement StripeElement--empty" step="0.01"
-                                            hidden>
-
-
-                                        <div><strong class="total-price">$</strong><strong class="total-price"
-                                                id="final">0</strong></div>
-                                    </li>
-
-                                    <div id="card-element" class="form-control mt-2">
-                                        <!-- a Stripe Element will be inserted here. -->
                                     </div>
-                                    <!-- Used to display form errors -->
-                                    <div style="color: red;" id="card-errors" role="alert"></div>
+                                    <div style="font-family: 'Gilroy-Regular';font-weight:bolder;">
+                                        <div>
+                                            <span class="text-muted">$</span><span class="text-muted"
+                                                id="prod_final">0</span>
+                                        </div>
 
-                                    <button id="payment_btn" style=" height: 50px;
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <div style="font-family: 'Gilroy-Regular';">
+                                        <h5 class="my-0" style="font-weight: bolder">SHINEY HEINIE ON THE GO</h5>
+                                        <span style="display: flex;margin-top:10px; ">
+                                            <small class="text-muted">Quantity :</small>
+                                            <i class="fas fa-minus form-control" style="width:40px;margin-left:10px"
+                                                onclick="minus1(),check_zero()"></i>
+                                            <small class=" form-control" style="width:40px" id="product2">0</small>
+                                            <i class="fas fa-plus form-control" style="width:40px"
+                                                onclick="total1(),check_zero()"></i>
+                                        </span>
+                                        <input type="number" name="product_second" id="second"
+                                            class="form-control mb-3 StripeElement StripeElement--empty" hidden>
+
+                                    </div>
+                                    <div style="font-family: 'Gilroy-Regular';font-weight:bolder;">
+                                        <div>
+                                            <span class="text-muted">$</span><span class="text-muted"
+                                                id="prod_final_2">0</span>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span class="total">Total</span>
+                                    <input type="number" name="pay" id="pay"
+                                        class="form-control mb-3 StripeElement StripeElement--empty" step="0.01" hidden>
+
+
+                                    <div><strong class="total-price">$</strong><strong class="total-price"
+                                            id="final">0</strong></div>
+                                </li>
+
+                                <div id="card-element" class="form-control mt-2">
+                                    <!-- a Stripe Element will be inserted here. -->
+                                </div>
+                                <!-- Used to display form errors -->
+                                <div style="color: red;" id="card-errors" role="alert"></div>
+
+                                <button id="payment_btn" style=" height: 50px;
                                     display: inline-flex;
                                     background-image: linear-gradient(147deg, #75CFB8 0%, rgb(255, 198, 125, 0.5) 74%);
                                     padding: 15px 15px;
@@ -303,26 +303,37 @@ require("./connection.php");
                                     margin-left: 2%;
                                     letter-spacing: 1px;">Submit Payment</button>
 
-                                </ul>
+                            </ul>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        
-        
-        <button onclick="openModal()">Open Modal!</button>
 
-<div id="overlay"></div>
-<div id="modal">
-    hh
-</div>
-<script>
-function openModal() {
-  $("#overlay").css({"display":"block"});
-  $("#modal").css({"display":"block"});
-}
-</script>
+
+        <button onclick="openModal()" id="modal_btn">Open Modal!</button>
+
+        <div id="overlay"></div>
+        <div id="modal" style="z-index: 50000000;">
+            <div class="p-5 text-center">
+                <img style="height: 150px; width:150px;" src="./images/Spinner.gif">
+                <div class=" mt-2 sm\:font-small" style="font-size: 20px;">Please Wait....</div>
+                <div class="text-gray-600 mt-2 mb-2">Please allow upto 5 min for slow internet while the transaction in
+                    in progress</div>
+                <div class="text-gray-600  mb-5" style="color: red;">Do not refresh or close this page. You will be
+                    automatically redirected once payment process is completed</div>
+            </div>
+        </div>
+        <script>
+        function openModal() {
+            $("#overlay").css({
+                "display": "block"
+            });
+            $("#modal").css({
+                "display": "block"
+            });
+        }
+        </script>
 
         <?php require("./footer.php"); ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
