@@ -205,11 +205,11 @@ require("./connection.php");
                                             <span style="display: flex;margin-top:10px; ">
                                                 <small class="text-muted">Quantity :</small>
                                                 <i class="fas fa-minus form-control" style="width:40px;margin-left:10px"
-                                                    onclick="minus()"></i>
+                                                    onclick="minus(),check_zero()"></i>
                                                 <small class="text-muted form-control" style="width:40px"
                                                     id="product1">0</small>
                                                 <i class="fas fa-plus form-control" style="width:40px"
-                                                    onclick="total()"></i>
+                                                    onclick="total(),check_zero()"></i>
                                             </span>
                                             <input type="number" name="product_first" id="first"
                                                 class="form-control mb-3 StripeElement StripeElement--empty" hidden>
@@ -231,10 +231,10 @@ require("./connection.php");
                                             <span style="display: flex;margin-top:10px; ">
                                                 <small class="text-muted">Quantity :</small>
                                                 <i class="fas fa-minus form-control" style="width:40px;margin-left:10px"
-                                                    onclick="minus1()"></i>
+                                                    onclick="minus1(),check_zero()"></i>
                                                 <small class=" form-control" style="width:40px" id="product2">0</small>
                                                 <i class="fas fa-plus form-control" style="width:40px"
-                                                    onclick="total1()"></i>
+                                                    onclick="total1(),check_zero()"></i>
                                             </span>
                                             <input type="number" name="product_second" id="second"
                                                 class="form-control mb-3 StripeElement StripeElement--empty" hidden>
@@ -265,7 +265,7 @@ require("./connection.php");
                                     <!-- Used to display form errors -->
                                     <div style="color: red;" id="card-errors" role="alert"></div>
 
-                                    <button style=" height: 50px;
+                                    <button id="payment_btn" style=" height: 50px;
                                     display: inline-flex;
                                     background-image: linear-gradient(147deg, #75CFB8 0%, rgb(255, 198, 125, 0.5) 74%);
                                     padding: 15px 15px;
@@ -359,6 +359,16 @@ require("./connection.php");
         });
 
 
+        function check_zero() {
+            var p1 = document.getElementById("product1").innerHTML;
+            var p2 = document.getElementById("product2").innerHTML;
+
+            if (p1 == 0 && p2 == 0) {
+                document.getElementById("payment_btn").style.display = "none";
+            } else {
+                document.getElementById("payment_btn").style.display = "block";
+            }
+        }
 
         function total() {
             pro1++;
@@ -379,6 +389,7 @@ require("./connection.php");
         function minus() {
             pro1--;
             if (pro1 == 0 || pro1 < 0) {
+
                 pro1 = 0;
                 document.getElementById("product1").innerHTML = pro1;
                 document.getElementById("prod_final").innerHTML = (pro1 * 69.99).toFixed(2);
