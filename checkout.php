@@ -20,6 +20,29 @@ require("./connection.php");
     <link rel="stylesheet" href="./css/responsive.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+#modal {
+  position:fixed;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  border:solid 1px #000;
+  display:none;
+  background-color:#fff;
+}
+
+#overlay {
+  position:fixed;
+  left:0;
+  top:0;
+  width:100vw;
+  height:100vh;
+  display:none;
+  background-color:#000;
+  opacity:0.5;
+}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </head>
@@ -286,7 +309,20 @@ require("./connection.php");
                 </form>
             </div>
         </div>
+        
+        
+        <button onclick="openModal()">Open Modal!</button>
 
+<div id="overlay"></div>
+<div id="modal">
+    hh
+</div>
+<script>
+function openModal() {
+  $("#overlay").css({"display":"block"});
+  $("#modal").css({"display":"block"});
+}
+</script>
 
         <?php require("./footer.php"); ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
