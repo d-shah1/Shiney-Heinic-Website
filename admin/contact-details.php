@@ -10,7 +10,7 @@ require("../connection.php");
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home Care Forms | Real Estate School International</title>
+    <title>Home Care Forms | Shiney Heinie</title>
     <!-- Favicon icon -->
     <!-- Datatable -->
     <link href="vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -36,8 +36,8 @@ require("../connection.php");
                     var last_name = response.last_name;
                     var email = response.email
                     var message = response.message;
-                   
-                    var subject=response.subject;
+
+                    var subject = response.subject;
 
                     var userid = response.userid;
 
@@ -45,7 +45,7 @@ require("../connection.php");
                     document.getElementById("first_name").value = first_name
                     document.getElementById("last_name").value = last_name
                     document.getElementById("email").value = email
-                  
+
                     document.getElementById("subject").value = subject
                     document.getElementById("message").value = message
 
@@ -92,7 +92,7 @@ require("../connection.php");
         ***********************************-->
         <div class="nav-header">
             <a href="dashboard.php" class="brand-logo">
-              </a>
+            </a>
 
             <div class="nav-control">
                 <div class="hamburger">
@@ -131,7 +131,7 @@ require("../connection.php");
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                     <div class="header-info">
                                         <span>Hey, <strong>Admin</strong></span>
-                                        <small>Real Estate School International</small>
+                                        <small>Shiney Heinie</small>
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -162,7 +162,7 @@ require("../connection.php");
                 <ul class="nav menu-tabs">
                     <li class="nav-item">
                         <a class="nav-link " href="dashboard.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
                                     <path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#ffffff" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953) " />
@@ -173,7 +173,7 @@ require("../connection.php");
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="contact-details.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
                                     <path d="M6,2 L18,2 C19.6568542,2 21,3.34314575 21,5 L21,19 C21,20.6568542 19.6568542,22 18,22 L6,22 C4.34314575,22 3,20.6568542 3,19 L3,5 C3,3.34314575 4.34314575,2 6,2 Z M12,11 C13.1045695,11 14,10.1045695 14,9 C14,7.8954305 13.1045695,7 12,7 C10.8954305,7 10,7.8954305 10,9 C10,10.1045695 10.8954305,11 12,11 Z M7.00036205,16.4995035 C6.98863236,16.6619875 7.26484009,17 7.4041679,17 C11.463736,17 14.5228466,17 16.5815,17 C16.9988413,17 17.0053266,16.6221713 16.9988413,16.5 C16.8360465,13.4332455 14.6506758,12 11.9907452,12 C9.36772908,12 7.21569918,13.5165724 7.00036205,16.4995035 Z" fill="#3A7AFE" />
@@ -183,7 +183,7 @@ require("../connection.php");
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="user-list.php">
-                        <svg id="icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
+                            <svg id="icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
                                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
                                 </path>
                                 <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
@@ -191,10 +191,10 @@ require("../connection.php");
                             </svg>
                         </a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="new_subscriptions.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
                                     <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#ffffff" />
@@ -206,7 +206,7 @@ require("../connection.php");
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="review-list-classic.php">
-                        <svg id="icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
+                            <svg id="icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
                                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
                                 </path>
                                 <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
@@ -216,7 +216,7 @@ require("../connection.php");
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="review-list-onthego.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
                                     <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#ffffff" />
@@ -226,7 +226,7 @@ require("../connection.php");
                             </svg>
                         </a>
                     </li>
-                   
+
                 </ul>
             </div>
             <a href="logout.php" class="logout-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
@@ -457,7 +457,7 @@ require("../connection.php");
                                         <label for="lastForm">Last Name</label>
                                         <input type="text" class="form-control" id='lastForm' placeholder="Last Name" required="required">
                                     </div>
-                                    
+
                                     <div class="form-group col-md-6">
                                         <label for="emailForm">Email</label>
                                         <input type="email" class="form-control" id='emailForm' placeholder="Email" required="required">
@@ -514,24 +514,24 @@ require("../connection.php");
                                         <label>Last Name</label>
                                         <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Name" required="required">
                                     </div>
-                                    
+
                                     <div class="form-group col-md-6">
                                         <label>Email</label>
                                         <input type="email" class="form-control" name="email" placeholder="Email" id="email" required="required">
                                         <div id="edit_email_error" style="color: red; display: none;">Enter valid Email.</div>
                                     </div>
-                                   
+
                                     <div class="form-group col-md-6">
                                         <label>Subject</label>
                                         <input type="text" class="form-control" name="subject" id="subject" placeholder="subject" required="required">
                                     </div>
-                                   
+
                                     <div class="form-group col-md-12">
                                         <label>Message</label>
                                         <textarea class="form-control" name="message" id="message" placeholder="Enter your message here..." required="required">
                                         </textarea>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -576,7 +576,7 @@ require("../connection.php");
                                                 <th id="serial_no">Sr No.</th>
                                                 <th>Name</th>
                                                 <th>Email</th>
-                                                
+
                                                 <th>Message</th>
                                                 <th>Subject</th>
                                                 <th>TimeStamp</th>
@@ -593,13 +593,13 @@ require("../connection.php");
                                                     <tr>
                                                         <td><?= $row["id"] ?>
                                                         </td>
-                                                        <td><?= $row["first_name"]." ".$row["last_name"]  ?>
+                                                        <td><?= $row["first_name"] . " " . $row["last_name"]  ?>
                                                         </td>
-                                                       
+
                                                         <td>
                                                             <?= $row["email"] ?>
                                                         </td>
-                                                      
+
                                                         <td>
                                                             <?= $row["message"] ?>
                                                         </td>
@@ -687,36 +687,35 @@ require("../connection.php");
 
             var firstForm = document.getElementById("firstForm");
             var lastForm = document.getElementById("lastForm");
-           
+
             var subjectForm = document.getElementById("subjectForm");
             var messageForm = document.getElementById("messageForm");
             var emailForm = document.getElementById("emailForm");
             var email_error = document.getElementById('email_error');
-          
-           
 
-           
+
+
+
             var pattern = new RegExp("^([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])(;)?)+$");
             var data = emailForm.value;
 
-           
-            email_error.style.display = "none";
-           
-                if (pattern.test(data) != true) {
-                    email_error.style.display = "block";
-                    emailForm.value = "";
-                    emailForm.focus();
 
-                }
-               else {
-                
+            email_error.style.display = "none";
+
+            if (pattern.test(data) != true) {
+                email_error.style.display = "block";
+                emailForm.value = "";
+                emailForm.focus();
+
+            } else {
+
                 email_error.style.display = "none";
 
                 var formData = new FormData();
 
                 formData.append("first_name", firstForm.value);
                 formData.append("last_name", lastForm.value);
-                
+
                 formData.append("emailForm", emailForm.value);
                 formData.append("subjectForm", subjectForm.value);
                 formData.append("messageForm", messageForm.value);
@@ -767,30 +766,29 @@ require("../connection.php");
 
             var first_Form = document.getElementById("first_name");
             var last_Form = document.getElementById("last_name");
-           var messageForm = document.getElementById("message");
-           var subjectForm = document.getElementById("subject");
+            var messageForm = document.getElementById("message");
+            var subjectForm = document.getElementById("subject");
             var emailForm = document.getElementById("email");
-            
-            var userid = document.getElementById('userid');
-            
-           
 
-            
+            var userid = document.getElementById('userid');
+
+
+
+
 
 
             var email_error = document.getElementById('edit_email_error');
             var pattern = new RegExp("^([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])(;)?)+$");
             var data = emailForm.value;
 
-          
-            email_error.style.display = "none";
-             if (pattern.test(data) != true) {
-                    email_error.style.display = "block";
-                    emailForm.value = "";
-                    emailForm.focus();
 
-                }
-                 else {
+            email_error.style.display = "none";
+            if (pattern.test(data) != true) {
+                email_error.style.display = "block";
+                emailForm.value = "";
+                emailForm.focus();
+
+            } else {
                 email_error.style.display = "none";
 
                 var formData = new FormData();
@@ -800,7 +798,7 @@ require("../connection.php");
                 formData.append("email", emailForm.value);
                 formData.append("message", messageForm.value);
                 formData.append("subject", subjectForm.value);
-               
+
                 formData.append("userid", userid.value);
 
                 $.ajax(
