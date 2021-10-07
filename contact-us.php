@@ -172,6 +172,12 @@
 
                             if (data == "New record created successfully") {
 
+                                first_Form.value = "";
+                                last_Form.value = "";
+                                messageForm.value = "";
+                                subjectForm.value = "";
+                                emailForm.value= "";
+                                email_error.value= "";
                                 
                                 document.getElementById('contact_success').style.display = "block";
                                 document.getElementById('contact_error').style.display = "none";
@@ -179,6 +185,12 @@
 
 
                             } else {
+                                first_Form.value = "";
+                                last_Form.value = "";
+                                messageForm.value = "";
+                                subjectForm.value = "";
+                                emailForm.value= "";
+                                email_error.value= "";
                                
                                 document.getElementById('contact_success').style.display = "none";
                             

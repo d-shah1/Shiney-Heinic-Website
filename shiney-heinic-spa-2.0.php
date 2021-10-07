@@ -686,7 +686,7 @@ if (isset($_REQUEST['product'])) {
             $style = "";
       ?>
 
-        <div class="benefits-section">
+        <div class="benefits-section" >
             <div class="container">
                 <div class="row text-center">
                     <div class="col-lg-12 col-sm-12 section-title">
@@ -700,8 +700,6 @@ if (isset($_REQUEST['product'])) {
             </div>
         </div>
         <?php
-         } else {
-            $style = 'style="margin-top: 20px;"';
          }
       }
       ?>
@@ -713,7 +711,7 @@ if (isset($_REQUEST['product'])) {
 
         <!-- Review Section Start -->
 
-        <div class="benefits-section" <?= $style ?> id="ViewReviewDiv">
+        <div class="benefits-section" style="margin-top: 30px;" id="ViewReviewDiv">
             <div class="container" id="container">
                 <div class="row text-center">
                     <div class="col-lg-12 col-sm-12 section-title">
