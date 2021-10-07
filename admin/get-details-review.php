@@ -26,11 +26,10 @@ if (!isset($_REQUEST['id'])) {
     $rating = $row['rating'];
    
     $review_text = $row['review_text'];
-    $userid_real=$row['user_id'];
-
+   
 
     echo json_encode(array(
         "error" => "false", "comment" => "successful", "name" => $name, 
-        "review_text" => $review_text, "rating" => $rating, "userid" => $userid,"userid_real" => $userid_real,
+        "review_text" => $review_text, "rating" => $rating, "userid" => $userid
     ));
 

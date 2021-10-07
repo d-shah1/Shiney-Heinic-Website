@@ -14,8 +14,7 @@ date_default_timezone_set('America/Los_Angeles');
 $current_time = date("j F  Y , g:i:s a", time());
 
 $name=$_POST['name'];
-$userid_realForm=$_POST['userid_realForm'];
-
+$user=0;
 $ratingForm = $_POST['ratingForm'];
 $review_textFrom = $_POST['review_textFrom'];
 
@@ -23,7 +22,7 @@ $review_textFrom = $_POST['review_textFrom'];
 $sql = sprintf(
   "INSERT INTO `classic_review` ( `name`, `user_id`,  `rating`, `review_text`, `timestamp`)VALUES ('%s','%s','%s','%s','%s')",
   $con->real_escape_string($name),
-  $con->real_escape_string($userid_realForm),
+  $con->real_escape_string($user),
  
   $con->real_escape_string($ratingForm),
   $con->real_escape_string($review_textFrom),

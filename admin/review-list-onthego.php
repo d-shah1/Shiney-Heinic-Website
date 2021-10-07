@@ -42,13 +42,12 @@ xhttp.onreadystatechange = function() {
         var rating = response.rating
 
         var userid = response.userid;
-        var userid_real = response.userid_real;
+     
 
         document.getElementById("userid").value = userid;
-        document.getElementById("userid_real").value = userid_real;
+       
         document.getElementById("name").value = name
-        document.getElementById("rating").value =rating
-
+        $('option[value="'+rating+'"]').prop('selected', true).change();
         document.getElementById("review_text").value = review_text
 
 
@@ -550,23 +549,25 @@ xhttp.send();
                                         <input type="text" class="form-control" id='nameForm' placeholder="Name"
                                             required="required">
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="emailForm">User ID</label>
-                                        <input type="text" class="form-control" id='userid_realForm' placeholder="userid"
-                                            required="required">
-                                        
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="emailForm">Rating</label>
-                                        <input type="text" class="form-control" id='ratingForm' placeholder="Rating"
-                                            required="required">
-
-                                    </div>
+                                   
+                                   
                                     <div class="form-group col-md-6">
                                         <label for="emailForm">Review Text</label>
                                         <input type="text" id="review_textFrom"  name="review_text"
-                                            class="form-control" placeholder="review_text" required></input>
+                                            class="form-control" placeholder="Review" required></input>
 
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                    <label>Rating</label>
+                                    <select class="form-control" id="ratingForm">
+                                    <option value="none">none</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    </select>
+                                    <div id="rating_error" style="color: red; display: none;">Select rating</div>
                                     </div>
                                    
 
@@ -616,23 +617,25 @@ xhttp.send();
                                         <input type="text" class="form-control" id='name' placeholder="Name"
                                             required="required">
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="emailForm">User ID</label>
-                                        <input type="text" class="form-control" id='userid_real' placeholder="userid"
-                                            required="required">
-                                        
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="emailForm">Rating</label>
-                                        <input type="text" class="form-control" id='rating' placeholder="Rating"
-                                            required="required">
-
-                                    </div>
+                                  
+                                   
                                     <div class="form-group col-md-6">
                                         <label for="emailForm">Review Text</label>
                                         <input type="text" id="review_text"  name="review_text"
-                                            class="form-control" placeholder="review_text" required></input>
+                                            class="form-control" placeholder="Review" required></input>
 
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                    <label>Rating</label>
+                                    <select class="form-control" id="rating">
+                                   
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    </select>
                                     </div>
 
 
@@ -804,19 +807,27 @@ xhttp.send();
     function create_new() {
 
         var nameForm = document.getElementById("nameForm");
-        var userid_realForm = document.getElementById("userid_realForm");
+       
         var ratingForm = document.getElementById("ratingForm");
-
+        var rating_error = document.getElementById('rating_error');
 
         var review_textFrom = document.getElementById("review_textFrom");
+        rating_error.style.display = "none";
+        if(ratingForm.value=="none"){
+            ratingForm.focus();
+            rating_error.style.display = "block";
+                
+
+        }
        
        
            
-
+        else{
+            rating_error.style.display = "none";
             var formData = new FormData();
 
             formData.append("name", nameForm.value);
-            formData.append("userid_realForm", userid_realForm.value);
+           
             formData.append("ratingForm", ratingForm.value);
 
             formData.append("review_textFrom", review_textFrom.value);
@@ -857,6 +868,7 @@ xhttp.send();
                 }
 
             );
+        }
 
         
     }
@@ -869,7 +881,7 @@ xhttp.send();
     function edit_new_form() {
 
         var nameForm = document.getElementById("name");
-        var userid_realForm = document.getElementById("userid_real");
+        
         var ratingForm = document.getElementById("rating");
         var userid = document.getElementById('userid');
 
@@ -882,7 +894,7 @@ xhttp.send();
             var formData = new FormData();
 
             formData.append("name", nameForm.value);
-            formData.append("userid_realForm", userid_realForm.value);
+            
             formData.append("ratingForm", ratingForm.value);
             formData.append("userid", userid.value);
 
