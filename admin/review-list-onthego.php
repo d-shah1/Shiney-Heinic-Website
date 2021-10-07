@@ -22,42 +22,43 @@ require("../connection.php");
     <link href="css/style.css" rel="stylesheet">
 
     <script>
-            function fill_edit_details(id) {
+    function fill_edit_details(id) {
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
 
-        var responseObj = this.responseText;
-        var response = JSON.parse(responseObj);
-        var error = response.error;
-        var comment = response.comment;
-
-
-        var name = response.name;
-        var review_text	=response.review_text;
-       
+                var responseObj = this.responseText;
+                var response = JSON.parse(responseObj);
+                var error = response.error;
+                var comment = response.comment;
 
 
-        var rating = response.rating
-
-        var userid = response.userid;
-     
-
-        document.getElementById("userid").value = userid;
-       
-        document.getElementById("name").value = name
-        $('option[value="'+rating+'"]').prop('selected', true).change();
-        document.getElementById("review_text").value = review_text
+                var name = response.name;
+                var review_text = response.review_text;
 
 
+
+                var rating = response.rating
+
+                var userid = response.userid;
+
+
+                document.getElementById("userid").value = userid;
+
+                document.getElementById("name").value = name
+                $('option[value="' + rating + '"]').prop('selected', true).change();
+                document.getElementById("review_text").value = review_text
+
+
+
+            }
+        };
+        xhttp.open("POST", "get-details-review-ongo.php?id=" + id, true);
+        xhttp.send();
 
     }
-};
-xhttp.open("POST", "get-details-review-ongo.php?id=" + id, true);
-xhttp.send();
 
-}
     function delete_message(id) {
         document.getElementById("delete").value = id;
     }
@@ -341,7 +342,7 @@ xhttp.send();
         <!--**********************************
             Success Modal End
         ***********************************-->
-          <!--**********************************
+        <!--**********************************
            Edit Success Modal Start
         ***********************************-->
         <button hidden id="editsuccessBtn" data-toggle="modal" data-target="#editsuccessModal"></button>
@@ -527,7 +528,7 @@ xhttp.send();
         <!--**********************************
             Error Modal End
         ***********************************-->
-           <!--**********************************
+        <!--**********************************
             Add New Form Modal Start
         ***********************************-->
         <div class="modal fade" id="basicModal">
@@ -549,30 +550,30 @@ xhttp.send();
                                         <input type="text" class="form-control" id='nameForm' placeholder="Name"
                                             required="required">
                                     </div>
-                                   
-                                   
-                                    <div class="form-group col-md-6">
-                                        <label for="emailForm">Review Text</label>
-                                        <input type="text" id="review_textFrom"  name="review_text"
-                                            class="form-control" placeholder="Review" required></input>
 
+
+
+                                    <div class="form-group col-md-6">
+                                        <label>Rating</label>
+                                        <select class="form-control" id="ratingForm">
+                                            <option value="none">none</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <div id="rating_error" style="color: red; display: none;">Select rating</div>
                                     </div>
                                     <div class="form-group col-md-12">
-                                    <label>Rating</label>
-                                    <select class="form-control" id="ratingForm">
-                                    <option value="none">none</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    </select>
-                                    <div id="rating_error" style="color: red; display: none;">Select rating</div>
+                                        <label for="emailForm">Review Text</label>
+                                        <input type="text" id="review_textFrom" name="review_text" class="form-control"
+                                            placeholder="Review" required></input>
+
                                     </div>
-                                   
 
 
-                                   
+
 
 
 
@@ -584,7 +585,7 @@ xhttp.send();
 
                             <button type="button" class="btn btn-danger light" id="close_new_details"
                                 data-dismiss="modal">Close</button>
-                            <button type="submit" id="submit" class="btn btn-primary" >Save
+                            <button type="submit" id="submit" class="btn btn-primary">Save
                                 changes</button>
                         </div>
                     </div>
@@ -617,27 +618,27 @@ xhttp.send();
                                         <input type="text" class="form-control" id='name' placeholder="Name"
                                             required="required">
                                     </div>
-                                  
-                                   
+
+
+
+
                                     <div class="form-group col-md-6">
-                                        <label for="emailForm">Review Text</label>
-                                        <input type="text" id="review_text"  name="review_text"
-                                            class="form-control" placeholder="Review" required></input>
+                                        <label>Rating</label>
+                                        <select class="form-control" id="rating">
 
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
                                     </div>
-
                                     <div class="form-group col-md-12">
-                                    <label>Rating</label>
-                                    <select class="form-control" id="rating">
-                                   
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    </select>
-                                    </div>
+                                        <label for="emailForm">Review Text</label>
+                                        <input type="text" id="review_text" name="review_text" class="form-control"
+                                            placeholder="Review" required></input>
 
+                                    </div>
 
 
                                 </div>
@@ -705,7 +706,7 @@ xhttp.send();
                                                 while ($row = mysqli_fetch_assoc($list)) {
                                             ?>
                                             <tr>
-                                            <td><?= $row["id"] ?>
+                                                <td><?= $row["id"] ?>
                                                 </td>
 
                                                 <td>
@@ -727,7 +728,7 @@ xhttp.send();
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                    <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"
+                                                        <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"
                                                             data-toggle="modal" data-target="#editFormModal"
                                                             onclick="fill_edit_details(<?= $row['id'] ?>)">
                                                             <i class="fa fa-pencil"></i></a>
@@ -800,34 +801,30 @@ xhttp.send();
     <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="js/plugins-init/datatables.init.js"></script>
     <script>
-          $("#create_form").submit(function(e) {
+    $("#create_form").submit(function(e) {
         e.preventDefault();
     });
 
     function create_new() {
 
         var nameForm = document.getElementById("nameForm");
-       
+
         var ratingForm = document.getElementById("ratingForm");
         var rating_error = document.getElementById('rating_error');
 
         var review_textFrom = document.getElementById("review_textFrom");
         rating_error.style.display = "none";
-        if(ratingForm.value=="none"){
+        if (ratingForm.value == "none") {
             ratingForm.focus();
             rating_error.style.display = "block";
-                
 
-        }
-       
-       
-           
-        else{
+
+        } else {
             rating_error.style.display = "none";
             var formData = new FormData();
 
             formData.append("name", nameForm.value);
-           
+
             formData.append("ratingForm", ratingForm.value);
 
             formData.append("review_textFrom", review_textFrom.value);
@@ -853,7 +850,7 @@ xhttp.send();
                             document.getElementById("create_form").reset();
 
                         } else {
-                          
+
 
                             setTimeout(document.getElementById('close_new_details').click(), 2000)
                             document.getElementById('errorBtn').click()
@@ -870,7 +867,7 @@ xhttp.send();
             );
         }
 
-        
+
     }
 
 
@@ -881,61 +878,61 @@ xhttp.send();
     function edit_new_form() {
 
         var nameForm = document.getElementById("name");
-        
+
         var ratingForm = document.getElementById("rating");
         var userid = document.getElementById('userid');
 
 
         var review_textFrom = document.getElementById("review_text");
-       
-       
-      
-
-            var formData = new FormData();
-
-            formData.append("name", nameForm.value);
-            
-            formData.append("ratingForm", ratingForm.value);
-            formData.append("userid", userid.value);
-
-            formData.append("review_textFrom", review_textFrom.value);
-
-            $.ajax(
-
-                {
-                    url: "./update-content-review-ongo.php",
-                    type: 'POST',
-                    data: formData,
-                    contentType: false,
-                    processData: false,
 
 
 
-                    success: function(data) {
 
-                        if (data == "Record Edited Successfully") {
+        var formData = new FormData();
 
-                            setTimeout(document.getElementById('close_edit').click(), 2000)
-                            document.getElementById('editsuccessBtn').click()
+        formData.append("name", nameForm.value);
+
+        formData.append("ratingForm", ratingForm.value);
+        formData.append("userid", userid.value);
+
+        formData.append("review_textFrom", review_textFrom.value);
+
+        $.ajax(
+
+            {
+                url: "./update-content-review-ongo.php",
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
 
 
-                        } else {
-                           
-                            setTimeout(document.getElementById('close_edit').click(), 2000)
-                            document.getElementById('errorBtn').click()
+
+                success: function(data) {
+
+                    if (data == "Record Edited Successfully") {
+
+                        setTimeout(document.getElementById('close_edit').click(), 2000)
+                        document.getElementById('editsuccessBtn').click()
 
 
-                        }
+                    } else {
+
+                        setTimeout(document.getElementById('close_edit').click(), 2000)
+                        document.getElementById('errorBtn').click()
+
 
                     }
 
-
-
                 }
 
-            );
 
-        
+
+            }
+
+        );
+
+
     }
     $("#delete_form").submit(function(e) {
         e.preventDefault();
